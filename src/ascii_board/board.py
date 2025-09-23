@@ -1,43 +1,84 @@
 # src/ascii_board/board.py
+"""
+Board (ASCII Renderer) — fixed perimeter mapping
+
+NOTE:
+- Trước đây lỗi "Jail / Just Visiting" bị in 2 lần do logic _tile_index_at()
+  xử lý góc rồi vẫn rơi vào nhánh cạnh. Ở bản này, ta tạo MAPPING RÕ RÀNG
+  cho 40 chỉ số (0..39) bằng cách "đi bộ quanh viền" 11x11 theo đúng thứ tự
+  Monopoly, rồi tra cứu ngược (coord -> index). Nhờ vậy KHÔNG còn khả năng
+  trùng lặp giữa corner/edge.
+
+- Quy ước vị trí (đi NGƯỢC kim đồng hồ từ GO):
+  GRID = 11  => tọa độ (x, y) với x,y ∈ [0..10]
+  0  (GO)        @ (10,10)  góc dưới-phải
+  10 (Jail)      @ (0,10)   góc dưới-trái
+  20 (Free)      @ (0,0)    góc trên-trái
+  30 (GoToJail)  @ (10,0)   góc trên-phải
+"""
+
 from typing import Dict, List
 from .tiles import TILES
 
-GRID = 11               # 11x11 ô (chỉ vẽ viền)
-TILE_W, TILE_H = 11, 5  # kích thước 1 ô (ký tự)
+GRID = 11               # 11x11 cells (only the border is used)
+TILE_W, TILE_H = 11, 5  # size of one ASCII cell
+
+# ---------- Perimeter Mapping (build once, no if-else mistakes) ----------
+def _build_perimeter_positions(grid: int = GRID):
+    """Trả về list 40 tọa độ [(x,y)] cho index 0..39
+       đi NGƯỢC kim đồng hồ từ GO (0) ở góc dưới-phải."""
+    maxv = grid - 1
+    pos = []
+
+    # 0: GO (bottom-right)
+    pos.append((maxv, maxv))
+
+    # 1..9: sang TRÁI cạnh dưới
+    for x in range(maxv - 1, 0, -1):  # 9..1
+        pos.append((x, maxv))
+
+    # 10: Jail / Just Visiting (bottom-left)
+    pos.append((0, maxv))
+
+    # 11..19: đi LÊN cạnh trái
+    for y in range(maxv - 1, 0, -1):  # 9..1
+        pos.append((0, y))
+
+    # 20: Free Parking (top-left)
+    pos.append((0, 0))
+
+    # 21..29: đi SANG PHẢI cạnh trên
+    for x in range(1, maxv):  # 1..9
+        pos.append((x, 0))
+
+    # 30: Go To Jail (top-right)
+    pos.append((maxv, 0))
+
+    # 31..39: đi XUỐNG cạnh phải
+    for y in range(1, maxv):  # 1..9
+        pos.append((maxv, y))
+
+    assert len(pos) == 40
+    return pos
+
+# Build forward (index -> coord) và reverse (coord -> index)
+_PERIM = _build_perimeter_positions()
+_COORD2IDX: Dict[tuple[int, int], int] = {xy: i for i, xy in enumerate(_PERIM)}
 
 def _tile_index_at(x: int, y: int) -> int:
-    """Map (x,y) trên viền 11x11 -> index 0..39; còn lại -1.
-    Góc quy ước:
-      (max,max)=0 GO; (max,0)=10 Jail; (0,0)=20 Free; (0,max)=30 Go2Jail
-    """
-    maxv = GRID - 1
-    # corners
-    if x == maxv and y == maxv: return 0
-    if x == maxv and y == 0:   return 10
-    if x == 0   and y == 0:    return 20
-    if x == 0   and y == maxv: return 30
-    # right edge (exclude corners): bottom->top => 1..9
-    if x == maxv and 0 < y < maxv:
-        return 1 + (maxv - y)
-    # top edge: right->left => 11..19
-    if y == 0 and 0 < x < maxv:
-        return 10 + (maxv - x)
-    # left edge: top->bottom => 21..29
-    if x == 0 and 0 < y < maxv:
-        return 20 + y
-    # bottom edge: left->right => 31..39
-    if y == maxv and 0 < x < maxv:
-        return 30 + x
-    return -1
+    """Tra cứu index 0..39 nếu (x,y) nằm trên viền; ngược lại trả -1."""
+    return _COORD2IDX.get((x, y), -1)
 
+# ------------------------ Rendering utilities ----------------------------
 def _pad_center(s: str, w: int) -> str:
     s = s[:w]
     left = (w - len(s)) // 2
     return " " * left + s + " " * (w - len(s) - left)
 
 class Board:
-    """Renderer cho Monopoly ASCII."""
-    def __init__(self, tile_w=TILE_W, tile_h=TILE_H):
+    """Renderer cho Monopoly ASCII (viền 11x11, 40 ô)."""
+
+    def __init__(self, tile_w: int = TILE_W, tile_h: int = TILE_H):
         self.tw, self.th = tile_w, tile_h
         self.W = GRID * self.tw + 1
         self.H = GRID * self.th + 1
@@ -45,15 +86,15 @@ class Board:
     def render_ascii(self, state: Dict) -> str:
         """
         state:
-          players: [{nick:'A', pos:int}, ...]
-          ownership: {tileIndex:'A'|'B'|'C'|'D'}
-          buildings: {tileIndex:{houses:int, hotel:bool}}
+          players:   [{nick:str, pos:int}, ...]
+          ownership: {tileIndex:int -> ownerNick:str}
+          buildings: {tileIndex:int -> {houses:int, hotel:bool}}
         """
         canvas: List[List[str]] = [[" "] * self.W for _ in range(self.H)]
 
         def draw_cell(cx: int, cy: int, lines: List[str]):
             x0, y0 = cx * self.tw, cy * self.th
-            # khung: +---+ |   |
+            # khung ô: +---+ |   |
             for i in range(self.tw + 1):
                 ch = "-" if 0 < i < self.tw else "+"
                 canvas[y0][x0 + i] = ch
@@ -62,8 +103,9 @@ class Board:
                 ch = "|" if 0 < j < self.th else "+"
                 canvas[y0 + j][x0] = ch
                 canvas[y0 + j][x0 + self.tw] = ch
+
             inner_w = self.tw - 1
-            for k, raw in enumerate(lines[:4]):
+            for k, raw in enumerate(lines[:4]):  # hiển thị tối đa 4 dòng
                 text = _pad_center(raw, inner_w)
                 for i, c in enumerate(text):
                     canvas[y0 + 1 + k][x0 + 1 + i] = c

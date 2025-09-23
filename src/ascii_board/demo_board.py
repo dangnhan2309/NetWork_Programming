@@ -1,30 +1,49 @@
 """
-Demo: Vẽ bàn cờ Monopoly ASCII
---------------------------------
-File này dùng để test hiển thị board ASCII 
-Không liên quan đến logic game, chỉ để kiểm chứng:
-    - Mapping 40 ô (0..39) có đúng vị trí không.
-    - Người chơi (players) đứng ở ô nào thì hiển thị đúng.
-    - Sở hữu đất (ownership) và nhà/khách sạn (buildings) có in ra hay không.
+Demo: Hiển thị bàn cờ Monopoly bằng ASCII
+-----------------------------------------
+
+Mục đích:
+- Kiểm thử class Board và hàm render_ascii().
+- Đảm bảo mapping 0..39 đi NGƯỢC kim đồng hồ quanh viền 11x11:
+    0  = GO (góc dưới-phải)
+    10 = Jail / Just Visiting (góc dưới-trái)
+    20 = Free Parking (góc trên-trái)
+    30 = Go To Jail (góc trên-phải)
+
+Nội dung demo_state:
+- players: 4 người chơi A, B, C, D với vị trí mẫu
+    A: pos=0   → GO (góc dưới-phải)
+    B: pos=10  → Jail (góc dưới-trái)
+    C: pos=24  → Illinois Ave (cạnh trên, giữa)
+    D: pos=39  → Boardwalk (ngay trước GO, cạnh phải)
+- ownership: một vài ô mẫu được gán chủ sở hữu (A/B/C/D)
+- buildings: ô 1 có 2 nhà, ô 39 có khách sạn
 
 Cách chạy:
     python -m src.ascii_board.demo_board
 
-Kết quả:
-    In ra bàn cờ ASCII 11x11 viền ngoài, có tên ô, người chơi, và thông tin sở hữu.
+Kết quả mong đợi:
+- Bàn cờ ASCII 11x11 với 40 ô viền ngoài.
+- Góc và cạnh hiển thị đúng thứ tự 0..39.
+- Tên ô, chủ sở hữu, số nhà/khách sạn, và vị trí người chơi được in ra.
 """
+
 
 # Import class Board từ file board.py
 from .board import Board
 
 # Trạng thái demo để test hiển thị board
 demo_state = {
-    # Danh sách người chơi với vị trí hiện tại (0=GO, 10=Jail, 20=Free Parking, 30=Go To Jail)
+    # Danh sách người chơi với vị trí hiện tại
+    # 0 = GO (góc dưới-phải)
+    # 10 = Jail / Just Visiting (góc dưới-trái)
+    # 20 = Free Parking (góc trên-trái)
+    # 30 = Go To Jail (góc trên-phải)
     "players": [
-        {"nick": "A", "pos": 0},     # A đứng ở GO
-        {"nick": "B", "pos": 10},    # B đứng ở Jail
-        {"nick": "C", "pos": 24},    # C đứng ở Illinois (trên cạnh trái)
-        {"nick": "D", "pos": 39},    # D đứng ở Boardwalk (ngay trước GO)
+        {"nick": "A", "pos": 0},     # A đứng ở GO (góc dưới-phải)
+        {"nick": "B", "pos": 10},    # B đứng ở Jail (góc dưới-trái)
+        {"nick": "C", "pos": 24},    # C đứng ở Illinois Ave (cạnh trên, giữa)
+        {"nick": "D", "pos": 39},    # D đứng ở Boardwalk (ngay trước GO, cạnh phải)
     ],
 
     # Sở hữu đất: tileIndex -> tên player
