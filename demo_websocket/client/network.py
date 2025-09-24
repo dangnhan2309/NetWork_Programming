@@ -1,9 +1,9 @@
 import asyncio
 import websockets
-from shared.protocol import Protocol
+from .shared.protocol import Protocol
 
 class ChatClient:
-    def __init__(self, uri="ws://192.168.10.23", name="Nhân"):
+    def __init__(self, uri="ws://localhost:8765", name="Tài"):
         self.uri = uri
         self.name = name
 
