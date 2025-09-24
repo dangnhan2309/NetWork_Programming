@@ -1,50 +1,29 @@
+import asyncio
+import websockets
+from shared.protocol import Protocol
 
-# src/client/network.py
-import socket
-import threading
-from typing import Callable
-from ..shared.protocol import encode,decode
-class ClientNetwork:
-    def __init__(self, host='127.0.0.1', port=12345, on_message: Callable[[dict], None]=None):
-        self.host = host
-        self.port = port
-        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.on_message = on_message
-        self.recv_thread = None
-        self.running = False
+class ChatClient:
+    def __init__(self, uri="ws://192.168.10.23", name="Nhân"):
+        self.uri = uri
+        self.name = name
 
-    def connect(self):
-        self.sock.connect((self.host, self.port))
-        self.running = True
-        self.recv_thread = threading.Thread(target=self._recv_loop, daemon=True)
-        self.recv_thread.start()
+    async def run(self):
+        async with websockets.connect(self.uri) as websocket:
+            await asyncio.gather(
+                self.send_message(websocket),
+                self.receive_message(websocket)
+            )
 
-    def _recv_loop(self):
-        buf = b''
-        while self.running:
-            try:
-                data = self.sock.recv(4096)
-                if not data:
-                    break
-                buf += data
-                while b'\n' in buf:
-                    line, buf = buf.split(b'\n', 1)
-                    pkt = decode(line + b'\n')
-                    if pkt and self.on_message:
-                        self.on_message(pkt)
-            except Exception:
-                break
-        self.running = False
+    async def send_message(self, websocket):
+        while True:
+            msg = await asyncio.to_thread(input, f"{self.name}: ")
+            packet = Protocol.make_packet("CHAT", {"msg": msg})
+            await websocket.send(packet)
 
-    def send(self, packet: dict):
-        try:
-            self.sock.sendall(encode(packet))
-        except Exception as e:
-            print("[CLIENT] send error:", e)
-
-    def close(self):
-        self.running = False
-        try:
-            self.sock.close()
-        except:
-            pass
+    async def receive_message(self, websocket):
+        async for message in websocket:
+            packet = Protocol.parse_packet(message)
+            msg = packet["data"]["msg"]
+            # Xuống dòng an toàn rồi in lại prompt
+            print(f"\n[Người khác] {msg}")
+            print(f"{self.name}: ", end="", flush=True)

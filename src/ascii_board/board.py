@@ -130,3 +130,39 @@ class Board:
                 draw_cell(x, y, lines)
 
         return "\n".join("".join(row) for row in canvas)
+def main () :
+    demo_state = {
+        # Danh sách người chơi với vị trí hiện tại
+        # 0 = GO (góc dưới-phải)
+        # 10 = Jail / Just Visiting (góc dưới-trái)
+        # 20 = Free Parking (góc trên-trái)
+        # 30 = Go To Jail (góc trên-phải)
+        "players": [
+            {"nick": "A", "pos": 0},  # A đứng ở GO (góc dưới-phải)
+            {"nick": "B", "pos": 10},  # B đứng ở Jail (góc dưới-trái)
+            {"nick": "C", "pos": 24},  # C đứng ở Illinois Ave (cạnh trên, giữa)
+            {"nick": "D", "pos": 39},  # D đứng ở Boardwalk (ngay trước GO, cạnh phải)
+        ],
+
+        # Sở hữu đất: tileIndex -> tên player
+        "ownership": {
+            1: "A",  # Mediterranean Ave thuộc A
+            3: "B",  # Baltic Ave thuộc B
+            6: "C",  # Oriental Ave thuộc C
+            8: "D",  # Vermont Ave thuộc D
+            39: "A"  # Boardwalk thuộc A
+        },
+
+        # Thông tin nhà/khách sạn: tileIndex -> {houses: n, hotel: bool}
+        "buildings": {
+            1: {"houses": 2, "hotel": False},  # Mediterranean có 2 nhà
+            39: {"houses": 0, "hotel": True},  # Boardwalk có 1 khách sạn
+        },
+    }
+    # Tạo board và in ra bản đồ ASCII dựa vào demo_state
+    board = Board()
+    print(board.render_ascii(demo_state))
+
+if __name__ == "__main__":
+
+     main()
