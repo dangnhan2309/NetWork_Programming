@@ -3,7 +3,7 @@ import websockets
 from shared.protocol import Protocol
 
 class ChatClient:
-    def __init__(self, uri="ws://localhost:8765", name="Bạn"):
+    def __init__(self, uri="ws://localhost:8765", name="Thuy"):
         self.uri = uri
         self.name = name
 
@@ -24,6 +24,6 @@ class ChatClient:
         async for message in websocket:
             packet = Protocol.parse_packet(message)
             msg = packet["data"]["msg"]
-            # Xuống dòng an toàn rồi in lại prompt
-            print(f"\n[Người khác] {msg}")
+
+            print(f"\n[data] {msg}")
             print(f"{self.name}: ", end="", flush=True)

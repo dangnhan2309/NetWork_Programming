@@ -14,7 +14,7 @@ class ChatServer:
                 await client.send(message)
 
     async def run(self):
-        async with websockets.serve(self.handler, "127.0.0.1", self.port):
+        async with websockets.serve(self.handler, "0.0.0.0", self.port):
             print(f"[Server] Đang chạy tại ws://127.0.0.1:{self.port}")
             await asyncio.Future()
 
