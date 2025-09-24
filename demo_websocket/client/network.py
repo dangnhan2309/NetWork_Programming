@@ -3,7 +3,7 @@ import websockets
 from shared.protocol import Protocol
 
 class ChatClient:
-    def __init__(self, uri="ws://localhost:8765", name="Bạn"):
+    def __init__(self, uri="ws://localhost:8765", name="Tài"):
         self.uri = uri
         self.name = name
 
