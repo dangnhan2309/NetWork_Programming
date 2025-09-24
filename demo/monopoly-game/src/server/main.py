@@ -29,7 +29,7 @@ def main():
     print("[SERVER] Server started. Press Ctrl+C to shut down.")
 
     # Luồng chính sẽ tạm dừng và chờ cho đến khi sự kiện được thiết lập
-    stop_event.wait()   
+    stop_event.wait()
 
     # Sau khi sự kiện được kích hoạt, luồng chính sẽ tiếp tục
     srv.stop()
