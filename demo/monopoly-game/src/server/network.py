@@ -1,38 +1,75 @@
+# src/server/game_server.py
 import asyncio
 import websockets
-from shared.protocol import Protocol
+from typing import Dict, Set
+from concurrent.futures import ThreadPoolExecutor
 
-class ChatServer:
-    def __init__(self, host="localhost", port=8765):
+from ..shared.protocol import Protocol
+from .room import GameRoom
+
+
+class GameServer:
+    """Main WebSocket server that manages rooms and clients."""
+    def __init__(self, host: str = "localhost", port: int = 8765):
         self.host = host
         self.port = port
-        self.clients = set()
+        self.rooms: Dict[int, GameRoom] = {}
+        self.next_room_id = 1
+        self.executor = ThreadPoolExecutor(max_workers=4)  # if you want threading
 
-    async def broadcast(self, message, sender):
-        for client in self.clients:
-            if client != sender:
-                await client.send(message)
+    async def handler(self, websocket: websockets.WebSocketServerProtocol):
+        """Handle client connection lifecycle."""
+        print("[SERVER] Client connected")
 
-    async def run(self):
-        async with websockets.serve(self.handler, "127.0.0.1", self.port):
-            print(f"[Server] Đang chạy tại ws://127.0.0.1:{self.port}")
-            await asyncio.Future()
+        # Assign client to a room (for demo: auto-create one room)
+        room_id = 1
+        if room_id not in self.rooms:
+            self.rooms[room_id] = GameRoom(room_id)
+        room = self.rooms[room_id]
 
-    async def handler(self, websocket):
-        self.clients.add(websocket)
-        remote = websocket.remote_address
-        client_host = remote[0]
-        client_port = remote[1]
-        print(f"[Server] Một client đã kết nối từ {client_host}:{client_port}")
         try:
             async for message in websocket:
                 packet = Protocol.parse_packet(message)
-                print(f"[Server] Nhận: {packet}")
+                action = packet.get("action")
+                data = packet.get("data", {})
 
-                if packet["cmd"] == "CHAT":
-                    msg = Protocol.make_packet("CHAT", packet["data"])
-                    await self.broadcast(msg, websocket)
+                print(f"[SERVER] Received: {action} {data}")
+
+                # Example: simple JOIN / CHAT
+                if action == "JOIN":
+                    await room.add_client(websocket, data.get("name", "Unknown"))
+
+                elif action == "CHAT":
+                    await room.broadcast({"action": "CHAT", "data": data})
+
+                elif action == "EXIT":
+                    await room.remove_client(websocket)
+                    break
+
+                # Later: pass to GameManager
+                else:
+                    response = room.game.recieve_player_input(packet)
+                    await room.broadcast({"action": "GAME", "data": response})
+
+        except websockets.ConnectionClosed:
+            print("[SERVER] Client disconnected")
         finally:
-            self.clients.remove(websocket)
-            print(f"[Server] Client {client_host}:{client_port} đã ngắt kết nối")
+            await room.remove_client(websocket)
 
+    async def start(self):
+        print(f"[SERVER] Starting on {self.host}:{self.port}")
+        async with websockets.serve(self.handler, self.host, self.port):
+            await asyncio.Future()  # run forever
+    def send_packet_clients(self,action,data):
+
+        try :
+
+            Protcol
+
+        except Exception as e :
+            print(e)
+
+
+if __name__ == "__main__":
+    server = GameServer()
+    asyncio.run(server.start())

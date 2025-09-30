@@ -1,2 +1,2 @@
- 
-from .network import ServerNetwork
+
+from .network import GameServer

@@ -10,6 +10,8 @@ NOTE:
   Monopoly, rồi tra cứu ngược (coord -> index). Nhờ vậy KHÔNG còn khả năng
   trùng lặp giữa corner/edge.
 
+
+
 - Quy ước vị trí (đi NGƯỢC kim đồng hồ từ GO):
   GRID = 11  => tọa độ (x, y) với x,y ∈ [0..10]
   0  (GO)        @ (10,10)  góc dưới-phải

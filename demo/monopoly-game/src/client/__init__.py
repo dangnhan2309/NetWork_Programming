@@ -1,2 +1,1 @@
- 
-from .network import ClientNetwork
+from ..shared.board import Board

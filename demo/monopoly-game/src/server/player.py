@@ -1,10 +1,16 @@
 import random
 
+# ----- Constants -----
+BOARD_SIZE = 40
+GO_BONUS = 200
+JAIL_POSITION = 10
+
 
 class Player:
-    def __init__(self, name="", position="A1", money=1500):
+    def __init__(self, name="", position=0, money=1500):
         self.name = name
-        self.position = position
+        # position should be an int in [0, 39]
+        self.position = int(position) if isinstance(position, int) or str(position).isdigit() else 0
         self.money = money
         self.properties = {}
         self.in_jail =False
@@ -28,29 +34,33 @@ class Player:
         old_position = self.position
 
         # Cập nhật vị trí mới bằng cách cộng thêm số bước.
-        self.position = (self.position + steps) % 40
+        self.position = (self.position + steps) % BOARD_SIZE
 
         # Nếu vị trí mới nhỏ hơn vị trí cũ, người chơi đã đi qua ô GO.
         # Ví dụ: từ ô 38 di chuyển 5 bước, vị trí mới là 3 (43 % 40).
         if self.position < old_position:
-            self.money += 200
-            print(f"{self.name} đã đi qua ô GO và nhận được 200 đô la.")
+            self.money += GO_BONUS
+            print(f"{self.name} đã đi qua ô GO và nhận được {GO_BONUS} đô la.")
 
         print(f"{self.name} di chuyển {steps} bước. Vị trí mới là {self.position}.")
 
+    def can_buy_property(self, cost: int) -> bool:
+        return self.money >= cost and not self.is_bankrupt and not self.in_jail
+
     def buy_property(self, property_name, cost):
-            """
-            Mua tài sản trên ô hiện tại.
-            Args:
-                property_name (str): Tên của tài sản.
-                cost (int): Chi phí để mua tài sản.
-            """
-            if self.money >= cost:
-                self.money -= cost
-                self.properties[property_name] = {'cost': cost, 'houses': 0}
-                print(f"{self.name} đã mua {property_name} với giá {cost}$.")
-            else:
-                print(f"{self.name} không đủ tiền để mua {property_name}.")
+        """
+        Mua tài sản trên ô hiện tại.
+        Args:
+            property_name (str): Tên của tài sản.
+            cost (int): Chi phí để mua tài sản.
+        """
+        if self.can_buy_property(cost):
+            self.money -= cost
+            # default: 0 houses; 5 means hotel
+            self.properties[property_name] = {'cost': cost, 'houses': 0}
+            print(f"{self.name} đã mua {property_name} với giá {cost}$.")
+        else:
+            print(f"{self.name} không đủ tiền để mua {property_name}.")
 
     def sell_property(self, property_name, price):
         """Bán tài sản đang sở hữu."""
@@ -117,21 +127,32 @@ class Player:
             self.jail_time()
     def jail_time(self):
         """Xử lý khi bị vào tù."""
-        self.position = 10  # Ô J11 (Go to Jail)
+        self.position = JAIL_POSITION
         self.in_jail = True
         self.jail_turns = 3  # Số lượt ở tù
         print(f"{self.name} đã bị đưa vào tù.")
 
-    def build_house(self, property_name):
-        """Nâng cấp tài sản (xây khách sạn)."""
-        if property_name in self.properties and self.properties[property_name]['houses'] == 4:
-            self.properties[property_name]['houses'] = 5  # 5 houses = 1 hotel
-            print(f"{self.name} đã xây một khách sạn trên {property_name}.")
-        else:
-            print(f"Không thể nâng cấp {property_name} thành khách sạn.")
+    def release_from_jail(self):
+        if not self.in_jail:
+            return
+        self.in_jail = False
+        self.jail_turns = 0
+        print(f"{self.name} đã được thả khỏi tù.")
 
-    def upgrade_property(self, property_name):
-        """Nâng cấp tài sản (xây khách sạn)."""
+    def add_house(self, property_name: str):
+        """Xây thêm 1 nhà (0 -> 1 -> 2 -> 3 -> 4). Khi đạt 4 thì lần sau sẽ thành hotel (5)."""
+        if property_name not in self.properties:
+            print(f"{self.name} không sở hữu {property_name}.")
+            return
+        houses = self.properties[property_name]['houses']
+        if 0 <= houses < 4:
+            self.properties[property_name]['houses'] = houses + 1
+            print(f"{self.name} đã xây thêm 1 nhà trên {property_name} (tổng {houses + 1}).")
+        else:
+            print(f"{property_name} đã có đủ nhà để nâng cấp lên khách sạn.")
+
+    def upgrade_property(self, property_name: str):
+        """Nâng cấp tài sản lên khách sạn (yêu cầu 4 nhà)."""
         if property_name in self.properties and self.properties[property_name]['houses'] == 4:
             self.properties[property_name]['houses'] = 5  # 5 houses = 1 hotel
             print(f"{self.name} đã xây một khách sạn trên {property_name}.")
@@ -160,6 +181,23 @@ class Player:
             self.money += mortgage_value
             print(f"{self.name} đã cầm cố {property_to_mortgage} để có thêm {mortgage_value}$.")
             del self.properties[property_to_mortgage]
+        if self.money < debt_amount and not self.properties:
+            self.is_bankrupt = True
+            print(f"{self.name} không thể trả nợ và đã phá sản.")
     # ----- Helper methods -----
     def __str__(self):
         return f"{self.name} at {self.position} with ${self.money}"
+
+    def release_from_jail(self):
+        pass
+def _calculate_property_worth(prop: dict) -> int:
+    base = int(prop.get('cost', 0))
+    houses = int(prop.get('houses', 0))
+    # Example heuristic: each house adds 50
+    return base + (50 * max(0, houses if houses <= 4 else 5))
+
+def get_net_worth(player: Player) -> int:
+    total = player.money
+    for p in player.properties.values():
+        total += _calculate_property_worth(p)
+    return total

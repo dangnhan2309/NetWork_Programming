@@ -3,7 +3,7 @@ import json
 class Protocol:
     @staticmethod
     def make_packet(cmd: str, data: dict):
-        return json.dumps({"cmd": cmd, "data": data})
+        return json.dumps({"action": cmd, "data": data})
 
     @staticmethod
     def parse_packet(packet: str):
