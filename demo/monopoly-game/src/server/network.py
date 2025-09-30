@@ -14,6 +14,7 @@ class ServerNetwork:
         self.lock = threading.Lock()
         self.running = False
 
+<<<<<<< Updated upstream
     def start(self):
         self.sock.bind((self.host, self.port))
         self.sock.listen(100)
@@ -21,6 +22,86 @@ class ServerNetwork:
         print(f"[SERVER] Listening on {self.host}:{self.port}")
         accept_thread = threading.Thread(target=self._accept_loop, daemon=True)
         accept_thread.start()
+=======
+    async def handler(self, websocket):
+        """Xử lý kết nối từ client"""
+        player_name = None
+        
+        try:
+            async for message in websocket:
+                try:
+                    data = json.loads(message)
+                    cmd = data.get("cmd")
+                    payload = data.get("data", {})
+                    
+                    if cmd == "join":
+                        name = payload.get("name", "Unknown")
+                        if self.game_manager.add_player(name, websocket):
+                            player_name = name
+                            self.clients[websocket] = name
+                            await self.send(websocket, "info", f"Welcome {name}! Waiting for game to start...")
+                            await self.send(websocket, "game_state", self.game_manager.get_game_state())
+                        else:
+                            await self.send(websocket, "error", "Cannot join game (game full or name taken)")
+                            
+                    elif cmd == "roll":
+                        if player_name:
+                            result = self.game_manager.handle_player_action(player_name, "ROLL")
+                            await self.send(websocket, "action_result", result)
+                        else:
+                            await self.send(websocket, "error", "You must join game first")
+                            
+                    elif cmd == "buy":
+                        if player_name:
+                            result = self.game_manager.handle_player_action(player_name, "BUY")
+                            await self.send(websocket, "action_result", result)
+                        else:
+                            await self.send(websocket, "error", "You must join game first")
+                            
+                    elif cmd == "end_turn":
+                        if player_name:
+                            result = self.game_manager.handle_player_action(player_name, "END_TURN")
+                            await self.send(websocket, "action_result", result)
+                        else:
+                            await self.send(websocket, "error", "You must join game first")
+                            
+                    elif cmd == "state":  # THÊM XỬ LÝ LỆNH STATE
+                        await self.send(websocket, "game_state", self.game_manager.get_game_state())
+                        
+                    elif cmd == "help":
+                        help_text = (
+                            "📖 DANH SÁCH LỆNH:\n"
+                            "/join <tên>    - Tham gia game\n"
+                            "/roll          - Đổ xúc xắc\n" 
+                            "/buy           - Mua đất\n"
+                            "/end_turn      - Kết thúc lượt\n"
+                            "/state         - Xem trạng thái game\n"
+                            "/help          - Xem trợ giúp\n"
+                            "/quit          - Thoát game\n"
+                        )
+                        await self.send(websocket, "info", help_text)
+                        
+                    elif cmd == "quit":
+                        break
+                        
+                    else:
+                        await self.send(websocket, "error", f"Unknown command: {cmd}")
+                        
+                except json.JSONDecodeError:
+                    await self.send(websocket, "error", "Invalid JSON format")
+                except Exception as e:
+                    await self.send(websocket, "error", f"Server error: {str(e)}")
+                    
+        except websockets.exceptions.ConnectionClosed:
+            print(f"🔌 Connection closed for {player_name}")
+        finally:
+            # Cleanup khi client disconnect
+            if player_name:
+                self.game_manager.remove_player(player_name)
+            if websocket in self.clients:
+                del self.clients[websocket]
+            await self.broadcast_state()
+>>>>>>> Stashed changes
 
     def _accept_loop(self):
         while self.running:
