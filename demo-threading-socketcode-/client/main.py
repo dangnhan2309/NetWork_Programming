@@ -1,7 +1,4 @@
- 
-
-
-# src/client/main.py
+ # src/client/main.py
 import threading
 import time
 from .network import ClientNetwork

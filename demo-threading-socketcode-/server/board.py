@@ -25,7 +25,7 @@ GRID = 11               # 11x11 cells (only the border is used)
 TILE_W, TILE_H = 11, 5  # size of one ASCII cell
 
 # ---------- Perimeter Mapping (build once, no if-else mistakes) ----------
-def _build_perimeter_positions(grid: int = GRID):
+def _build_perimeter_positions(grid: int = GRID): 
     """Trả về list 40 tọa độ [(x,y)] cho index 0..39
        đi NGƯỢC kim đồng hồ từ GO (0) ở góc dưới-phải."""
     maxv = grid - 1
