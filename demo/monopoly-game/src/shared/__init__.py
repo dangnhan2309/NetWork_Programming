@@ -1,1 +1,1 @@
-from .protocol import encode,decode
+# Shared package

@@ -1,169 +1,153 @@
- 
-# src/ascii_board/board.py
 """
-Board (ASCII Renderer) — fixed perimeter mapping
-
-NOTE:
-- Trước đây lỗi "Jail / Just Visiting" bị in 2 lần do logic _tile_index_at()
-  xử lý góc rồi vẫn rơi vào nhánh cạnh. Ở bản này, ta tạo MAPPING RÕ RÀNG
-  cho 40 chỉ số (0..39) bằng cách "đi bộ quanh viền" 11x11 theo đúng thứ tự
-  Monopoly, rồi tra cứu ngược (coord -> index). Nhờ vậy KHÔNG còn khả năng
-  trùng lặp giữa corner/edge.
-
-- Quy ước vị trí (đi NGƯỢC kim đồng hồ từ GO):
-  GRID = 11  => tọa độ (x, y) với x,y ∈ [0..10]
-  0  (GO)        @ (10,10)  góc dưới-phải
-  10 (Jail)      @ (0,10)   góc dưới-trái
-  20 (Free)      @ (0,0)    góc trên-trái
-  30 (GoToJail)  @ (10,0)   góc trên-phải
+Board class cho Monopoly game
 """
 
 from typing import Dict, List
-from .tiles import TILES
 
-GRID = 11               # 11x11 cells (only the border is used)
-TILE_W, TILE_H = 11, 5  # size of one ASCII cell
-
-# ---------- Perimeter Mapping (build once, no if-else mistakes) ----------
-def _build_perimeter_positions(grid: int = GRID):
-    """Trả về list 40 tọa độ [(x,y)] cho index 0..39
-       đi NGƯỢC kim đồng hồ từ GO (0) ở góc dưới-phải."""
-    maxv = grid - 1
-    pos = []
-
-    # 0: GO (bottom-right)
-    pos.append((maxv, maxv))
-
-    # 1..9: sang TRÁI cạnh dưới
-    for x in range(maxv - 1, 0, -1):  # 9..1
-        pos.append((x, maxv))
-
-    # 10: Jail / Just Visiting (bottom-left)
-    pos.append((0, maxv))
-
-    # 11..19: đi LÊN cạnh trái
-    for y in range(maxv - 1, 0, -1):  # 9..1
-        pos.append((0, y))
-
-    # 20: Free Parking (top-left)
-    pos.append((0, 0))
-
-    # 21..29: đi SANG PHẢI cạnh trên
-    for x in range(1, maxv):  # 1..9
-        pos.append((x, 0))
-
-    # 30: Go To Jail (top-right)
-    pos.append((maxv, 0))
-
-    # 31..39: đi XUỐNG cạnh phải
-    for y in range(1, maxv):  # 1..9
-        pos.append((maxv, y))
-
-    assert len(pos) == 40
-    return pos
-
-# Build forward (index -> coord) và reverse (coord -> index)
-_PERIM = _build_perimeter_positions()
-_COORD2IDX: Dict[tuple[int, int], int] = {xy: i for i, xy in enumerate(_PERIM)}
-
-def _tile_index_at(x: int, y: int) -> int:
-    """Tra cứu index 0..39 nếu (x,y) nằm trên viền; ngược lại trả -1."""
-    return _COORD2IDX.get((x, y), -1)
-
-# ------------------------ Rendering utilities ----------------------------
-def _pad_center(s: str, w: int) -> str:
-    s = s[:w]
-    left = (w - len(s)) // 2
-    return " " * left + s + " " * (w - len(s) - left)
+TILE_WIDTH = 11
+TILE_HEIGHT = 7
 
 class Board:
-    """Renderer cho Monopoly ASCII (viền 11x11, 40 ô)."""
+    def __init__(self):
+        self.tiles = self._create_tiles()
+        
+    def _create_tiles(self) -> List[Dict]:
+        """Tạo danh sách 40 ô trên board"""
+        tiles = []
+        for i in range(40):
+            if i == 0:
+                tiles.append({"name": "GO", "type": "go", "owner": None, "price": 0, "rent": 0})
+            elif i == 10:
+                tiles.append({"name": "Jail", "type": "jail", "owner": None, "price": 0, "rent": 0})
+            elif i == 20:
+                tiles.append({"name": "Free Parking", "type": "free_parking", "owner": None, "price": 0, "rent": 0})
+            elif i == 30:
+                tiles.append({"name": "Go to Jail", "type": "go_to_jail", "owner": None, "price": 0, "rent": 0})
+            elif i in [2, 17, 33]:
+                tiles.append({"name": "Chance", "type": "chance", "owner": None, "price": 0, "rent": 0})
+            elif i in [7, 22, 36]:
+                tiles.append({"name": "Community Chest", "type": "community_chest", "owner": None, "price": 0, "rent": 0})
+            elif i in [4, 38]:
+                tiles.append({"name": "Income Tax" if i == 4 else "Luxury Tax", "type": "tax", "owner": None, "price": 0, "rent": 0, "amount": 200 if i==4 else 100})
+            elif i in [5, 15, 25, 35]:
+                tiles.append({"name": f"Railroad {i//10 + 1}", "type": "railroad", "owner": None, "price": 200, "rent": 25})
+            elif i in [12, 28]:
+                tiles.append({"name": "Electric Company" if i == 12 else "Water Works", "type": "utility", "owner": None, "price": 150, "rent": 4})
+            else:
+                property_names = [
+                    "Mediterranean Ave", "Baltic Ave", "Oriental Ave", "Vermont Ave",
+                    "Connecticut Ave", "St. Charles Place", "States Ave", "Virginia Ave",
+                    "St. James Place", "Tennessee Ave", "New York Ave", "Kentucky Ave",
+                    "Indiana Ave", "Illinois Ave", "Atlantic Ave", "Ventnor Ave",
+                    "Marvin Gardens", "Pacific Ave", "North Carolina Ave", "Pennsylvania Ave",
+                    "Park Place", "Boardwalk"
+                ]
+                property_positions = [1, 3, 6, 8, 9, 11, 13, 14, 16, 18, 19, 21, 23, 24, 26, 27, 29, 31, 32, 34, 37, 39]
+                base_prices = [60, 60, 100, 100, 120, 140, 140, 160, 180, 180, 200, 220, 220, 240, 260, 260, 280, 300, 300, 320, 350, 400]
+                base_rents = [2, 4, 6, 6, 8, 10, 10, 12, 14, 14, 16, 18, 18, 20, 22, 22, 24, 26, 26, 28, 35, 50]
 
-    def __init__(self, tile_w: int = TILE_W, tile_h: int = TILE_H):
-        self.tw, self.th = tile_w, tile_h
-        self.W = GRID * self.tw + 1
-        self.H = GRID * self.th + 1
+                if i in property_positions:
+                    idx = property_positions.index(i)
+                    tiles.append({"name": property_names[idx], "type": "property", "owner": None, "price": base_prices[idx], "rent": base_rents[idx]})
+                else:
+                    tiles.append({"name": f"Tile {i}", "type": "special", "owner": None, "price": 0, "rent": 0})
+        return tiles
 
-    def render_ascii(self, state: Dict) -> str:
-        """
-        state:
-          players:   [{nick:str, pos:int}, ...]
-          ownership: {tileIndex:int -> ownerNick:str}
-          buildings: {tileIndex:int -> {houses:int, hotel:bool}}
-        """
-        canvas: List[List[str]] = [[" "] * self.W for _ in range(self.H)]
+    def get_tile(self, pos: int) -> Dict:
+        if 0 <= pos < len(self.tiles):
+            return self.tiles[pos]
+        return {"name": "Invalid", "type": "invalid", "owner": None, "price": 0, "rent": 0}
 
-        def draw_cell(cx: int, cy: int, lines: List[str]):
-            x0, y0 = cx * self.tw, cy * self.th
-            # khung ô: +---+ |   |
-            for i in range(self.tw + 1):
-                ch = "-" if 0 < i < self.tw else "+"
-                canvas[y0][x0 + i] = ch
-                canvas[y0 + self.th][x0 + i] = ch
-            for j in range(self.th + 1):
-                ch = "|" if 0 < j < self.th else "+"
-                canvas[y0 + j][x0] = ch
-                canvas[y0 + j][x0 + self.tw] = ch
+    def fit_text(self, text, width):
+        if len(text) > width:
+            return text[:width-2] + ".."
+        return text.center(width)
 
-            inner_w = self.tw - 1
-            for k, raw in enumerate(lines[:4]):  # hiển thị tối đa 4 dòng
-                text = _pad_center(raw, inner_w)
-                for i, c in enumerate(text):
-                    canvas[y0 + 1 + k][x0 + 1 + i] = c
+    def create_tile_lines(self, tile, pos, players):
+        colors = {
+            "property": "\033[42m", "railroad": "\033[44m", "utility": "\033[46m",
+            "tax": "\033[41m", "chance": "\033[43m", "community_chest": "\033[45m",
+            "go": "\033[47m", "jail": "\033[47m", "free_parking": "\033[47m",
+            "go_to_jail": "\033[47m", "special": "\033[47m"
+        }
+        color = colors.get(tile["type"], "\033[47m")
+        reset = "\033[0m"
 
-        # gom người chơi theo tile
-        players_at: Dict[int, List[str]] = {}
-        for p in state.get("players", []):
-            players_at.setdefault(p["pos"], []).append(p["nick"])
+        occupants = [name[0].upper() for name, p in players.items() if p == pos]
+        player_str = "".join(occupants) if occupants else " "
 
-        for y in range(GRID):
-            for x in range(GRID):
-                idx = _tile_index_at(x, y)
-                if idx < 0:
-                    continue
-                name = TILES[idx] if idx < len(TILES) else f"T{idx}"
-                owner = state.get("ownership", {}).get(idx, "")
-                binfo = state.get("buildings", {}).get(idx, {"houses": 0, "hotel": False})
-                builds = "HOTEL" if binfo.get("hotel") else ("H" * min(4, binfo.get("houses", 0)))
-                ppl = "".join(players_at.get(idx, []))[:8]
+        name = self.fit_text(tile["name"], TILE_WIDTH-2)
+        type_display = tile['type'][:TILE_WIDTH-2] if tile['type'] != 'community_chest' else "C.Chest"
+        price_str = f"${tile['price']}" if tile.get('price', 0) > 0 else ""
 
-                lines = [name, f"Own:{owner}" if owner else "", builds, ppl]
-                draw_cell(x, y, lines)
+        lines = []
+        lines.append(color + "┌" + "─"*(TILE_WIDTH-2) + "┐" + reset)
+        lines.append(color + f"│{str(pos).center(TILE_WIDTH-2)}│" + reset)
+        lines.append(color + f"│{name}│" + reset)
+        lines.append(color + f"│{type_display.center(TILE_WIDTH-2)}│" + reset)
+        lines.append(color + f"│{price_str.center(TILE_WIDTH-2)}│" + reset)
+        lines.append(color + f"│[{player_str}]".ljust(TILE_WIDTH-1) + "│" + reset)
+        lines.append(color + "└" + "─"*(TILE_WIDTH-2) + "┘" + reset)
+        return lines
 
-        return "\n".join("".join(row) for row in canvas)
-def main () :
-    demo_state = {
-        # Danh sách người chơi với vị trí hiện tại
-        # 0 = GO (góc dưới-phải)
-        # 10 = Jail / Just Visiting (góc dưới-trái)
-        # 20 = Free Parking (góc trên-trái)
-        # 30 = Go To Jail (góc trên-phải)
-        "players": [
-            {"nick": "A", "pos": 0},  # A đứng ở GO (góc dưới-phải)
-            {"nick": "B", "pos": 10},  # B đứng ở Jail (góc dưới-trái)
-            {"nick": "C", "pos": 24},  # C đứng ở Illinois Ave (cạnh trên, giữa)
-            {"nick": "D", "pos": 39},  # D đứng ở Boardwalk (ngay trước GO, cạnh phải)
-        ],
+    def render_board(self, players: Dict[str, int] = None):
+        if players is None:
+            players = {}
 
-        # Sở hữu đất: tileIndex -> tên player
-        "ownership": {
-            1: "A",  # Mediterranean Ave thuộc A
-            3: "B",  # Baltic Ave thuộc B
-            6: "C",  # Oriental Ave thuộc C
-            8: "D",  # Vermont Ave thuộc D
-            39: "A"  # Boardwalk thuộc A
-        },
+        # Cạnh dưới 0-10
+        bottom_row = [self.create_tile_lines(self.tiles[i], i, players) for i in range(0,11)]
+        # Cạnh trái 11-19
+        left_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(11,20)]
+        # Cạnh trên 20-30 ngược
+        top_row = [self.create_tile_lines(self.tiles[i], i, players) for i in range(20,31)][::-1]
+        # Cạnh phải 31-39
+        right_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(31,40)]
 
-        # Thông tin nhà/khách sạn: tileIndex -> {houses: n, hotel: bool}
-        "buildings": {
-            1: {"houses": 2, "hotel": False},  # Mediterranean có 2 nhà
-            39: {"houses": 0, "hotel": True},  # Boardwalk có 1 khách sạn
-        },
-    }
-    # Tạo board và in ra bản đồ ASCII dựa vào demo_state
-    board = Board()
-    print(board.render_ascii(demo_state))
+        # Vẽ cạnh trên
+        for line_num in range(TILE_HEIGHT):
+            line = ""
+            for tile in top_row:
+                line += tile[line_num]
+            print(line)
 
+        # Vẽ phần giữa (cạnh trái + khoảng trống + cạnh phải)
+        for i in range(len(left_col)):
+            for ln in range(TILE_HEIGHT):
+                left_line = left_col[i][ln]
+                right_line = right_col[i][ln]
+                middle = " " * (TILE_WIDTH*9)  # khoảng trống
+                print(left_line + middle + right_line)
+
+        # Vẽ cạnh dưới
+        for line_num in range(TILE_HEIGHT):
+            line = ""
+            for tile in bottom_row:
+                line += tile[line_num]
+            print(line)
+
+        # Chú thích
+        print("\nLEGEND:")
+        print("🟩 Property  🟦 Railroad  🟨 Chance  🟪 C.Chest  🟥 Tax  ⬜️ Special")
+        if players:
+            player_list = [f"{name}[{name[0]}]" for name in players.keys()]
+            print(f"PLAYERS: {', '.join(player_list)}")
+
+    def display_tile_info(self, position: int):
+        tile = self.get_tile(position)
+        print(f"\n📍 Tile {position}: {tile['name']}")
+        print(f"   Type: {tile['type']}")
+        if tile['type'] in ['property', 'railroad', 'utility']:
+            print(f"   Price: ${tile.get('price',0)}")
+            print(f"   Rent: ${tile.get('rent',0)}")
+            owner = tile.get('owner')
+            print(f"   Owner: {owner if owner else 'Bank'}")
+        elif tile['type'] == 'tax':
+            print(f"   Tax Amount: ${tile.get('amount',0)}")
+
+# Demo sử dụng
 if __name__ == "__main__":
-
-     main()
+    board = Board()
+    demo_players = {"Player1":0, "Player2":5, "Player3":15, "Player4":25}
+    board.render_board(demo_players)
+    board.display_tile_info(1)
+    board.display_tile_info(5)

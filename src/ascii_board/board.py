@@ -12,7 +12,7 @@ NOTE:
 """
 
 from typing import Dict, List
-from .tiles import TILES
+from src.ascii_board.tiles import TILES
 
 GRID = 11               # 11x11 cells (chỉ dùng viền ngoài)
 TILE_W, TILE_H = 11, 5  # kích thước ASCII 1 ô
