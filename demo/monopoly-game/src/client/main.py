@@ -29,10 +29,23 @@ import asyncio
 from .network import Client   # import Client đã viết ở client.py
 
 async def main():
+<<<<<<< Updated upstream
     # Tạo client mới, có thể chỉnh name cho dễ phân biệt
     IP = str(input("Enter Ip server: "))
     Port = str(input("Enter Port server: "))
     Name = str(input("Enter Nick Name: "))
+=======
+    # Lấy địa chỉ server từ command line hoặc dùng mặc định
+    server_host = sys.argv[1] if len(sys.argv) > 1 else "localhost"
+    server_port = sys.argv[2] if len(sys.argv) > 2 else "8765"
+    # -> nhận room ip tên
+    uri = f"ws://{server_host}:{server_port}"
+    
+    print(f"🎮 Kết nối đến server: {uri}")
+    
+    client = MonopolyClient(uri)
+    
+>>>>>>> Stashed changes
     try:
         client = Client(uri=f"ws://{IP}:{Port}", name=f"{Name}")
         await client.run()

@@ -9,6 +9,7 @@ JAIL_POSITION = 10
 class Player:
     def __init__(self, name="", position=0, money=1500):
         self.name = name
+<<<<<<< Updated upstream
         # position should be an int in [0, 39]
         self.position = int(position) if isinstance(position, int) or str(position).isdigit() else 0
         self.money = money
@@ -108,6 +109,64 @@ class Player:
         if self.money >= amount:
             self.money -= amount
             print(f"{self.name} đã trả {amount}$ tiền thuế.")
+=======
+        self.balance = 1500
+        self.position = 0
+        self.properties: Dict[str, dict] = {}
+        self.is_bankrupt = False
+        self.jail_turns = 0
+        self.has_get_out_of_jail_card = 0
+
+    def move(self, steps: int):
+        old_pos = self.position
+        self.position = (self.position + steps) % 40
+        
+        # Nhận $200 khi đi qua GO
+        if old_pos + steps >= 40:
+            self.balance  += 200
+            print(f"💰 {self.name} passed GO and collected $200")
+
+    def buy_property(self, property_name: str, price: int):
+        """Mua tài sản"""
+        if self.balance  >= price:
+            self.balance  -= price
+            self.properties[property_name] = {
+                "name": property_name,
+                "price": price,
+                "houses": 0,
+                "hotel": False,
+                "mortgaged": False
+            }
+            return True
+        return False
+
+    def pay_rent(self, owner, amount: int) -> bool:
+        """Trả tiền thuê, trả về True nếu thành công, False nếu phá sản"""
+        if self.balance  >= amount:
+            self.balance  -= amount
+            owner.balance  += amount
+            print(f"💸 {self.name} paid ${amount} rent to {owner.name}")
+            return True
+        else:
+            # Phá sản
+            self.is_bankrupt = True
+            owner.balance  += self.balance
+            self.balance  = 0
+            print(f"💀 {self.name} went bankrupt! Properties transferred to {owner.name}")
+            
+            # Chuyển tất cả tài sản
+            for prop_name, prop in self.properties.items():
+                owner.properties[prop_name] = prop
+            self.properties.clear()
+            
+            return False
+
+    def pay_tax(self, amount: int):
+        """Trả thuế"""
+        if self.balance  >= amount:
+            self.balance  -= amount
+            print(f"🏛️ {self.name} paid ${amount} tax")
+>>>>>>> Stashed changes
         else:
             print(f"Không đủ tiền để trả {amount}$ thuế.")
     def draw_lucky_card(self):
@@ -183,10 +242,35 @@ class Player:
             del self.properties[property_to_mortgage]
         if self.money < debt_amount and not self.properties:
             self.is_bankrupt = True
+<<<<<<< Updated upstream
             print(f"{self.name} không thể trả nợ và đã phá sản.")
     # ----- Helper methods -----
     def __str__(self):
         return f"{self.name} at {self.position} with ${self.money}"
+=======
+            self.balance  = 0
+            print(f"💀 {self.name} went bankrupt from tax!")
+
+    def go_to_jail(self):
+        """Đi vào tù"""
+        self.position = 10  # Vị trí Jail
+        self.jail_turns = 3
+        print(f"🔒 {self.name} went to jail!")
+
+    def get_out_of_jail(self):
+        """Ra tù"""
+        if self.jail_turns > 0:
+            self.jail_turns = 0
+            print(f"🔓 {self.name} got out of jail!")
+
+    def add_balance (self, amount: int):
+        """Thêm tiền"""
+        self.balance  += amount
+        print(f"💰 {self.name} received ${amount}")
+
+    def __str__(self):
+        return f"Player({self.name}, ${self.balance }, pos:{self.position})"
+>>>>>>> Stashed changes
 
     def release_from_jail(self):
         pass

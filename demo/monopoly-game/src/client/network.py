@@ -15,6 +15,7 @@ class Client:
         self.ui = ClientUI()   # Khởi tạo UI
 
     async def run(self):
+<<<<<<< Updated upstream
         """
            Attempts to connect to a WebSocket server and prints a log message.
 
@@ -64,6 +65,13 @@ class Client:
         """Gửi lệnh Monopoly từ command_dic."""
         if key not in command_dic:
             print(f"[ERROR] Command {key} not found in command_dic")
+=======
+        """Chạy client"""
+        self.ui.display_welcome()
+        # hiển thị thêm bàn cờ
+        
+        if not await self.connect():
+>>>>>>> Stashed changes
             return
 
         # Copy object để không ảnh hưởng đến bản gốc
@@ -110,8 +118,113 @@ class Client:
             elif action == "ERROR":
                 print(f"❌ Error: {data.get('msg')}")
 
+<<<<<<< Updated upstream
             # Prompt lại cho user
             print(f"{self.name}> ", end="", flush=True)
+=======
+        except Exception as e:
+            self.ui.display_message(f"❌ ❌ Lỗi xử lý tin nhắn: {e} | raw_data: {raw_data}", "error")
+
+
+    async def send_input(self):
+        """Gửi input từ người dùng đến server"""
+        while self.connected:
+            try:
+                # Sử dụng UI để lấy input
+                user_input = await self.ui.get_input_async()
+                
+                if not user_input:
+                    continue
+                    
+                # Parse command
+                message, error = parse_cmd(user_input)
+                
+                if error:
+                    self.ui.display_message(error, "error")
+                    continue
+                    
+                if not message:
+                    continue
+
+                # Gửi message đến server
+                await self.send_message(message)
+                
+            except KeyboardInterrupt:
+                self.ui.display_message("👋 Thoát game...", "info")
+                break
+            except Exception as e:
+                self.ui.display_message(f"❌ Lỗi gửi tin nhắn: {e}", "error")
+
+    async def send_message(self, message: dict):
+        """Gửi message đến server"""
+        if not self.websocket:
+            self.ui.display_message("❌ Chưa kết nối đến server", "error")
+            return
+            
+        try:
+            # Chuyển đổi message thành packet theo protocol của server
+            cmd = message.get(C.K_TYPE, "").lower()
+            data = {k: v for k, v in message.items() if k != C.K_TYPE}
+            
+            packet = {
+                "cmd": cmd,
+                "data": data
+            }
+            
+            await self.websocket.send(json.dumps(packet))
+            
+        except Exception as e:
+            self.ui.display_message(f"❌ Lỗi gửi tin nhắn: {e}", "error")
+            #--------------------------------- các command player ---------------
+                # nên chuyển thành file khác
+    async def join_game(self, name: str):
+        """Tham gia game với tên"""
+        self.player_name = name
+        self.ui.set_player_name(name)
+        await self.send_message(C.m_join(name))
+
+    async def send_chat(self, message: str):
+        """Gửi tin nhắn chat"""
+        await self.send_message(C.m_chat(message))
+
+    async def roll_dice(self):
+        """Gieo xúc xắc"""
+        await self.send_message(C.m_roll())
+
+    async def buy_property(self):
+        """Mua property"""
+        await self.send_message(C.m_buy())
+
+    async def end_turn(self):
+        """Kết thúc lượt"""
+        await self.send_message(C.m_end_turn())
+
+    async def request_state(self):
+        """Yêu cầu trạng thái game"""
+        await self.send_message(C.m_state_ping())
+
+    async def exit_game(self):
+        """Thoát game"""
+        await self.send_message(C.m_exit())
+        self.connected = False
+
+
+async def main():
+    """Hàm main để chạy client"""
+    import sys
+    
+    # Lấy URI từ command line hoặc dùng mặc định
+    uri = sys.argv[1] if len(sys.argv) > 1 else "ws://localhost:8765"
+    
+    client = MonopolyClient(uri)
+    
+    try:
+        await client.run()
+    except KeyboardInterrupt:
+        print("\n👋 Tạm biệt!")
+    except Exception as e:
+        print(f"❌ Lỗi: {e}")
+>>>>>>> Stashed changes
 
 
 if __name__ == "__main__":
