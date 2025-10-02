@@ -14,3 +14,6 @@ def format_msg(msg, sender="SYSTEM"):
 def money_format(amount: int):
     """Định dạng số tiền hiển thị"""
     return f"${amount:,}"
+
+# Define Chance cards
+

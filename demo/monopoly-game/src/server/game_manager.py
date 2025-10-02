@@ -6,6 +6,7 @@ from .board import Board
 from src.shared import constants as C
 from src.shared import utils as U
 
+
 MAX_PLAYERS = 4
 GAME_WAITING = "WAITING"
 GAME_PLAYING = "PLAYING"
@@ -21,6 +22,7 @@ class GameManager:
         self.game_state = GAME_WAITING
         self.broadcast_callback: Optional[Callable] = None
         self.player_order: List[str] = []
+        self.material ={"Chance deck" : C.community_chest_cards[:],"Community deck" : C.chance_cards[:]}
 
     def set_broadcast_callback(self, callback: Callable):
         self.broadcast_callback = callback
@@ -131,9 +133,18 @@ class GameManager:
         
         print(f"🎲 {player_name} rolled {dice['dice']} = {steps}")
         print(f"📍 Moved from {old_position} to {player.position}: {tile['name']}")
-        
-        result = self.handle_tile(player, tile)
-        
+        if tile["type"] in ["chance", "community_chest"]:
+            if tile["type"] == "chance":
+                card = C.draw_card(self.material["Chance deck"],False)
+                print(card)
+            else:  # community_chest
+                card = C.draw_card(self.material["Community deck"],False)
+                print(card)
+
+            result = self.handler_card_content(player, card)
+        else:
+            result = self.handle_tile(player, tile)
+
         self.display_game_state()
         asyncio.create_task(self.broadcast_state())
         
@@ -192,8 +203,105 @@ class GameManager:
             
         elif tile_type == "go":
             return {"action": "passed_go", "amount": 200}
-            
+
+
         return {"action": "landed", "tile": tile["name"]}
+
+    def handler_card_content(self, player: Player, card: str):
+        """
+        Xử lý nội dung lá bài được rút ra.
+        Trả về dict action + thông tin chi tiết để log/game engine xử lý.
+        """
+
+        # Advance to Go
+        if card.startswith("Advance to Go"):
+            player.position = 0
+            player.balance  += 200
+            return {"action": "move", "to": 0, "amount": 200}
+
+        # Bank error in your favor
+        elif card.startswith("Bank error in your favor"):
+            player.balance  += 200
+            return {"action": "balance ", "amount": 200}
+
+        # Doctor’s fees
+        elif card.startswith("Doctor’s fees"):
+            player.balance  -= 50
+            return {"action": "balance ", "amount": -50}
+
+        # Get out of Jail Free
+        elif card.startswith("Get Out of Jail Free"):
+            player.has_get_out_of_jail_card += 1
+            return {"action": "jail_free"}
+
+        # Go to Jail
+        elif "Go to Jail" in card:
+            player.position = "jail"
+            player.in_jail = True
+            return {"action": "jail"}
+
+        # Go Back 3 Spaces
+        elif card.startswith("Go Back 3 Spaces"):
+            player.position -= 3
+            return {"action": "move_back", "steps": 3}
+
+        # Pay poor tax
+        elif card.startswith("Pay poor tax"):
+            player.balance -= 15
+            return {"action": "balance ", "amount": -15}
+
+        # Birthday / Opera Night → collect from others
+        elif card.startswith("It is your birthday"):
+            return {"action": "collect_from_others", "amount": 10}
+
+        elif card.startswith("Grand Opera Night"):
+            return {"action": "collect_from_others", "amount": 50}
+
+        # Property repairs
+        elif card.startswith("You are assessed for street repairs"):
+            return {"action": "repairs", "house": 40, "hotel": 115}
+
+        elif card.startswith("Make general repairs on all your property"):
+            return {"action": "repairs", "house": 25, "hotel": 100}
+
+        # Movement to named places
+        elif card.startswith("Advance to Illinois Ave."):
+            return {"action": "move", "to": "Illinois Ave"}
+
+        elif card.startswith("Advance to St. Charles Place"):
+            return {"action": "move", "to": "St. Charles Place"}
+
+        elif card.startswith("Take a trip to Reading Railroad"):
+            return {"action": "move", "to": "Reading Railroad"}
+
+        elif card.startswith("Take a walk on the Boardwalk"):
+            return {"action": "move", "to": "Boardwalk"}
+
+        elif card.startswith("Advance token to nearest Utility"):
+            return {"action": "nearest", "target": "utility"}
+
+        elif card.startswith("Advance token to nearest Railroad"):
+            return {"action": "nearest", "target": "railroad"}
+
+        # Generic balance  events
+        elif "Collect" in card:
+            import re
+            m = re.search(r"Collect \$([0-9]+)", card)
+            if m:
+                amount = int(m.group(1))
+                player.balance += amount
+                return {"action": "balance ", "amount": amount}
+
+        elif "Pay" in card:
+            import re
+            m = re.search(r"Pay \$([0-9]+)", card)
+            if m:
+                amount = int(m.group(1))
+                player.balance -= amount
+                return {"action": "balance ", "amount": -amount}
+
+        # fallback
+        return {"action": "none", "card": card}
 
     async def broadcast_state(self):
         if self.broadcast_callback:
@@ -207,7 +315,7 @@ class GameManager:
             "players": [
                 {
                     "name": p.name, 
-                    "money": p.money, 
+                    "balance ": p.balance ,
                     "position": p.position,
                     "properties": list(p.properties.keys())
                 }
@@ -230,7 +338,7 @@ class GameManager:
         for i, (name, player) in enumerate(self.players.items()):
             turn_indicator = " 🎲" if i == self.current_turn and self.game_state == GAME_PLAYING else ""
             print(f"  {i+1}. {name}{turn_indicator}")
-            print(f"     💰 ${player.money} | 📍 Vị trí: {player.position}")
+            print(f"     💰 ${player.balance } | 📍 Vị trí: {player.position}")
             if player.properties:
                 print(f"     🏠 Properties: {', '.join(player.properties.keys())}")
             print()

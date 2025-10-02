@@ -127,7 +127,7 @@ def test_bankruptcy():
     player = gm.players["PoorPlayer"]
     player.money = 10  # Rất ít tiền
     
-    print(f"✅ PoorPlayer starting money: ${player.money}")
+    print(f"✅ PoorPlayer starting money: ${player.balance}")
     
     # Tạo player khác để trả tiền thuê
     ws2 = MockWebSocket("RichPlayer")
@@ -138,19 +138,19 @@ def test_bankruptcy():
     rent_amount = 50  # Nhiều hơn số tiền có
     
     print(f"\n💸 PoorPlayer must pay ${rent_amount} rent")
-    print(f"   Current money: ${player.money}")
+    print(f"   Current balance : ${player.balance }")
     
     # Test bankruptcy
-    if player.money < rent_amount:
+    if player.balance  < rent_amount:
         print("⚠️  PoorPlayer cannot afford rent!")
         player.pay_rent(rich_player, rent_amount)
         
         if player.is_bankrupt:
             print("💀 PoorPlayer is BANKRUPT!")
-            print(f"   Final money: ${player.money}")
+            print(f"   Final balance : ${player.balance }")
             print(f"   Properties: {list(player.properties.keys())}")
         else:
-            print(f"✅ PoorPlayer survived with ${player.money}")
+            print(f"✅ PoorPlayer survived with ${player.balance }")
     
     print("\n✅ Test 3 completed successfully!")
 
@@ -203,7 +203,7 @@ def test_integration():
     print("=" * 30)
     for name, player in gm.players.items():
         print(f"{name}:")
-        print(f"  💰 Money: ${player.money}")
+        print(f"  💰 Money: ${player.balance }")
         print(f"  📍 Position: {player.position}")
         print(f"  🏠 Properties: {len(player.properties)}")
         if player.properties:

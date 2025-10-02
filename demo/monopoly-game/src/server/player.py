@@ -3,12 +3,12 @@ from typing import Dict
 class Player:
     def __init__(self, name: str):
         self.name = name
-        self.money = 1500
+        self.balance = 1500
         self.position = 0
         self.properties: Dict[str, dict] = {}
         self.is_bankrupt = False
         self.jail_turns = 0
-        self.has_get_out_of_jail_card = False
+        self.has_get_out_of_jail_card = 0
 
     def move(self, steps: int):
         old_pos = self.position
@@ -16,13 +16,13 @@ class Player:
         
         # Nhận $200 khi đi qua GO
         if old_pos + steps >= 40:
-            self.money += 200
+            self.balance  += 200
             print(f"💰 {self.name} passed GO and collected $200")
 
     def buy_property(self, property_name: str, price: int):
         """Mua tài sản"""
-        if self.money >= price:
-            self.money -= price
+        if self.balance  >= price:
+            self.balance  -= price
             self.properties[property_name] = {
                 "name": property_name,
                 "price": price,
@@ -35,16 +35,16 @@ class Player:
 
     def pay_rent(self, owner, amount: int) -> bool:
         """Trả tiền thuê, trả về True nếu thành công, False nếu phá sản"""
-        if self.money >= amount:
-            self.money -= amount
-            owner.money += amount
+        if self.balance  >= amount:
+            self.balance  -= amount
+            owner.balance  += amount
             print(f"💸 {self.name} paid ${amount} rent to {owner.name}")
             return True
         else:
             # Phá sản
             self.is_bankrupt = True
-            owner.money += self.money
-            self.money = 0
+            owner.balance  += self.balance
+            self.balance  = 0
             print(f"💀 {self.name} went bankrupt! Properties transferred to {owner.name}")
             
             # Chuyển tất cả tài sản
@@ -56,12 +56,12 @@ class Player:
 
     def pay_tax(self, amount: int):
         """Trả thuế"""
-        if self.money >= amount:
-            self.money -= amount
+        if self.balance  >= amount:
+            self.balance  -= amount
             print(f"🏛️ {self.name} paid ${amount} tax")
         else:
             self.is_bankrupt = True
-            self.money = 0
+            self.balance  = 0
             print(f"💀 {self.name} went bankrupt from tax!")
 
     def go_to_jail(self):
@@ -76,13 +76,13 @@ class Player:
             self.jail_turns = 0
             print(f"🔓 {self.name} got out of jail!")
 
-    def add_money(self, amount: int):
+    def add_balance (self, amount: int):
         """Thêm tiền"""
-        self.money += amount
+        self.balance  += amount
         print(f"💰 {self.name} received ${amount}")
 
     def __str__(self):
-        return f"Player({self.name}, ${self.money}, pos:{self.position})"
+        return f"Player({self.name}, ${self.balance }, pos:{self.position})"
 
     def __repr__(self):
         return self.__str__()

@@ -5,7 +5,7 @@ UI hiển thị board và trạng thái game trong console - Phiên bản cải 
 import os
 import asyncio
 from typing import Dict, List, Optional
-from src.shared import constants as C
+from ..shared import constants as C
 
 class MonopolyUI:
     def __init__(self, client=None):

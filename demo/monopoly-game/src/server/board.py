@@ -93,16 +93,24 @@ class Board:
     def render_board(self, players: Dict[str, int] = None):
         if players is None:
             players = {}
+        #
+        # # Cạnh dưới 0-10
+        # bottom_row = [self.create_tile_lines(self.tiles[i], i, players) for i in range(0,11)]
+        # # Cạnh trái 11-19
+        # left_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(11,20)]
+        # # Cạnh trên 20-30 ngược
+        # top_row = [self.create_tile_lines(self.tiles[i], i, players) for i in range(20,31)][::-1]
+        # # Cạnh phải 31-39
+        # right_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(31,40)]
 
         # Cạnh dưới 0-10
         bottom_row = [self.create_tile_lines(self.tiles[i], i, players) for i in range(0,11)]
         # Cạnh trái 11-19
-        left_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(11,20)]
+        left_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(31,40)]
         # Cạnh trên 20-30 ngược
         top_row = [self.create_tile_lines(self.tiles[i], i, players) for i in range(20,31)][::-1]
         # Cạnh phải 31-39
-        right_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(31,40)]
-
+        right_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(11,20)][::-1]
         # Vẽ cạnh trên
         for line_num in range(TILE_HEIGHT):
             line = ""

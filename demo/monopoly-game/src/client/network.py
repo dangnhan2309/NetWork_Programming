@@ -1,8 +1,8 @@
 import asyncio
 import json
 import websockets
-from src.shared import constants as C
-from src.shared.protocol import Protocol
+from ..shared import constants as C
+from ..shared.protocol import Protocol
 from .commands import parse_cmd
 from .ui import MonopolyUI
 
@@ -28,6 +28,7 @@ class MonopolyClient:
     async def run(self):
         """Chạy client"""
         self.ui.display_welcome()
+        # hiển thị thêm bàn cờ
         
         if not await self.connect():
             return
@@ -160,7 +161,8 @@ class MonopolyClient:
             
         except Exception as e:
             self.ui.display_message(f"❌ Lỗi gửi tin nhắn: {e}", "error")
-
+            #--------------------------------- các command player ---------------
+                # nên chuyển thành file khác
     async def join_game(self, name: str):
         """Tham gia game với tên"""
         self.player_name = name
