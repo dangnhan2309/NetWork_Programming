@@ -1,34 +1,21 @@
- 
+import asyncio
+from .network import MonopolyClient
 
-
-# src/client/main.py
-import threading
-import time
-from .network import ClientNetwork
-
-def on_msg(pkt):
-    t = pkt.get('type')
-    if t == 'CHAT':
-        print(f"[{pkt.get('name')}] {pkt.get('message')}")
-
-def main():
-    name = input("Your name: ").strip() or "anon"
-    client = ClientNetwork(host='127.0.0.1', port=12345, on_message=on_msg)
-    client.connect()
-    client.send({'type':'JOIN', 'name': name})
+async def main():
+    import sys
+    
+    # Lấy URI từ command line hoặc dùng mặc định
+    uri = sys.argv[1] if len(sys.argv) > 1 else "ws://localhost:12345"
+    
+    client = MonopolyClient(uri)
+    
     try:
-        while True:
-            line = input()
-            if line.strip().lower() in ('/exit', '/quit'):
-                client.send({'type':'EXIT', 'name': name})
-                break
-            if not line:
-                continue
-            client.send({'type':'CHAT', 'message': line})
+        await client.run()
     except KeyboardInterrupt:
-        client.send({'type':'EXIT', 'name': name})
-    finally:
-        client.close()
+        print("\n👋 Tạm biệt!")
+    except Exception as e:
+        print(f"❌ Lỗi: {e}")
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    import random
+    asyncio.run(main())

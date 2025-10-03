@@ -1,6 +1,4 @@
-<<<<<<< Updated upstream
- 
-=======
+
 """
 Board class cho Monopoly game
 """
@@ -140,4 +138,4 @@ class Board:
         if players:
             player_list = [f"{name}[{name[0]}]" for name in players.keys()]
             print(f"👥 NGƯỜI CHƠI: {', '.join(player_list)}")
->>>>>>> Stashed changes
+

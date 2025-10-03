@@ -1,6 +1,4 @@
-<<<<<<< Updated upstream
- 
-=======
+
 """
 UI hiển thị board và trạng thái game trong console - Phiên bản cải tiến
 """
@@ -333,4 +331,4 @@ class MonopolyUI:
         print("/exit         - Thoát game")
         print("-" * 40)
         print("💡 Lưu ý: Bạn chỉ có thể /roll một lần mỗi lượt")
->>>>>>> Stashed changes
+

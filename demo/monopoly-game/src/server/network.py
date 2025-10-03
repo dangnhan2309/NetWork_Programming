@@ -1,181 +1,261 @@
- 
-# src/server/network.py
-import socket
-import threading
-from typing import Callable, Dict, Tuple, List
-from ..shared.protocol import encode, decode
+"""
+WebSocket Server Network Handler
+"""
+
+import asyncio
+import websockets
+import json
+import uuid
+from typing import Dict
+from .room_manager import RoomManager
+from ..shared.constants import *
+
 
 class ServerNetwork:
-    def __init__(self, host='0.0.0.0', port=12345):
+    def __init__(self, host="0.0.0.0", port=12345):
         self.host = host
         self.port = port
-        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.clients: Dict[socket.socket, Tuple[str, threading.Thread]] = {}
-        self.lock = threading.Lock()
-        self.running = False
+        self.room_manager = RoomManager()
+        self.server = None
 
-<<<<<<< Updated upstream
-    def start(self):
-        self.sock.bind((self.host, self.port))
-        self.sock.listen(100)
-        self.running = True
-        print(f"[SERVER] Listening on {self.host}:{self.port}")
-        accept_thread = threading.Thread(target=self._accept_loop, daemon=True)
-        accept_thread.start()
-=======
+    async def start(self):
+        """Khởi động server"""
+        self.server = await websockets.serve(self.handler, self.host, self.port)
+        print("🎮 MONOPOLY SERVER - STATE MACHINE EDITION")
+        print(f"📍 Listening on ws://{self.host}:{self.port}")
+        print(f"👥 Players: {MIN_PLAYERS}-{MAX_PLAYERS} per room")
+        print("="*50)
+        print("Server is running... Press Ctrl+C to stop")
+        print("="*50)
+        await self.server.wait_closed()
+
     async def handler(self, websocket):
-        """Xử lý kết nối từ client"""
-        player_name = None
+        """Xử lý kết nối client"""
+        player_info = {"id": None, "name": None, "room_id": None}
         
         try:
+            # Gửi welcome message khi client kết nối
+            await websocket.send(json.dumps({
+                "type": TYPE_INFO,
+                "message": "✅ Connected to Monopoly Server!"
+            }))
+            
             async for message in websocket:
                 try:
                     data = json.loads(message)
-                    cmd = data.get("cmd")
-                    payload = data.get("data", {})
+                    await self.handle_client_message(websocket, data, player_info)
                     
-                    if cmd == "join":
-                        name = payload.get("name", "Unknown")
-                        if self.game_manager.add_player(name, websocket):
-                            player_name = name
-                            self.clients[websocket] = name
-                            await self.send(websocket, "info", f"Welcome {name}! Waiting for game to start...")
-                            await self.send(websocket, "game_state", self.game_manager.get_game_state())
-                        else:
-                            await self.send(websocket, "error", "Cannot join game (game full or name taken)")
-                            
-                    elif cmd == "roll":
-                        if player_name:
-                            result = self.game_manager.handle_player_action(player_name, "ROLL")
-                            await self.send(websocket, "action_result", result)
-                        else:
-                            await self.send(websocket, "error", "You must join game first")
-                            
-                    elif cmd == "buy":
-                        if player_name:
-                            result = self.game_manager.handle_player_action(player_name, "BUY")
-                            await self.send(websocket, "action_result", result)
-                        else:
-                            await self.send(websocket, "error", "You must join game first")
-                            
-                    elif cmd == "end_turn":
-                        if player_name:
-                            result = self.game_manager.handle_player_action(player_name, "END_TURN")
-                            await self.send(websocket, "action_result", result)
-                        else:
-                            await self.send(websocket, "error", "You must join game first")
-                            
-                    elif cmd == "state":  # THÊM XỬ LÝ LỆNH STATE
-                        await self.send(websocket, "game_state", self.game_manager.get_game_state())
-                        
-                    elif cmd == "help":
-                        help_text = (
-                            "📖 DANH SÁCH LỆNH:\n"
-                            "/join <tên>    - Tham gia game\n"
-                            "/roll          - Đổ xúc xắc\n" 
-                            "/buy           - Mua đất\n"
-                            "/end_turn      - Kết thúc lượt\n"
-                            "/state         - Xem trạng thái game\n"
-                            "/help          - Xem trợ giúp\n"
-                            "/quit          - Thoát game\n"
-                        )
-                        await self.send(websocket, "info", help_text)
-                        
-                    elif cmd == "quit":
-                        break
-                        
-                    else:
-                        await self.send(websocket, "error", f"Unknown command: {cmd}")
-                        
                 except json.JSONDecodeError:
-                    await self.send(websocket, "error", "Invalid JSON format")
+                    await self.send_error(websocket, "Invalid JSON format")
                 except Exception as e:
-                    await self.send(websocket, "error", f"Server error: {str(e)}")
-                    
+                    await self.send_error(websocket, f"Server error: {str(e)}")
+
         except websockets.exceptions.ConnectionClosed:
-            print(f"🔌 Connection closed for {player_name}")
+            print(f"❌ Client disconnected: {player_info['name'] or 'Unknown'}")
         finally:
-            # Cleanup khi client disconnect
-            if player_name:
-                self.game_manager.remove_player(player_name)
-            if websocket in self.clients:
-                del self.clients[websocket]
-            await self.broadcast_state()
->>>>>>> Stashed changes
+            await self.handle_disconnect(websocket, player_info)
 
-    def _accept_loop(self):
-        while self.running:
-            try:
-                conn, addr = self.sock.accept()
-                print(f"[SERVER] Connection from {addr}")
-                t = threading.Thread(target=self._client_handler, args=(conn,), daemon=True)
-                with self.lock:
-                    self.clients[conn] = ("<unknown>", t)
-                t.start()
-            except Exception as e:
-                print("[SERVER] Accept error:", e)
+    async def handle_client_message(self, websocket, data: dict, player_info: dict):
+        """Xử lý message từ client"""
+        action = data.get("action")
+        
+        if action == ACTION_CREATE_ROOM:
+            await self.handle_create_room(websocket, data, player_info)
+            
+        elif action == ACTION_JOIN_RANDOM:
+            await self.handle_join_random(websocket, data, player_info)
+            
+        elif action == ACTION_ROLL_DICE:
+            await self.handle_game_action(websocket, data, player_info)
+            
+        elif action == ACTION_BUY:
+            await self.handle_buy_action(websocket, data, player_info)
+            
+        elif action == ACTION_END_TURN:
+            await self.handle_end_turn(websocket, data, player_info)
+            
+        elif action == ACTION_CHAT:
+            await self.handle_chat(websocket, data, player_info)
+        else:
+            await self.send_error(websocket, f"Unknown action: {action}")
 
-    def _client_handler(self, conn: socket.socket):
-        try:
-            buf = b''
-            while True:
-                data = conn.recv(4096)
-                if not data:
-                    break
-                buf += data
-                while b'\n' in buf:
-                    line, buf = buf.split(b'\n', 1)
-                    pkt = decode(line + b'\n')
-                    if not pkt:
-                        continue
-                    ptype = pkt.get('type')
-                    if ptype == 'JOIN':
-                        name = pkt.get('name', 'anon')
-                        with self.lock:
-                            self.clients[conn] = (name, self.clients[conn][1])
-                        self.broadcast({'type':'CHAT', 'name':'SERVER', 'message': f"{name} joined."})
-                    elif ptype == 'CHAT':
-                        name = self.clients.get(conn, ("<unknown>",))[0]
-                        message = pkt.get('message', '')
-                        self.broadcast({'type':'CHAT', 'name': name, 'message': message})
-                    elif ptype == 'EXIT':
-                        name = self.clients.get(conn, ("<unknown>",))[0]
-                        self.broadcast({'type':'CHAT', 'name':'SERVER', 'message': f"{name} left."})
-                        conn.close()
-                        return
-        except Exception as e:
-            print("[SERVER] client handler error:", e)
-        finally:
-            with self.lock:
-                if conn in self.clients:
-                    del self.clients[conn]
-            try:
-                conn.close()
-            except:
-                pass
+    async def handle_create_room(self, websocket, data, player_info):
+        """Xử lý tạo phòng"""
+        player_name = data.get("playerName", "Player")
+        room_name = data.get("roomName", "Phòng mới")
+        
+        # Tạo player ID
+        player_id = str(uuid.uuid4())[:8]
+        
+        # Tạo phòng mới
+        room = self.room_manager.create_room(room_name)
+        
+        # Thêm player vào phòng
+        if room.add_player(player_id, player_name, websocket):
+            player_info["id"] = player_id
+            player_info["name"] = player_name
+            player_info["room_id"] = room.room_id
+            
+            # Gửi thông báo thành công
+            await websocket.send(json.dumps({
+                "type": TYPE_INFO,
+                "message": f"✅ Created room '{room_name}'",
+                "roomId": room.room_id,
+                "playerId": player_id,
+                "roomName": room.room_name
+            }))
+            
+            # Broadcast player joined
+            await room.broadcast({
+                "type": TYPE_INFO,
+                "event": EVENT_PLAYER_JOINED,
+                "player": {"id": player_id, "name": player_name},
+                "roomStatus": room.get_room_info(),
+                "message": f"🎮 {player_name} joined the room"
+            })
+            
+            # Kiểm tra bắt đầu game
+            if room.can_start_game():
+                print(f"🚀 Starting game in room {room.room_id}...")
+                await room.start_game()
+                
+        else:
+            await self.send_error(websocket, "❌ Cannot create room")
 
-    def broadcast(self, packet: dict):
-        data = encode(packet)
-        dead = []
-        with self.lock:
-            for c in list(self.clients.keys()):
-                try:
-                    c.sendall(data)
-                except Exception:
-                    dead.append(c)
-            for d in dead:
-                del self.clients[d]
+    async def handle_join_random(self, websocket, data, player_info):
+        """Xử lý tham gia phòng ngẫu nhiên"""
+        player_name = data.get("playerName", "Player")
+        player_id = str(uuid.uuid4())[:8]
+        
+        # Tìm phòng có sẵn
+        room = self.room_manager.get_random_available_room()
+        if not room:
+            # Tạo phòng mới nếu không có
+            room = self.room_manager.create_room(f"Phòng của {player_name}")
+        
+        # Thêm player vào phòng
+        if room.add_player(player_id, player_name, websocket):
+            player_info["id"] = player_id
+            player_info["name"] = player_name
+            player_info["room_id"] = room.room_id
+            
+            await websocket.send(json.dumps({
+                "type": TYPE_INFO,
+                "message": f"✅ Joined room '{room.room_name}'",
+                "roomId": room.room_id,
+                "playerId": player_id,
+                "roomName": room.room_name
+            }))
+            
+            # Broadcast
+            await room.broadcast({
+                "type": TYPE_INFO,
+                "event": EVENT_PLAYER_JOINED,
+                "player": {"id": player_id, "name": player_name},
+                "roomStatus": room.get_room_info(),
+                "message": f"🎮 {player_name} joined the room"
+            })
+            
+            # Start game nếu đủ điều kiện
+            if room.can_start_game():
+                print(f"🚀 Starting game in room {room.room_id}...")
+                await room.start_game()
+                
+        else:
+            await self.send_error(websocket, "❌ Cannot join room")
 
-    def stop(self):
-        self.running = False
-        with self.lock:
-            for c in list(self.clients.keys()):
-                try:
-                    c.close()
-                except:
-                    pass
-            self.clients.clear()
-        try:
-            self.sock.close()
-        except:
-            pass
+    async def handle_game_action(self, websocket, data, player_info):
+        """Xử lý hành động game"""
+        if not player_info["room_id"]:
+            await self.send_error(websocket, "❌ Not in a room")
+            return
+            
+        room = self.room_manager.get_room(player_info["room_id"])
+        if not room:
+            await self.send_error(websocket, "❌ Room not found")
+            return
+            
+        player_id = player_info["id"]
+        action = data.get("action")
+        
+        if action == ACTION_ROLL_DICE:
+            result = await room.handle_roll_dice(player_id)
+            await websocket.send(json.dumps(result))
+            
+        elif action == ACTION_END_TURN:
+            room.next_turn()
+            current_player = room.get_current_player()
+            if current_player:
+                await room.broadcast({
+                    "type": TYPE_INFO,
+                    "event": EVENT_UPDATE_BOARD,
+                    "board": room.get_board_state(),
+                    "currentTurn": current_player.id,
+                    "message": f"🔄 {player_info['name']} ended turn. Now it's {current_player.name}'s turn!"
+                })
+
+    async def handle_buy_action(self, websocket, data, player_info):
+        """Xử lý mua property"""
+        if not player_info["room_id"]:
+            await self.send_error(websocket, "❌ Not in a room")
+            return
+            
+        room = self.room_manager.get_room(player_info["room_id"])
+        if not room:
+            await self.send_error(websocket, "❌ Room not found")
+            return
+            
+        result = await room.handle_buy_property(player_info["id"])
+        await websocket.send(json.dumps(result))
+
+    async def handle_chat(self, websocket, data, player_info):
+        """Xử lý chat"""
+        if not player_info["room_id"]:
+            await self.send_error(websocket, "❌ Not in a room")
+            return
+            
+        room = self.room_manager.get_room(player_info["room_id"])
+        if not room:
+            await self.send_error(websocket, "❌ Room not found")
+            return
+            
+        message = data.get("message", "")
+        await room.broadcast({
+            "type": TYPE_INFO,
+            "event": ACTION_CHAT,
+            "playerId": player_info["id"],
+            "playerName": player_info["name"],
+            "message": message
+        })
+
+    async def handle_disconnect(self, websocket, player_info):
+        """Xử lý ngắt kết nối"""
+        if player_info["room_id"]:
+            room = self.room_manager.get_room(player_info["room_id"])
+            if room:
+                room.remove_player(player_info["id"])
+                
+                # Broadcast player left
+                await room.broadcast({
+                    "type": TYPE_INFO,
+                    "event": EVENT_PLAYER_LEFT,
+                    "playerId": player_info["id"],
+                    "message": f"🚪 {player_info['name']} left the game",
+                    "roomStatus": room.get_room_info()
+                })
+        
+        self.room_manager.remove_empty_rooms()
+
+    async def send_error(self, websocket, message: str):
+        """Gửi lỗi"""
+        await websocket.send(json.dumps({
+            "type": TYPE_ERROR,
+            "message": message
+        }))
+
+    async def stop(self):
+        """Dừng server"""
+        if self.server:
+            self.server.close()
+            await self.server.wait_closed()
+        print("🛑 Server stopped")

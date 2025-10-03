@@ -1,6 +1,4 @@
-<<<<<<< Updated upstream
- 
-=======
+
 """
 Parse lệnh người chơi từ console -> message JSON (dict) gửi server.
 """
@@ -122,4 +120,4 @@ def parse_cmd(line: str) -> Tuple[Optional[dict], Optional[str]]:
         return C.m_exit(), None
 
     return None, f"❌ Lệnh không tồn tại: {cmd}. Gõ /help để xem danh sách lệnh"
->>>>>>> Stashed changes
+

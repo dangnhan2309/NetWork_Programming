@@ -1,303 +1,332 @@
-<<<<<<< Updated upstream
- 
-=======
+"""
+Game Room với State Machine
+"""
+
 import asyncio
 import random
-from typing import Dict, Optional, Callable, List
-from .player import Player
+import json
+from typing import Dict, List, Optional
 from .board import Board
-from src.shared import constants as C
-from src.shared import utils as U
+from .player import Player
+from ..shared.constants import *
 
-MAX_PLAYERS = 4
-GAME_WAITING = "WAITING"
-GAME_PLAYING = "PLAYING"
-GAME_ENDED = "ENDED"
-GAME_START_DELAY = 2.0
-
-class GameManager:
-    def __init__(self):
+class GameRoom:
+    def __init__(self, room_id: str, room_name: str = "Phòng chơi"):
+        self.room_id = room_id
+        self.room_name = room_name
         self.players: Dict[str, Player] = {}
-        self.player_connections: Dict[str, any] = {}
         self.board = Board()
-        self.current_turn = 0
-        self.game_state = GAME_WAITING
-        self.broadcast_callback: Optional[Callable] = None
-        self.player_order: List[str] = []
+        self.state = STATE_EMPTY
+        self.current_turn_index = 0
         self.has_rolled = False
+        self.winner = None
+        
+        # BỎ PRINT Ở ĐÂY - để RoomManager in thôi
+        # print(f"🏠 Room created: {room_id} - '{room_name}'")
 
-    def set_broadcast_callback(self, callback: Callable):
-        self.broadcast_callback = callback
-
-    def add_player(self, name: str, websocket=None) -> bool:
+    def add_player(self, player_id: str, player_name: str, websocket) -> bool:
+        """Thêm player vào room"""
         if len(self.players) >= MAX_PLAYERS:
             return False
-        if name in self.players:
-            return False
             
-        player = Player(name)
-        self.players[name] = player
-        self.player_connections[name] = websocket
-        self.player_order.append(name)
+        player = Player(player_id, player_name, websocket)
+        self.players[player_id] = player
         
-        print(f"🎮 Player joined: {name} (Total: {len(self.players)}/{MAX_PLAYERS})")
-        
-        # Hiển thị board khi có player
-        self.display_game_state()
-        
-        # Tự động bắt đầu game khi đủ 2 player
-        if len(self.players) >= 2 and self.game_state == GAME_WAITING:
-            asyncio.create_task(self.start_game())
+        # Update state
+        if self.state == STATE_EMPTY:
+            self.state = STATE_WAITING
             
+        print(f"🎮 {player_name} joined room {self.room_id}. Players: {len(self.players)}/{MAX_PLAYERS}")
         return True
 
-    def remove_player(self, name: str):
-        if name in self.players:
-            del self.players[name]
-            if name in self.player_connections:
-                del self.player_connections[name]
-            if name in self.player_order:
-                self.player_order.remove(name)
-                
-            print(f"🚪 Player left: {name}")
+    def remove_player(self, player_id: str):
+        """Xóa player khỏi room"""
+        if player_id in self.players:
+            player_name = self.players[player_id].name
+            del self.players[player_id]
             
-            if len(self.players) < 2:
-                self.game_state = GAME_WAITING
-                self.current_turn = 0
-                print("⏳ Waiting for more players...")
+            print(f"🚪 {player_name} left room {self.room_id}. Players: {len(self.players)}/{MAX_PLAYERS}")
             
-            self.display_game_state()
+            # Update state
+            if len(self.players) == 0:
+                self.state = STATE_EMPTY
+                print(f"🏠 Room {self.room_id} is now empty")
+            elif self.state == STATE_PLAYING and len(self.players) < MIN_PLAYERS:
+                self.state = STATE_WAITING
+                self.current_turn_index = 0
+                print(f"⏸️ Game paused in room {self.room_id} - waiting for more players")
 
-    def roll_dice(self):
-        return U.roll_dice()
-
-    def next_turn(self):
-        if not self.players:
-            return
-            
-        self.current_turn = (self.current_turn + 1) % len(self.player_order)
-        current_player = self.get_current_player()
-        
-        if current_player:
-            print(f"\n🎲 Lượt của: {current_player.name}")
-            asyncio.create_task(self.broadcast_state())
+    def can_start_game(self) -> bool:
+        """Kiểm tra có thể bắt đầu game không"""
+        return len(self.players) >= MIN_PLAYERS and self.state == STATE_WAITING
 
     async def start_game(self):
-        print(f"\n🎯 Starting game in {GAME_START_DELAY} seconds...")
-        await asyncio.sleep(GAME_START_DELAY)
-        
-        self.game_state = GAME_PLAYING
-        self.current_turn = 0
-        current_player = self.get_current_player()
-        
-        print(f"\n🎉 GAME STARTED!")
-        print(f"👥 Players: {', '.join(self.player_order)}")
-        print(f"🎲 First turn: {current_player.name}")
-        
-        # Broadcast game started message
-        if self.broadcast_callback:
-            await self.broadcast_callback({
-                "type": "game_started",
-                "message": "Game has started!",
-                "first_player": current_player.name
+        """Bắt đầu game"""
+        if self.can_start_game():
+            self.state = STATE_PLAYING
+            self.current_turn_index = 0
+            self.has_rolled = False
+            self.winner = None
+            
+            print(f"🎉 Game started in room {self.room_id} with {len(self.players)} players")
+            
+            # Broadcast game started
+            await self.broadcast({
+                "type": TYPE_INFO,
+                "event": "gameStarted",
+                "message": "🎮 Game started!",
+                "board": self.get_board_state(),
+                "currentTurn": self.get_current_player().id
             })
-        
-        self.display_game_state()
-        await self.broadcast_state()  # Đảm bảo broadcast state
 
     def get_current_player(self) -> Optional[Player]:
-        if not self.player_order or self.game_state != GAME_PLAYING:
+        """Lấy player hiện tại đến lượt"""
+        if not self.players or self.state != STATE_PLAYING:
             return None
-        current_name = self.player_order[self.current_turn]
-        return self.players.get(current_name)
-
-    def handle_player_action(self, player_name: str, action: str, data: dict = None) -> dict:
-        player = self.players.get(player_name)
-        if not player:
-            return {C.K_TYPE: C.ERROR, C.K_MSG: "Player not found"}
             
-        current = self.get_current_player()
-        if not current or current.name != player_name:
-            return {C.K_TYPE: C.ERROR, C.K_MSG: "Not your turn"}
+        player_ids = list(self.players.keys())
+        if not player_ids:
+            return None
+            
+        current_id = player_ids[self.current_turn_index % len(player_ids)]
+        return self.players.get(current_id)
 
-        if action == "ROLL":
-            return self.handle_roll(player_name)
-        elif action == "BUY":
-            return self.handle_buy(player_name)
-        elif action == "END_TURN":
-            self.next_turn()
-            result = {C.K_TYPE: C.INFO, C.K_MSG: f"{player_name} ended turn"}
-            self.display_game_state()
-            return result
-        else:
-            return {C.K_TYPE: C.ERROR, C.K_MSG: "Unknown action"}
-
-    def handle_end_turn(self, player_name: str):
-        current_player = self.get_current_player()
-        if not current_player or current_player.name != player_name:
-            return {
-                C.K_TYPE: C.ERR,
-                C.K_MSG: "❌ Không phải lượt của bạn!"
-            }
-
-        # Chuyển lượt
-        self.current_turn = (self.current_turn + 1) % len(self.player_order)
+    def next_turn(self):
+        """Chuyển lượt"""
+        if not self.players or self.state != STATE_PLAYING:
+            return
+            
+        self.current_turn_index = (self.current_turn_index + 1) % len(self.players)
         self.has_rolled = False
-        next_player = self.get_current_player()
+        
+        current_player = self.get_current_player()
+        if current_player:
+            print(f"🎲 Turn changed to: {current_player.name} in room {self.room_id}")
 
-        print(f"🔄 {player_name} đã kết thúc lượt. Đến lượt {next_player.name}")
-
+    def roll_dice(self) -> dict:
+        """Tung xúc xắc"""
+        dice1 = random.randint(1, 6)
+        dice2 = random.randint(1, 6)
         return {
-            C.K_TYPE: C.INFO,
-            C.K_MSG: f"🔄 {player_name} đã kết thúc lượt. Đến lượt {next_player.name}"
+            "dice": [dice1, dice2],
+            "total": dice1 + dice2,
+            "is_double": dice1 == dice2
         }
 
-
-
-    def handle_roll(self, player_name: str):
+    async def handle_roll_dice(self, player_id: str) -> dict:
+        """Xử lý tung xúc xắc"""
         current_player = self.get_current_player()
-        if not current_player or current_player.name != player_name:
-            return {
-                C.K_TYPE: C.ERR,
-                C.K_MSG: "❌ Không phải lượt của bạn!"
-            }
+        if not current_player or current_player.id != player_id:
+            return {"type": TYPE_ERROR, "message": "❌ Not your turn!"}
 
         if self.has_rolled:
+            return {"type": TYPE_ERROR, "message": "❌ Already rolled this turn!"}
+
+        # Roll dice
+        dice_result = self.roll_dice()
+        steps = dice_result["total"]
+        
+        # Move player
+        old_position = current_player.position
+        new_position = current_player.move(steps)
+        tile = self.board.get_tile(new_position)
+
+        print(f"🎲 {current_player.name} rolled {dice_result['dice']} = {steps}")
+        print(f"📍 Moved from {old_position} to {new_position}: {tile['name']}")
+
+        # Handle tile effect
+        result = await self.handle_tile_effect(current_player, tile)
+        self.has_rolled = True
+
+        # Check game over
+        if await self.check_game_over():
             return {
-                C.K_TYPE: C.ERR,
-                C.K_MSG: "❌ Bạn đã roll trong lượt này rồi!"
+                "type": TYPE_INFO,
+                "message": f"🎲 {current_player.name} rolled {steps}",
+                "dice": dice_result,
+                "tile": tile,
+                "result": result
             }
 
-        player = self.players[player_name]
-        dice = self.roll_dice()
-        steps = dice["total"]
-
-        old_position = player.position
-        player.move(steps)
-        tile = self.board.get_tile(player.position)
-
-        print(f"🎲 {player_name} rolled {dice['dice']} = {steps}")
-        print(f"📍 Moved from {old_position} to {player.position}: {tile['name']}")
-
-        result = self.handle_tile(player, tile)
-
-        self.display_game_state()
-        asyncio.create_task(self.broadcast_state())
-
-        self.has_rolled = True  # đánh dấu đã roll
+        # Broadcast update
+        await self.broadcast({
+            "type": TYPE_INFO,
+            "event": EVENT_UPDATE_BOARD,
+            "board": self.get_board_state(),
+            "currentTurn": current_player.id,
+            "diceResult": dice_result,
+            "playerMoved": {
+                "playerId": player_id,
+                "from": old_position,
+                "to": new_position,
+                "tile": tile
+            },
+            "message": f"🎲 {current_player.name} rolled {dice_result['dice'][0]}+{dice_result['dice'][1]} = {steps}"
+        })
 
         return {
-            C.K_TYPE: C.INFO,
-            C.K_MSG: f"{player_name} rolled {steps}",
-            "dice": dice,
+            "type": TYPE_INFO,
+            "message": f"🎲 {current_player.name} rolled {steps}",
+            "dice": dice_result,
             "tile": tile,
             "result": result
         }
 
-
-
-    def handle_buy(self, player_name: str):
-        player = self.players[player_name]
-        tile = self.board.get_tile(player.position)
-        
-        if tile.get("owner") is not None:
-            return {C.K_TYPE: C.ERROR, C.K_MSG: "Property already owned"}
-            
-        if tile.get("type") not in ["property", "railroad", "utility"]:
-            return {C.K_TYPE: C.ERROR, C.K_MSG: "Cannot buy this tile type"}
-            
-        if player.money < tile["price"]:
-            return {C.K_TYPE: C.ERROR, C.K_MSG: "Not enough money"}
-            
-        # Thực hiện mua
-        player.buy_property(tile["name"], tile["price"])
-        tile["owner"] = player
-        
-        print(f"💰 {player_name} bought {tile['name']} for ${tile['price']}")
-        
-        self.display_game_state()
-        asyncio.create_task(self.broadcast_state())
-        
-        return {
-            C.K_TYPE: C.INFO, 
-            C.K_MSG: f"{player_name} bought {tile['name']} for ${tile['price']}"
-        }
-
-    def handle_tile(self, player: Player, tile: dict):
+    async def handle_tile_effect(self, player: Player, tile: dict):
+        """Xử lý hiệu ứng ô đất"""
         tile_type = tile["type"]
         
-        if tile_type == "property" and tile.get("owner") and tile["owner"] != player:
+        if tile_type == "property" and tile.get("owner") and tile["owner"] != player.id:
+            # Trả tiền thuê
             rent = tile.get("rent", 0)
-            result = player.pay_rent(tile["owner"], rent)
-            return {
-                "action": "paid_rent", 
-                "amount": rent, 
-                "to": tile["owner"].name,
-                "success": result
-            }
-            
+            owner = self.players.get(tile["owner"])
+            if owner:
+                success = player.pay_rent(owner, rent)
+                if success:
+                    await self.broadcast({
+                        "type": TYPE_INFO,
+                        "event": "playerPaidRent",
+                        "fromPlayer": player.id,
+                        "toPlayer": owner.id,
+                        "amount": rent,
+                        "property": tile["name"],
+                        "message": f"💰 {player.name} paid ${rent} rent to {owner.name}"
+                    })
+                return {"action": "paid_rent", "amount": rent, "success": success}
+                
         elif tile_type == "tax":
+            # Trả thuế
             amount = tile.get("amount", 0)
-            player.pay_tax(amount)
+            player.money -= amount
+            await self.broadcast({
+                "type": TYPE_INFO,
+                "event": "playerPaidTax",
+                "playerId": player.id,
+                "amount": amount,
+                "tile": tile["name"],
+                "message": f"💸 {player.name} paid ${amount} tax"
+            })
             return {"action": "paid_tax", "amount": amount}
             
         elif tile_type == "go":
+            # Qua ô Start
+            player.money += 200
+            await self.broadcast({
+                "type": TYPE_INFO,
+                "event": "playerPassedGo",
+                "playerId": player.id,
+                "amount": 200,
+                "message": f"🎉 {player.name} passed GO and collected $200"
+            })
             return {"action": "passed_go", "amount": 200}
             
         return {"action": "landed", "tile": tile["name"]}
 
-    async def broadcast_state(self):
-        if self.broadcast_callback:
-            state = self.get_game_state()
-            await self.broadcast_callback(state)
+    async def handle_buy_property(self, player_id: str):
+        """Xử lý mua property"""
+        player = self.players.get(player_id)
+        if not player:
+            return {"type": TYPE_ERROR, "message": "Player not found"}
+            
+        tile = self.board.get_tile(player.position)
+        
+        if tile.get("owner") is not None:
+            return {"type": TYPE_ERROR, "message": "Property already owned"}
+            
+        if tile.get("type") not in ["property", "railroad", "utility"]:
+            return {"type": TYPE_ERROR, "message": "Cannot buy this tile"}
+            
+        if player.money < tile["price"]:
+            return {"type": TYPE_ERROR, "message": "Not enough money"}
+            
+        # Mua property
+        if player.buy_property(tile["name"], tile["price"]):
+            tile["owner"] = player_id
+            
+            await self.broadcast({
+                "type": TYPE_INFO,
+                "event": "propertyBought",
+                "playerId": player_id,
+                "property": tile["name"],
+                "price": tile["price"],
+                "message": f"🏠 {player.name} bought {tile['name']} for ${tile['price']}"
+            })
+            
+            await self.broadcast({
+                "type": TYPE_INFO,
+                "event": EVENT_UPDATE_BOARD,
+                "board": self.get_board_state(),
+                "currentTurn": self.get_current_player().id if self.get_current_player() else None
+            })
+            
+            return {
+                "type": TYPE_INFO, 
+                "message": f"✅ {player.name} bought {tile['name']} for ${tile['price']}"
+            }
+        else:
+            return {"type": TYPE_ERROR, "message": "Purchase failed"}
 
-    def get_game_state(self):
+    async def check_game_over(self) -> bool:
+        """Kiểm tra game kết thúc"""
+        active_players = [p for p in self.players.values() if not p.is_bankrupt]
+        
+        if len(active_players) == 1:
+            # Có người thắng
+            self.winner = active_players[0]
+            self.state = STATE_ENDED
+            
+            await self.broadcast({
+                "type": TYPE_INFO,
+                "event": EVENT_GAME_OVER,
+                "winner": self.winner.to_dict(),
+                "message": f"🎉 {self.winner.name} wins the game!"
+            })
+            
+            print(f"🏆 Game over in room {self.room_id}. Winner: {self.winner.name}")
+            return True
+            
+        return False
+
+    def get_board_state(self):
+        """Lấy trạng thái board"""
+        player_positions = {pid: player.position for pid, player in self.players.items()}
+        
         return {
-            "state": self.game_state,
-            "current_turn": self.current_turn,
-            "players": [
-                {
-                    "name": p.name, 
-                    "money": p.money, 
-                    "position": p.position,
-                    "properties": list(p.properties.keys())
-                }
-                for p in self.players.values()
-            ]
+            "players": [player.to_dict() for player in self.players.values()],
+            "currentTurn": self.get_current_player().id if self.get_current_player() else None,
+            "playerPositions": player_positions,
+            "roomState": self.state,
+            "roomName": self.room_name,
+            "roomId": self.room_id
         }
 
-    def display_game_state(self):
-        """Hiển thị trạng thái game trên server console"""
-        print("\n" + "="*60)
-        print("🎯 MONOPOLY SERVER - GAME STATE")
-        print("="*60)
+    def get_room_info(self):
+        """Lấy thông tin room"""
+        return {
+            "roomId": self.room_id,
+            "roomName": self.room_name,
+            "playerCount": len(self.players),
+            "maxPlayers": MAX_PLAYERS,
+            "state": self.state,
+            "players": [player.name for player in self.players.values()]
+        }
+
+    async def broadcast(self, message: dict):
+        """Gửi message đến tất cả players trong room"""
+        if not self.players:
+            return
+            
+        disconnected_players = []
+        for player in self.players.values():
+            if player.websocket and not player.websocket.closed:
+                try:
+                    await player.websocket.send(json.dumps(message))
+                except Exception as e:
+                    print(f"❌ Failed to send message to {player.name}: {e}")
+                    disconnected_players.append(player.id)
+            else:
+                disconnected_players.append(player.id)
         
-        # Hiển thị board
-        player_positions = {name: player.position for name, player in self.players.items()}
-        self.board.render_board(player_positions)
-        
-        # Hiển thị thông tin players
-        print(f"\n📊 PLAYERS ({len(self.players)}/{MAX_PLAYERS}):")
-        for i, (name, player) in enumerate(self.players.items()):
-            turn_indicator = " 🎲" if i == self.current_turn and self.game_state == GAME_PLAYING else ""
-            print(f"  {i+1}. {name}{turn_indicator}")
-            print(f"     💰 ${player.money} | 📍 Vị trí: {player.position}")
-            if player.properties:
-                print(f"     🏠 Properties: {', '.join(player.properties.keys())}")
-            print()
-        
-        # Hiển thị game state
-        if self.game_state == GAME_WAITING:
-            print("⏳ Game State: WAITING FOR PLAYERS...")
-            needed = 2 - len(self.players)
-            if needed > 0:
-                print(f"   Need {needed} more player(s) to start")
-        elif self.game_state == GAME_PLAYING:
-            current_player = self.get_current_player()
-            if current_player:
-                print(f"🎲 CURRENT TURN: {current_player.name}")
-                current_tile = self.board.get_tile(current_player.position)
-                print(f"📍 Current tile: {current_tile['name']} ({current_tile['type']})")
-        
-        print("="*60)
->>>>>>> Stashed changes
+        # Remove disconnected players
+        for player_id in disconnected_players:
+            self.remove_player(player_id)
