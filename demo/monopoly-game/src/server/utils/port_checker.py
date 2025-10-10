@@ -1,56 +1,45 @@
+# src/utils/port_checker.py
 import socket
 import random
 import threading
-from ..utils import logger as Logger
+from typing import List, Optional
+
+# Import logger đúng path ( điều chỉnh theo project của bạn )
+try:
+    # Nếu package layout là src.utils.logger
+    from src.utils.logger import Logger
+except Exception:
+    # Fallback nếu import khác
+    class Logger:
+        def __init__(self, name=None): self.name = name
+        def info(self, m): print(f"[INFO] {m}")
+        def success(self, m): print(f"[SUCCESS] {m}")
+        def error(self, m): print(f"[ERROR] {m}")
 
 class PortChecker:
     """
     Kiểm tra và quản lý cổng UDP khả dụng cho multicast.
-    Có thể dùng cả ở client và server.
-    Example :
-    from utils.port_checker import PortChecker
-
-    if __name__ == "__main__":
-        checker = PortChecker(5500, 5550)
-
-        checker.scan_ports()
-        print("Available ports:", checker.list_ports())
-
-        port = checker.get_random_port()
-        print("Chosen port:", port)
-
-        checker.release_port(port)
-        print("Ports after release:", checker.list_ports())
-
-    Result :
-    [INFO] [PortChecker] Scanning ports 5500–5550...
-    [SUCCESS] [PortChecker] Found 23 available ports.
-    [INFO] [PortChecker] Selected port 5521
-    [INFO] [PortChecker] Released port 5521 back to pool.
-
-
     """
 
-    def __init__(self, start_port=5000, end_port=6000):
+    def __init__(self, start_port: int = 5000, end_port: int = 6000):
         self.start_port = start_port
         self.end_port = end_port
-        self.available_ports = []
+        self.available_ports: List[int] = []
         self.logger = Logger("PortChecker")
         self.lock = threading.Lock()
 
-    # ==================================================
     def is_port_available(self, port: int) -> bool:
-        """Kiểm tra xem port có đang rảnh để dùng không."""
+        """Kiểm tra xem port có đang rảnh để dùng không (UDP)."""
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         try:
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             sock.bind(("", port))
             sock.close()
             return True
         except OSError:
             return False
 
-    # ==================================================
-    def scan_ports(self):
+    def scan_ports(self) -> None:
         """Quét và lưu danh sách các cổng khả dụng."""
         self.logger.info(f"Scanning ports {self.start_port}–{self.end_port}...")
         with self.lock:
@@ -60,14 +49,14 @@ class PortChecker:
                     self.available_ports.append(port)
         self.logger.success(f"Found {len(self.available_ports)} available ports.")
 
-    # ==================================================
-    def get_random_port(self) -> int:
-        """Lấy ngẫu nhiên 1 port từ danh sách khả dụng."""
+    def get_random_port(self) -> Optional[int]:
+        """Lấy ngẫu nhiên 1 port từ danh sách khả dụng — trả None nếu không còn."""
         with self.lock:
             if not self.available_ports:
                 self.scan_ports()
             if self.available_ports:
                 port = random.choice(self.available_ports)
+                # Reserve (remove) port từ pool để tránh trùng
                 self.available_ports.remove(port)
                 self.logger.info(f"Selected port {port}")
                 return port
@@ -75,16 +64,14 @@ class PortChecker:
                 self.logger.error("No available ports found!")
                 return None
 
-    # ==================================================
-    def release_port(self, port: int):
+    def release_port(self, port: int) -> None:
         """Giải phóng port để dùng lại."""
         with self.lock:
             if port not in self.available_ports:
                 self.available_ports.append(port)
                 self.logger.info(f"Released port {port} back to pool.")
 
-    # ==================================================
-    def list_ports(self):
+    def list_ports(self) -> List[int]:
         """Trả về danh sách port hiện còn khả dụng."""
         with self.lock:
             return list(self.available_ports)

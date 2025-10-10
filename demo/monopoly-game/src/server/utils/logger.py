@@ -96,3 +96,5 @@ class Logger:
             self.debug(message)
         except Exception as e:
             self.error(f"Failed to log packet: {e}")
+
+

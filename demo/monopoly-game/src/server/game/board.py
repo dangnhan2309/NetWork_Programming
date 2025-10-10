@@ -114,11 +114,12 @@ class Board:
     # ======================================
 
     def buy_property(self, tile_id: int, player_id: str) -> bool:
-        """Đánh dấu quyền sở hữu ô"""
         tile = self.get_tile(tile_id)
         if not tile or not self.is_property(tile):
             return False
         if tile.get("owner") is not None:
+            return False
+        if tile.get("price", 0) <= 0:  # THÊM KIỂM TRA
             return False
         tile["owner"] = player_id
         return True
@@ -134,31 +135,36 @@ class Board:
         return [t for t in self.tiles if t.get("group") == group_name]
 
     def get_rent(self, tile_id: int, dice_roll: Optional[int] = None) -> int:
-        """Tính tiền thuê dựa trên loại tài sản"""
         tile = self.get_tile(tile_id)
         if not tile or not self.is_property(tile):
             return 0
 
+        owner = tile.get("owner")
+        if not owner: 
+            return 0
+
         ttype = tile["type"]
         if ttype == "property":
-            # Nếu người chơi sở hữu cả nhóm màu → tiền thuê gấp đôi
+            # Logic hiện tại OK
             group = tile.get("group")
             group_tiles = self.get_group_properties(group)
-            if group_tiles and all(t.get("owner") == tile.get("owner") for t in group_tiles):
+            if group_tiles and all(t.get("owner") == owner for t in group_tiles):
                 return tile["rent"] * 2
             return tile["rent"]
 
         elif ttype == "railroad":
-            # Tiền thuê dựa trên số railroad sở hữu
             owner = tile.get("owner")
+            if not owner:  # KIỂM TRA THÊM
+                return 0
             railroads = [t for t in self.tiles if t["type"] == "railroad" and t.get("owner") == owner]
-            return 25 * (2 ** (len(railroads) - 1))  # 25, 50, 100, 200
+            return 25 * (2 ** (len(railroads) - 1))
 
         elif ttype == "utility":
-            # Tiền thuê dựa trên xúc xắc
             owner = tile.get("owner")
+            if not owner or dice_roll is None:  # KIỂM TRA THÊM
+                return 0
             utilities = [t for t in self.tiles if t["type"] == "utility" and t.get("owner") == owner]
             multiplier = 4 if len(utilities) == 1 else 10
-            return (dice_roll or 0) * multiplier
+            return dice_roll * multiplier
 
         return 0

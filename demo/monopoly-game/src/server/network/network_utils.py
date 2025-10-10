@@ -66,6 +66,7 @@ def log_packet(packet: dict, action: str, addr=None):
     prefix = f"[{action.upper()}]"
     addr_info = f" | from {addr}" if addr else ""
     pkt_type = packet.get("type", "unknown")
+    # SỬA: sử dụng logger thay vì logger.log_packet
     logger.info(f"{prefix} {pkt_type}{addr_info}")
 
 

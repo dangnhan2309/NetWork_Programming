@@ -1,0 +1,5 @@
+[2025-10-07 16:27:48] [INFO] [network_utils] Đã join group multicast 239.179.23.104
+[2025-10-08 11:14:46] [INFO] [network_utils] Đã join group multicast 239.221.26.129
+[2025-10-08 11:32:39] [INFO] [network_utils] Đã join group multicast 239.222.111.138
+[2025-10-08 11:37:56] [INFO] [network_utils] Đã join group multicast 239.129.44.36
+[2025-10-08 11:47:03] [INFO] [network_utils] Đã join group multicast 239.159.95.33

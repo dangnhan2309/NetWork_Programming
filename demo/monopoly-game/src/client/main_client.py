@@ -1,8 +1,9 @@
 import asyncio
-from ..client.network.client import MonopolyClient
+from .network.multicast_manager import MonopolyMulticastClient
+
 
 async def main():
-    client = MonopolyClient()
+    client = MonopolyMulticastClient()
     await client.run()
 
 if __name__ == "__main__":

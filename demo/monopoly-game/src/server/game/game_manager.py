@@ -73,6 +73,9 @@ class GameManager:
         self.active: bool = False
         self.winner: Optional[str] = None
 
+        self.community_chest_cards = community_chest_cards
+        self.chance_cards = chance_cards
+        
         self.seq_counter = 0
         self.lock = threading.RLock()
         self.logger = logger or Logger(room_id)
@@ -226,17 +229,26 @@ class GameManager:
     # -------------------------
     # Core actions
     # -------------------------
+    def _validate_player_turn(self, player_id: str) -> bool:
+        """Kiểm tra xem có phải lượt của player không"""
+        return self.active and self.get_current_player_id() == player_id
+        
     def roll(self, player_id: str) -> dict:
         with self.lock:
             if not self.active:
                 return {"status": "ERROR", "message": "Game not active"}
+            if not self._validate_player_turn(player_id):  # DÙNG HELPER
+                return {"status": "ERROR", "message": "Not your turn"}
             if self.get_current_player_id() != player_id:
                 return {"status": "ERROR", "message": "Not your turn"}
+
+            player = self.players.get(player_id)  # THÊM .get() để tránh KeyError
+            if not player:
+                return {"status": "ERROR", "message": "Player not found"}
 
             d1, d2 = random.randint(1, 6), random.randint(1, 6)
             total = d1 + d2
 
-            player = self.players[player_id]
             old_pos = player.position
             new_pos = player.move(total, board_size=len(self.board.tiles))
             tile = self.board.get_tile(new_pos)
@@ -244,19 +256,34 @@ class GameManager:
             rent_paid = 0
             events = []
 
-            if tile and tile.get("type") in ("property", "railroad", "utility"):
+            # SỬA LẠI LOGIC TÍNH TIỀN THUÊ
+            if tile and self.board.is_property(tile):
                 owner = tile.get("owner")
-                if owner and owner != player_id:
-                    rent = self.board.get_rent(new_pos, dice_roll=total) if tile["type"] == "utility" else self.board.get_rent(new_pos)
-                    rent_paid = rent if player.pay(rent, receiver=self.players.get(owner)) else 0
-                    events.append(f"Paid rent {rent} to {owner}" if rent_paid else "Bankrupt paying rent")
+                if owner and owner != player_id and owner in self.players:  # THÊM KIỂM TRA owner tồn tại
+                    if tile["type"] == "utility":
+                        rent = self.board.get_rent(new_pos, dice_roll=total)
+                    else:
+                        rent = self.board.get_rent(new_pos)
+                    
+                    if rent > 0:  # CHỈ TRẢ TIỀN NẾU CÓ TIỀN THUÊ
+                        receiver = self.players.get(owner)
+                        if receiver and player.pay(rent, receiver=receiver):
+                            rent_paid = rent
+                            events.append(f"Paid rent {rent} to {owner}")
+                        else:
+                            events.append("Bankrupt paying rent")
+                            self._handle_bankruptcy(player)
 
+            # Xử lý các ô đặc biệt
             if tile and tile.get("type") == "go_to_jail":
-                player.send_to_jail(10)
+                player.send_to_jail(10)  # Vị trí jail
                 events.append("Sent to Jail")
+                
             if tile and tile.get("type") in ("community_chest", "chance"):
                 card = self.draw_card(tile["type"])
-                events += self.handler_card_content(player_id, card)
+                card_events = self.handle_card_content(player_id, card)  # SỬA TÊN
+                events.extend(card_events)
+
             self._advance_turn()
 
             payload = {
@@ -361,29 +388,61 @@ class GameManager:
             sender = packet["header"]["sender"]
             args = packet["command"].get("args", {}) or {}
 
+            # Validation common checks
+            if action in ["ROLL", "BUY", "PAY", "END_TURN"]:
+                if sender not in self.players:
+                    return {"status": "ERROR", "message": "Player not in game"}
+                if action in ["ROLL", "BUY", "END_TURN"] and not self.active:
+                    return {"status": "ERROR", "message": "Game not active"}
+
+            # Route actions
             if action == "JOIN":
-                return {"status": "OK" if self.add_player(sender, sender) else "ERROR"}
-            if action == "LEAVE":
+                player_name = args.get("player_name", sender)
+                return {"status": "OK" if self.add_player(sender, player_name) else "ERROR"}
+                
+            elif action == "LEAVE":
                 return {"status": "OK" if self.remove_player(sender) else "ERROR"}
-            if action == "START_GAME":
+                
+            elif action == "START_GAME":
                 return {"status": "OK" if self.start_game() else "ERROR"}
-            if action == "ROLL":
+                
+            elif action == "ROLL":
                 return self.roll(sender)
-            if action == "BUY":
+                
+            elif action == "BUY":
                 return self.buy(sender)
-            if action == "PAY":
-                return self.pay(sender, args.get("to"), int(args.get("amount", 0)))
-            if action == "END_TURN":
+                
+            elif action == "PAY":
+                to_player = args.get("to")
+                amount_str = args.get("amount", "0")
+                
+                if not to_player or to_player not in self.players:
+                    return {"status": "ERROR", "message": "Invalid recipient"}
+                
+                try:
+                    amount = int(amount_str)
+                    if amount <= 0:
+                        return {"status": "ERROR", "message": "Amount must be positive"}
+                except (ValueError, TypeError):
+                    return {"status": "ERROR", "message": "Invalid amount format"}
+                
+                return self.pay(sender, to_player, amount)
+                
+            elif action == "END_TURN":
                 return self.end_turn(sender)
-            if action == "STATE_REQUEST":
+                
+            elif action == "STATE_REQUEST":
                 return {"status": "OK", "state": self.build_state_packet()["payload"]["data"]}
-            return {"status": "ERROR", "message": f"Unknown action {action}"}
+                
+            else:
+                return {"status": "ERROR", "message": f"Unknown action {action}"}
+                
+        except KeyError as e:
+            self.logger.error(f"[GameManager] Missing key in packet: {e}")
+            return {"status": "ERROR", "message": f"Missing key: {e}"}
         except Exception as e:
             self.logger.error(f"[GameManager] handle_command error: {e}")
             return {"status": "ERROR", "message": "Internal server error"}
-
-
-
     # -------------------------
     # Draw / Handle Card
     # -------------------------
@@ -392,7 +451,7 @@ class GameManager:
         deck = self.community_chest_cards if deck_type == "community_chest" else self.chance_cards
         return random.choice(deck)
 
-    def handler_card_content(self, player_id: str, card: str):
+    def handle_card_content(self, player_id: str, card: str):
         """
         Xử lý nội dung của lá bài:
         - Cập nhật tiền, vị trí, đi tù, trả tiền cho người chơi khác...
