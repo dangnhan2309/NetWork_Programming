@@ -1,0 +1,106 @@
+{
+    "ROOM_01": {
+        "room_id": "ROOM_01",
+        "multicast_ip": "239.126.237.92",
+        "port": 38012,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T10:00:30.081866"
+    },
+    "ROOM_02": {
+        "room_id": "ROOM_02",
+        "multicast_ip": "239.212.22.207",
+        "port": 31304,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T10:00:30.083865"
+    },
+    "ell": {
+        "room_id": "ell",
+        "multicast_ip": "239.151.128.217",
+        "port": 14321,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T10:17:11.946466"
+    },
+    "e": {
+        "room_id": "e",
+        "multicast_ip": "239.79.247.248",
+        "port": 49383,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T10:20:09.399662"
+    },
+    "q": {
+        "room_id": "q",
+        "multicast_ip": "239.138.145.59",
+        "port": 38927,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T14:16:01.721886"
+    },
+    "a": {
+        "room_id": "a",
+        "multicast_ip": "239.12.233.22",
+        "port": 23819,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T15:00:14.140493"
+    },
+    "em": {
+        "room_id": "em",
+        "multicast_ip": "239.13.201.131",
+        "port": 58213,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T15:11:27.101696"
+    },
+    "anh": {
+        "room_id": "anh",
+        "multicast_ip": "239.24.112.54",
+        "port": 22469,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T15:12:24.583292"
+    },
+    "thuy": {
+        "room_id": "thuy",
+        "multicast_ip": "239.96.239.19",
+        "port": 54629,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T15:19:24.823659"
+    },
+    "wi": {
+        "room_id": "wi",
+        "multicast_ip": "239.6.73.192",
+        "port": 18084,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T15:35:04.202405"
+    },
+    "linh": {
+        "room_id": "linh",
+        "multicast_ip": "239.38.162.62",
+        "port": 17664,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T16:08:55.174058"
+    },
+    "love u": {
+        "room_id": "love u",
+        "multicast_ip": "239.53.205.231",
+        "port": 46256,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T16:15:25.685577"
+    },
+    "x": {
+        "room_id": "x",
+        "multicast_ip": "239.207.126.101",
+        "port": 48813,
+        "players": [],
+        "max_players": 4,
+        "created_at": "2025-10-09T16:22:30.523514"
+    }
+}
