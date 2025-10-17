@@ -3,3 +3,1842 @@
 [2025-10-08 11:32:39] [INFO] [network_utils] Đã join group multicast 239.222.111.138
 [2025-10-08 11:37:56] [INFO] [network_utils] Đã join group multicast 239.129.44.36
 [2025-10-08 11:47:03] [INFO] [network_utils] Đã join group multicast 239.159.95.33
+[2025-10-12 10:05:02] [WARNING] [network_utils] Packet format encode lỗi (name 'packetformat' is not defined), fallback sang JSON.
+[2025-10-12 10:05:02] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:05:02] [ERROR] [network_utils] Lỗi UDP receive: name 'packetformat' is not defined
+[2025-10-12 10:05:02] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:02] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:02] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:02] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:02] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:02] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:03] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:04] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:05] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:06] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:07] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:08] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:09] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:10] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:11] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:12] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:13] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:14] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:15] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:16] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:17] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:18] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:19] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:20] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:21] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:21] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:21] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:21] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:21] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:05:21] [ERROR] [network_utils] Lỗi UDP receive: [WinError 10035] A non-blocking socket operation could not be completed immediately
+[2025-10-12 10:10:14] [WARNING] [network_utils] Packet format encode lỗi (type object 'PacketFormat' has no attribute 'encode'), fallback sang JSON.
+[2025-10-12 10:10:14] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:11:00] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:27] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:27] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:27] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:27] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:27] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:27] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:27] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:27] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:27] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:27] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:27] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:27] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:27] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:28] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:28] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:28] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:28] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:28] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:28] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:28] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:28] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:28] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:28] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:28] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:28] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:28] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:28] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:28] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:28] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:29] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:29] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:29] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:29] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:29] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:29] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:29] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:29] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:30] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:30] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:30] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:30] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:30] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:30] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:30] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:30] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:31] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:31] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:31] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:31] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:31] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:31] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:31] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:31] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:32] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:32] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:32] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:32] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:32] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:32] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:32] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:33] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:33] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:33] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:33] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:33] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:33] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:33] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:33] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:34] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:34] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:34] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:34] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:34] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:34] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:34] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:34] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:35] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:35] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:35] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:35] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:35] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:35] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:35] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:35] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:35] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:35] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:35] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:35] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:35] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:35] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:35] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:35] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:36] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:36] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:36] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:36] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:36] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:36] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:36] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:36] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:36] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:36] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:36] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:36] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:36] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:36] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:36] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:36] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:37] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:37] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:37] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:37] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:37] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:37] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:37] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:38] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:38] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:38] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:38] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:38] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:38] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:38] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:38] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:39] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:39] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:39] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:39] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:39] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:39] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:39] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:40] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:40] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:40] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:40] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:40] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:40] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:40] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:40] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:40] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:40] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:40] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:40] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:40] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:40] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:40] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:41] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:41] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:41] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:41] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:41] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:41] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:41] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:42] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:42] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:42] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:42] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:42] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:42] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:42] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:43] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:43] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:43] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:43] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:43] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:43] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:43] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:43] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:43] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:43] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:43] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:43] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:43] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:43] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:43] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:43] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:44] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:44] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:44] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:44] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:44] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:44] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:44] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:45] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:45] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:45] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:45] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:45] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:45] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:45] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:45] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:45] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:45] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:45] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:45] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:45] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:45] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:45] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:45] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:46] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:46] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:46] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:46] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:46] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:46] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:46] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:46] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:47] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:47] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:47] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:47] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:47] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:47] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:47] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:47] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:48] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:48] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:48] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:48] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:48] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:48] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:48] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:49] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:49] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:49] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:49] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:49] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:49] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:49] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:49] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:49] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:49] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:49] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:49] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:49] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:49] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:49] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:50] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:50] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:50] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:50] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:50] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:50] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:50] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:50] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:51] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:51] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:51] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:51] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:51] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:51] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:51] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:52] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:52] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:52] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:52] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:52] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:52] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:52] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:52] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:53] [DEBUG] [network_utils] [RECV-UDP] STATE from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [DEBUG] [network_utils] [RECV-UDP] STATE from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [DEBUG] [network_utils] [RECV-UDP] EVENT from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [DEBUG] [network_utils] [RECV-UDP] STATE from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [DEBUG] [network_utils] [RECV-UDP] STATE from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:54] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:54] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:54] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:54] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:55] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:55] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:55] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:55] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:55] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:55] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:55] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:55] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:56] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:56] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:56] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:56] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:56] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:56] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:56] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:56] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:56] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:56] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:56] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:56] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:56] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:56] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:56] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:56] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:57] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:57] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:57] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:57] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:57] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:57] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:57] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:57] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:57] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:57] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:13:57] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:57] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:57] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:57] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:58] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:58] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:58] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:13:58] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:58] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:58] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:58] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:58] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:58] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:58] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:13:58] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:58] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:58] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:58] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:59] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:59] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:59] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:13:59] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:59] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:59] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:59] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:59] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:59] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:59] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:13:59] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:59] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:13:59] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:13:59] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:00] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:00] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:00] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:00] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:00] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:00] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:00] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:00] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:00] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:00] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:00] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:00] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:00] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:00] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:01] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:01] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:01] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:01] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:01] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:01] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:01] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:01] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:01] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:01] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:01] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:01] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:01] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:01] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:02] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:02] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:02] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:02] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:02] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:02] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:02] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:02] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:02] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:03] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:03] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:03] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:03] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:03] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:03] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:03] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:03] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:03] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:03] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:03] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:03] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:04] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:04] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:04] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:04] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:04] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:04] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:04] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:04] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:04] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:04] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:04] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:04] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:05] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:05] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:05] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:05] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:05] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:05] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:05] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:05] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:05] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:05] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:05] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:05] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:06] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:06] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:06] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:06] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:06] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:06] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:06] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:06] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:06] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:06] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:06] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:06] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:07] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:07] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:07] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:07] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:07] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:07] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:07] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:07] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:08] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:08] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:08] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:08] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:08] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:08] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:08] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:08] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:08] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:08] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:08] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:08] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:08] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:09] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:09] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:09] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:09] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:09] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:09] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:09] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:09] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:09] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:09] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:09] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:09] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:10] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:10] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:10] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:10] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:10] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:10] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:10] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:10] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:10] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:10] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:10] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:11] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:11] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:11] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:11] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:11] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:11] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:11] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:11] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:11] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:11] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:11] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:11] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:11] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:12] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:12] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:12] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:12] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:12] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:12] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:12] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:12] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:12] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:12] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:12] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:13] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:13] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:13] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:13] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:13] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:13] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:13] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:13] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:13] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:13] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:13] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:14] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:14] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:14] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:14] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:14] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:14] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:14] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:14] [DEBUG] [network_utils] [RECV-UDP] system_message from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:14] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:14:14] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:14:15] [DEBUG] [network_utils] [RECV-UDP] heartbeat from ('192.168.101.178', 5105) (Thread: MainThread, Func: safe_udp_receive)
+[2025-10-12 10:14:15] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:19:03] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:19:23] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:19:23] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 10:19:23] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 10:19:23] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 10:19:23] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 10:19:23] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 10:19:23] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 10:19:46] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 10:20:16] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 15:56:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 15:56:42] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 15:56:42] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 15:56:42] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 15:56:42] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 15:56:42] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 15:56:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 15:56:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 15:57:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 15:57:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 15:58:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 15:58:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 15:59:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 15:59:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:00:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:00:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:01:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:01:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:02:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:03:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:03:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:04:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:04:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:05:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:05:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:06:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:06:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:07:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:07:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:08:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:08:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:09:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:09:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:10:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:20:21] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:20:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:20:47] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:20:47] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:20:47] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 16:20:47] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:20:47] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:20:47] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:21:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:21:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:22:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:22:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:23:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:23:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:24:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:24:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:25:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:25:40] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:26:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:26:40] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:27:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:27:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:28:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:28:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:29:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:29:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:30:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:30:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:31:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:31:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:32:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:32:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:33:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:33:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:34:03] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:34:03] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:34:03] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:34:03] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 16:34:03] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:34:03] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:34:03] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:34:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:34:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:35:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:35:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:36:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:36:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:37:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:37:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:38:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:39:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:39:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:40:07] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:40:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:40:29] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:40:29] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:40:29] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 16:40:29] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:40:29] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:40:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:40:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:41:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:41:18] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 16:41:18] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:41:18] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:41:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:42:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:42:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:43:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:43:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:44:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:44:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:45:50] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:46:06] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:46:06] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:46:06] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:46:06] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 16:46:06] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:46:06] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:46:06] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:46:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:47:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:47:18] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 16:47:18] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 16:47:18] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 16:47:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:48:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:48:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:49:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:49:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:50:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:50:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:51:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:51:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:52:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:52:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 16:53:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:25:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 22:26:07] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 22:26:07] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 22:26:07] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 22:26:07] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 22:26:07] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 22:26:07] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 22:26:07] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 22:26:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:26:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:27:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:27:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:28:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:28:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:29:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:29:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:30:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:30:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:31:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:31:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:32:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:32:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:33:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:33:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:34:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:34:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:35:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:35:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:36:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:36:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:37:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:37:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:38:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:38:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:39:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:39:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:40:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:40:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:41:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:41:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:42:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:42:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:43:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:43:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:44:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:44:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:45:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:46:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:46:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:47:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:47:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:48:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:48:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:49:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:49:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:50:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:50:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:51:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:51:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:52:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:52:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:53:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:53:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:54:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:55:07] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 22:55:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 22:55:31] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 22:55:31] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 22:55:31] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 22:55:31] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 22:55:31] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 22:55:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 22:55:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:56:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:56:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:57:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:57:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:58:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:58:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:59:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 22:59:59] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:00:20] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:00:20] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:00:20] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:00:20] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 23:00:20] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:00:20] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:00:20] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:00:46] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:01:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:01:47] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:02:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:02:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:03:18] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:03:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:04:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:04:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:05:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:05:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:06:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:06:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:08:06] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:08:22] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:08:22] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:08:22] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:08:22] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 23:08:22] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:08:22] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:08:22] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:08:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:09:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:09:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:10:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:10:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:11:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:11:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:12:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:12:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:13:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:13:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:14:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:14:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:14:52] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:14:52] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:14:52] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 23:14:52] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:14:52] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:14:53] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:14:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:15:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:15:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:16:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:16:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:17:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:17:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:18:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:18:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:19:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:19:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:20:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:20:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:21:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:22:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:23:13] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:23:13] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:23:13] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:23:13] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 23:23:13] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:23:13] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:23:13] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:23:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:24:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:24:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:25:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:25:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:26:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:26:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:27:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:27:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:28:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:28:40] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:29:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:29:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:30:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:30:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-12 23:33:04] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:33:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:33:41] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:33:41] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:33:41] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-12 23:33:41] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:33:41] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-12 23:33:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-12 23:33:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-13 09:55:55] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-13 09:56:23] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-13 09:56:23] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-13 09:56:23] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-13 09:56:23] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-13 09:56:23] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-13 09:56:23] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-13 09:56:23] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-13 09:56:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-13 09:57:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-13 09:57:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-13 09:58:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-13 09:58:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-13 09:59:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-13 10:06:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-13 10:09:09] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-13 10:12:18] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-13 10:13:24] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-13 10:14:08] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 11:59:25] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 12:12:09] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 12:15:38] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 12:16:14] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 12:16:14] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 12:16:14] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 12:16:14] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-15 12:16:14] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 12:16:14] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 12:16:14] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 12:16:15] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:16:45] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:17:15] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:17:46] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:18:16] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:18:46] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:19:16] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:19:47] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:20:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:20:47] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:21:18] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:21:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:22:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:22:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:23:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:23:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:24:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:24:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:25:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:25:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:26:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:26:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:27:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:27:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:28:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:28:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:29:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:29:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:30:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:30:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:31:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:31:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:32:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:32:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:33:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:33:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:34:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:34:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:35:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:36:03] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 12:36:17] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 12:36:17] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 12:36:17] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 12:36:17] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-15 12:36:17] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 12:36:17] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 12:36:17] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 12:36:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:37:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:37:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:38:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:38:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:39:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:39:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:40:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:40:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:41:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:41:44] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:42:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:42:44] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:43:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:43:45] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:44:15] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:44:45] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:45:16] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:45:46] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:46:16] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:46:46] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:47:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:47:47] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:48:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:48:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:49:18] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:49:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:50:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:50:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:51:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:51:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:52:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:52:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:53:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:53:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:54:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:54:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:55:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:55:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:56:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:56:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:57:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:57:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:58:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:58:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:59:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 12:59:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:00:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:00:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:01:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:01:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:02:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:02:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:03:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:03:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:04:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:04:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:05:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:05:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:06:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:06:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:07:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:07:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:08:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:09:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:09:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:10:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:10:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:11:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:11:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:12:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:12:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:13:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:13:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:14:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:14:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:15:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:15:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:16:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:16:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:17:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:17:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:18:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:18:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:19:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:19:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:20:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:20:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:21:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:21:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:22:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:22:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:23:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:23:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:24:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:24:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:25:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:25:40] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:26:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:26:40] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:27:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:27:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:28:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:28:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:29:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:29:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:30:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:30:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:31:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:31:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:32:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:32:44] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:33:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:33:45] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:34:15] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:34:45] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:35:16] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:35:46] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:36:16] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:36:47] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:37:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:37:47] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:38:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:38:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:39:18] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:39:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:40:18] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:40:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:41:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:41:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:42:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:42:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:43:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:43:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:45:04] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 13:45:20] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 13:45:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:45:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:46:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:46:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:47:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:47:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:48:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:48:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:49:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:49:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:50:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:50:57] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 13:51:26] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 13:51:46] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:52:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:52:47] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:53:17] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:53:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:54:18] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:54:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:55:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:55:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:56:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:56:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:57:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:57:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:58:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:58:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:59:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 13:59:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:00:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:00:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:01:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:01:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:02:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:02:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:03:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:03:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:04:15] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 14:04:33] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 14:04:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:05:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:05:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:06:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:06:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:07:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:07:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:08:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:08:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:09:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:09:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:10:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:10:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:11:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:11:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:12:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:12:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:13:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:13:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:14:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:14:37] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:15:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:15:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:16:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:16:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:17:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:17:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:18:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:18:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:19:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:19:40] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:20:10] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:20:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:21:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:21:41] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:22:11] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:22:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:23:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:23:42] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:24:12] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:24:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:25:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:25:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:26:13] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:26:44] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:27:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:27:44] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:28:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:28:45] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:29:15] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:29:45] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:30:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 14:30:52] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 14:31:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:31:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:32:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:32:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 14:32:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:33:01] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 14:33:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:33:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:33:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:33:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:34:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:34:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:34:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:34:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:35:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:35:22] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:35:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:35:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:36:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:36:23] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:36:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:36:53] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:37:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:37:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:37:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:37:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:38:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:38:24] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:38:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:38:54] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:39:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:39:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:39:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:39:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:40:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:40:25] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:40:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:40:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:41:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:41:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:41:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:41:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:42:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:42:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:42:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:42:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:43:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:43:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:43:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:43:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:44:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:44:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:44:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:44:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:45:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:45:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:45:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:45:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:46:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:46:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:46:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:46:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:47:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:47:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:47:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:47:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:48:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:48:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:48:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:48:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:49:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:49:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:49:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:49:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:50:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:50:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:51:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:51:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:51:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:51:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:52:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:52:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:52:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:52:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:53:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:53:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:53:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:53:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:54:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:54:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:54:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:54:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:55:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:55:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:55:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:55:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:56:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:56:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:56:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:56:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:57:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:57:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:57:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:57:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:58:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:58:03] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:58:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:58:33] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:59:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:59:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:59:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 14:59:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:00:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:00:04] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:00:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:00:34] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:01:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:01:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:01:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:01:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:02:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:02:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:02:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:02:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:03:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:03:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:03:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:03:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:04:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:04:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:04:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:04:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:05:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:05:07] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:05:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:05:54] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:05:55] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:06:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:06:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:07:26] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:07:56] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:08:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:08:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:09:27] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:09:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:09:49] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:09:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:10:05] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:10:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:10:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:10:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:10:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:11:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:11:28] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:11:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:11:58] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:12:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:12:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:12:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:12:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:13:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:13:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:13:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:13:59] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:14:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:14:29] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:15:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:15:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:15:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:15:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:16:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:16:00] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:16:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:16:30] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:17:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:17:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:17:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:17:31] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:18:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:18:01] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:18:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:18:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:19:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:19:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:19:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:19:32] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:20:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:20:02] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:20:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:21:10] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:21:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:30:31] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:30:51] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:31:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:31:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:32:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:32:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:33:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:33:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:34:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:34:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:35:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:35:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:36:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:36:52] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:37:11] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:37:32] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:37:57] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:46:30] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:46:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:46:48] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:46:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:47:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:47:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:48:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:48:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:49:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:49:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:50:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:50:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:51:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:53:17] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:53:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:53:34] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:53:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:54:05] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:54:35] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:55:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:55:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:56:06] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:56:36] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:57:21] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:57:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:57:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 15:58:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:58:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:59:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 15:59:38] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:00:08] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:00:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:01:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:01:39] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:02:09] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:02:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:02:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:02:46] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:02:47] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:03:18] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:03:48] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:04:18] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:04:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:05:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:05:49] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:06:19] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:06:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:07:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:07:50] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:08:20] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:08:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:09:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:09:51] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:10:21] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:11:23] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:11:41] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:11:41] [INFO] [network_utils] [SEND-UDP] EVENT
+[2025-10-15 16:11:42] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 16:11:42] [INFO] [network_utils] [SEND-UDP] STATE
+[2025-10-15 16:11:42] [INFO] [network_utils] [SEND-UDP] COMMAND_BROADCAST
+[2025-10-15 16:11:42] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:11:43] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:12:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:12:29] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:12:44] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:13:14] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:13:44] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:14:15] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:14:45] [INFO] [network_utils] [SEND-UDP] heartbeat
+[2025-10-15 16:17:40] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:17:44] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:18:18] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:18:27] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:29:39] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:29:58] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:31:05] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:31:05] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:31:23] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:31:37] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:33:10] [INFO] [network_utils] [SEND-UDP] system_message
+[2025-10-15 16:34:40] [INFO] [network_utils] [SEND-UDP] system_message

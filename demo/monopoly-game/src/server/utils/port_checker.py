@@ -3,18 +3,7 @@ import socket
 import random
 import threading
 from typing import List, Optional
-
-# Import logger đúng path ( điều chỉnh theo project của bạn )
-try:
-    # Nếu package layout là src.utils.logger
-    from src.utils.logger import Logger
-except Exception:
-    # Fallback nếu import khác
-    class Logger:
-        def __init__(self, name=None): self.name = name
-        def info(self, m): print(f"[INFO] {m}")
-        def success(self, m): print(f"[SUCCESS] {m}")
-        def error(self, m): print(f"[ERROR] {m}")
+from .logger import Logger
 
 class PortChecker:
     """
@@ -47,7 +36,7 @@ class PortChecker:
             for port in range(self.start_port, self.end_port + 1):
                 if self.is_port_available(port):
                     self.available_ports.append(port)
-        self.logger.success(f"Found {len(self.available_ports)} available ports.")
+        self.logger.info(f"Found {len(self.available_ports)} available ports.")
 
     def get_random_port(self) -> Optional[int]:
         """Lấy ngẫu nhiên 1 port từ danh sách khả dụng — trả None nếu không còn."""

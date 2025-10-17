@@ -1324,3 +1324,256 @@
 {"timestamp": "2025-10-09 23:08:55", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5628"}
 {"timestamp": "2025-10-09 23:15:25", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5554"}
 {"timestamp": "2025-10-09 23:22:30", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5042"}
+{"timestamp": "2025-10-12 00:45:57", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:45:57", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:47:47", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:47:47", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:49:58", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:49:58", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:51:02", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:51:03", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:52:03", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:52:03", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:53:10", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:53:10", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:54:42", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:54:42", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:55:03", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:55:03", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:56:15", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:56:15", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:56:30", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:56:30", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 00:58:46", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 00:58:46", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 01:03:43", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 01:03:43", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 01:10:38", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 01:10:38", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 01:10:51", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 01:10:51", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 01:26:34", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 01:26:34", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 01:27:08", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5936"}
+{"timestamp": "2025-10-12 09:05:48", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 09:05:49", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 09:06:07", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5797"}
+{"timestamp": "2025-10-12 09:14:31", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 09:14:31", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 09:14:50", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5393"}
+{"timestamp": "2025-10-12 09:16:30", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5393 back to pool."}
+{"timestamp": "2025-10-12 09:36:18", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 09:36:18", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 09:36:31", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5341"}
+{"timestamp": "2025-10-12 09:36:42", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5341 back to pool."}
+{"timestamp": "2025-10-12 09:36:55", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5970"}
+{"timestamp": "2025-10-12 09:39:46", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 09:39:46", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 09:40:00", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5886"}
+{"timestamp": "2025-10-12 09:51:31", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 09:51:31", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 09:51:54", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5280"}
+{"timestamp": "2025-10-12 09:58:46", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 09:58:46", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 09:59:13", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 09:59:13", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 09:59:32", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5903"}
+{"timestamp": "2025-10-12 10:04:45", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 10:04:45", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 10:05:02", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5756"}
+{"timestamp": "2025-10-12 10:09:57", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 10:09:57", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 10:10:14", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5567"}
+{"timestamp": "2025-10-12 10:10:24", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5567 back to pool."}
+{"timestamp": "2025-10-12 10:10:42", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 10:10:42", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 10:11:00", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5893"}
+{"timestamp": "2025-10-12 10:11:15", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5893 back to pool."}
+{"timestamp": "2025-10-12 10:13:12", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 10:13:12", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 10:13:27", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5105"}
+{"timestamp": "2025-10-12 10:14:11", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5105 back to pool."}
+{"timestamp": "2025-10-12 10:18:46", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 10:18:46", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 10:19:03", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5108"}
+{"timestamp": "2025-10-12 10:20:53", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5108 back to pool."}
+{"timestamp": "2025-10-12 10:41:49", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 10:41:49", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 10:42:06", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5220"}
+{"timestamp": "2025-10-12 10:51:06", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5220 back to pool."}
+{"timestamp": "2025-10-12 10:57:04", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 10:57:04", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 11:03:26", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 11:03:27", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 15:16:52", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 15:16:52", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 15:17:37", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 15:17:37", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 15:20:57", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5881"}
+{"timestamp": "2025-10-12 15:28:28", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 15:28:28", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 15:28:52", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5225"}
+{"timestamp": "2025-10-12 15:33:40", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5225 back to pool."}
+{"timestamp": "2025-10-12 15:44:24", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 15:44:24", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 15:47:32", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5638"}
+{"timestamp": "2025-10-12 15:55:47", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5638 back to pool."}
+{"timestamp": "2025-10-12 15:55:56", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 15:55:56", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 15:56:11", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5745"}
+{"timestamp": "2025-10-12 16:04:52", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5746"}
+{"timestamp": "2025-10-12 16:10:19", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5746 back to pool."}
+{"timestamp": "2025-10-12 16:10:19", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5745 back to pool."}
+{"timestamp": "2025-10-12 16:10:30", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 16:10:30", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 16:11:22", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5182"}
+{"timestamp": "2025-10-12 16:20:07", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 16:20:07", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 16:20:21", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5408"}
+{"timestamp": "2025-10-12 16:33:28", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 16:33:28", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 16:33:41", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5309"}
+{"timestamp": "2025-10-12 16:39:21", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5309 back to pool."}
+{"timestamp": "2025-10-12 16:39:30", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 16:39:30", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 16:39:42", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5190"}
+{"timestamp": "2025-10-12 16:39:58", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5190 back to pool."}
+{"timestamp": "2025-10-12 16:40:07", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5427"}
+{"timestamp": "2025-10-12 16:45:35", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 16:45:36", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 16:45:50", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5686"}
+{"timestamp": "2025-10-12 16:53:29", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5686 back to pool."}
+{"timestamp": "2025-10-12 22:22:44", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 22:22:44", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 22:25:18", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 22:25:18", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 22:25:37", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5510"}
+{"timestamp": "2025-10-12 22:54:40", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 22:54:40", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 22:55:07", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5539"}
+{"timestamp": "2025-10-12 22:56:19", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5539 back to pool."}
+{"timestamp": "2025-10-12 22:59:46", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 22:59:46", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 22:59:59", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5961"}
+{"timestamp": "2025-10-12 23:07:17", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 23:07:17", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 23:08:06", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5544"}
+{"timestamp": "2025-10-12 23:14:16", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5544 back to pool."}
+{"timestamp": "2025-10-12 23:14:22", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 23:14:22", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 23:14:34", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5019"}
+{"timestamp": "2025-10-12 23:21:36", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 23:21:36", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 23:22:52", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5305"}
+{"timestamp": "2025-10-12 23:32:51", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-12 23:32:51", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-12 23:33:04", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5123"}
+{"timestamp": "2025-10-13 09:55:37", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-13 09:55:37", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-13 09:55:55", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5294"}
+{"timestamp": "2025-10-13 10:04:53", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-13 10:04:53", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-13 10:04:59", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-13 10:04:59", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-13 10:06:37", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5368"}
+{"timestamp": "2025-10-13 10:08:58", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5368 back to pool."}
+{"timestamp": "2025-10-13 10:09:09", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5952"}
+{"timestamp": "2025-10-13 10:11:47", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-13 10:11:47", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-13 10:12:05", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-13 10:12:05", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-13 10:12:18", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5332"}
+{"timestamp": "2025-10-13 10:13:12", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5332 back to pool."}
+{"timestamp": "2025-10-13 10:13:24", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5547"}
+{"timestamp": "2025-10-13 10:14:00", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5547 back to pool."}
+{"timestamp": "2025-10-13 10:14:08", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5994"}
+{"timestamp": "2025-10-15 11:59:07", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 11:59:07", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 11:59:25", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5272"}
+{"timestamp": "2025-10-15 12:12:02", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5272 back to pool."}
+{"timestamp": "2025-10-15 12:12:09", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5739"}
+{"timestamp": "2025-10-15 12:15:16", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5739 back to pool."}
+{"timestamp": "2025-10-15 12:15:38", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5468"}
+{"timestamp": "2025-10-15 12:35:31", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5468 back to pool."}
+{"timestamp": "2025-10-15 12:35:40", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 12:35:40", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 12:36:03", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5168"}
+{"timestamp": "2025-10-15 13:44:20", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 13:44:20", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 13:45:04", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5418"}
+{"timestamp": "2025-10-15 13:50:34", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5418 back to pool."}
+{"timestamp": "2025-10-15 13:50:46", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 13:50:46", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 13:50:57", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5568"}
+{"timestamp": "2025-10-15 14:03:51", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5568 back to pool."}
+{"timestamp": "2025-10-15 14:04:02", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 14:04:02", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 14:04:15", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5162"}
+{"timestamp": "2025-10-15 14:30:21", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 14:30:21", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 14:30:32", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5681"}
+{"timestamp": "2025-10-15 14:32:23", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5681 back to pool."}
+{"timestamp": "2025-10-15 14:32:33", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 14:32:33", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 14:32:39", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5343"}
+{"timestamp": "2025-10-15 15:04:25", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5343 back to pool."}
+{"timestamp": "2025-10-15 15:04:32", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:04:33", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:05:25", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:05:25", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:05:37", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5359"}
+{"timestamp": "2025-10-15 15:05:44", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:05:44", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:06:26", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5359 back to pool."}
+{"timestamp": "2025-10-15 15:09:31", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5127"}
+{"timestamp": "2025-10-15 15:09:38", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5127 back to pool."}
+{"timestamp": "2025-10-15 15:09:49", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5053"}
+{"timestamp": "2025-10-15 15:20:27", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5053 back to pool."}
+{"timestamp": "2025-10-15 15:20:34", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:20:34", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:20:48", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5882"}
+{"timestamp": "2025-10-15 15:30:19", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:30:19", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:30:31", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5044"}
+{"timestamp": "2025-10-15 15:36:46", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5044 back to pool."}
+{"timestamp": "2025-10-15 15:36:54", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:36:54", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:36:57", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:36:57", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:37:11", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5924"}
+{"timestamp": "2025-10-15 15:46:18", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:46:18", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:46:30", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5475"}
+{"timestamp": "2025-10-15 15:53:05", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:53:05", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:53:17", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5535"}
+{"timestamp": "2025-10-15 15:57:01", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5535 back to pool."}
+{"timestamp": "2025-10-15 15:57:07", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:57:07", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:57:13", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 15:57:13", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 15:57:20", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5892"}
+{"timestamp": "2025-10-15 16:02:10", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5892 back to pool."}
+{"timestamp": "2025-10-15 16:02:17", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 16:02:17", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 16:02:29", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5405"}
+{"timestamp": "2025-10-15 16:10:21", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5405 back to pool."}
+{"timestamp": "2025-10-15 16:11:13", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 16:11:13", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 16:11:23", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5293"}
+{"timestamp": "2025-10-15 16:17:02", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 16:17:02", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 16:17:40", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5495"}
+{"timestamp": "2025-10-15 16:18:18", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5495 back to pool."}
+{"timestamp": "2025-10-15 16:29:26", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 16:29:26", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 16:29:39", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5332"}
+{"timestamp": "2025-10-15 16:31:05", "level": "INFO", "room_id": "PortChecker", "message": "Released port 5332 back to pool."}
+{"timestamp": "2025-10-15 16:31:13", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 16:31:13", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 16:31:23", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5958"}
+{"timestamp": "2025-10-15 16:32:54", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 16:32:54", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}
+{"timestamp": "2025-10-15 16:33:10", "level": "INFO", "room_id": "PortChecker", "message": "Selected port 5687"}
+{"timestamp": "2025-10-15 16:34:24", "level": "INFO", "room_id": "PortChecker", "message": "Scanning ports 5000–6000..."}
+{"timestamp": "2025-10-15 16:34:24", "level": "INFO", "room_id": "PortChecker", "message": "Found 1000 available ports."}

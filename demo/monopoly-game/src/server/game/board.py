@@ -1,170 +1,88 @@
-"""
-Board logic for Monopoly
------------------------------------
-Quản lý các ô (tile), loại tài sản, giá, tiền thuê,
-và các quy tắc liên quan đến sở hữu & tiền thuê.
-"""
-
+import json
 from typing import Dict, List, Optional
+import json 
 
+TILE_WIDTH = 11
+TILE_HEIGHT = 7
 
 class Board:
-    def __init__(self):
-        self.tiles = self._create_tiles()
+    def __init__(self, json_path: str = "board_tiles.json"):
+        self.tiles = self.load_tiles_from_json(json_path)
 
-    # ======================================
-    # Tạo danh sách 40 ô Monopoly cơ bản
-    # ======================================
-    def _create_tiles(self) -> List[Dict]:
-        tiles = []
-        property_names = [
-            "Mediterranean Ave", "Baltic Ave", "Oriental Ave", "Vermont Ave",
-            "Connecticut Ave", "St. Charles Place", "States Ave", "Virginia Ave",
-            "St. James Place", "Tennessee Ave", "New York Ave", "Kentucky Ave",
-            "Indiana Ave", "Illinois Ave", "Atlantic Ave", "Ventnor Ave",
-            "Marvin Gardens", "Pacific Ave", "North Carolina Ave", "Pennsylvania Ave",
-            "Park Place", "Boardwalk"
-        ]
-        property_positions = [1, 3, 6, 8, 9, 11, 13, 14, 16, 18, 19,
-                              21, 23, 24, 26, 27, 29, 31, 32, 34, 37, 39]
-        base_prices = [60, 60, 100, 100, 120, 140, 140, 160, 180, 180, 200,
-                       220, 220, 240, 260, 260, 280, 300, 300, 320, 350, 400]
-        base_rents = [2, 4, 6, 6, 8, 10, 10, 12, 14, 14, 16,
-                      18, 18, 20, 22, 22, 24, 26, 26, 28, 35, 50]
-        color_groups = [
-            "Brown", "Brown", "Light Blue", "Light Blue", "Light Blue",
-            "Pink", "Pink", "Pink", "Orange", "Orange", "Orange",
-            "Red", "Red", "Red", "Yellow", "Yellow", "Yellow",
-            "Green", "Green", "Green", "Dark Blue", "Dark Blue"
-        ]
-
-        for i in range(40):
-            if i == 0:
-                tiles.append({"id": i, "name": "GO", "type": "go", "price": 0})
-            elif i == 10:
-                tiles.append({"id": i, "name": "Jail", "type": "jail", "price": 0})
-            elif i == 20:
-                tiles.append({"id": i, "name": "Free Parking", "type": "free_parking", "price": 0})
-            elif i == 30:
-                tiles.append({"id": i, "name": "Go to Jail", "type": "go_to_jail", "price": 0})
-            elif i in [2, 17, 33]:
-                tiles.append({"id": i, "name": "Chance", "type": "chance", "price": 0})
-            elif i in [7, 22, 36]:
-                tiles.append({"id": i, "name": "Community Chest", "type": "community_chest", "price": 0})
-            elif i in [4, 38]:
-                tiles.append({
-                    "id": i,
-                    "name": "Income Tax" if i == 4 else "Luxury Tax",
-                    "type": "tax",
-                    "amount": 200 if i == 4 else 100
-                })
-            elif i in [5, 15, 25, 35]:
-                tiles.append({
-                    "id": i,
-                    "name": f"Railroad {i//10 + 1}",
-                    "type": "railroad",
-                    "price": 200,
-                    "rent": 25,
-                    "owner": None
-                })
-            elif i in [12, 28]:
-                tiles.append({
-                    "id": i,
-                    "name": "Electric Company" if i == 12 else "Water Works",
-                    "type": "utility",
-                    "price": 150,
-                    "owner": None
-                })
-            elif i in property_positions:
-                idx = property_positions.index(i)
-                tiles.append({
-                    "id": i,
-                    "name": property_names[idx],
-                    "type": "property",
-                    "price": base_prices[idx],
-                    "rent": base_rents[idx],
-                    "group": color_groups[idx],
-                    "owner": None,
-                    "houses": 0
-                })
-            else:
-                tiles.append({"id": i, "name": f"Tile {i}", "type": "special"})
+    def load_tiles_from_json(self, path: str) -> List[Dict]:
+        """Load board tiles from JSON file"""
+        with open(path, "r", encoding="utf-8") as f:
+            tiles = json.load(f)
         return tiles
 
-    # ======================================
-    # Hàm tiện ích
-    # ======================================
+    def fit_text(self, text: str, width: int) -> str:
+        if len(text) > width:
+            return text[:width-2] + ".."
+        return text.center(width)
 
-    def get_tile(self, tile_id: int) -> Optional[Dict]:
-        """Lấy thông tin ô theo vị trí"""
-        if 0 <= tile_id < len(self.tiles):
-            return self.tiles[tile_id]
-        return None
+    def create_tile_lines(self, tile: Dict, pos: int, players: Dict[str, int]) -> List[str]:
+        colors = {
+            "property": "\033[42m", "railroad": "\033[44m", "utility": "\033[46m",
+            "tax": "\033[41m", "chance": "\033[43m", "community_chest": "\033[45m",
+            "go": "\033[47m", "jail": "\033[47m", "free_parking": "\033[47m",
+            "go_to_jail": "\033[47m", "special": "\033[47m"
+        }
+        color = colors.get(tile.get("type", "special"), "\033[47m")
+        reset = "\033[0m"
 
-    def is_property(self, tile: Dict) -> bool:
-        """Kiểm tra ô là loại có thể mua"""
-        return tile["type"] in ("property", "railroad", "utility")
+        occupants = [name[0].upper() for name, p in players.items() if p == pos]
+        player_str = "".join(occupants) if occupants else " "
 
-    def next_position(self, current_pos: int, steps: int) -> int:
-        """Tính vị trí mới khi di chuyển"""
-        return (current_pos + steps) % len(self.tiles)
+        name = self.fit_text(tile.get("name", ""), 9)
+        type_display = tile.get("type", "special")[:7]
+        price_str = f"${tile.get('price', '')}" if tile.get("price") else ""
 
-    # ======================================
-    # Logic sở hữu & tiền thuê
-    # ======================================
+        lines = [
+            color + "┌" + "─"*9 + "┐" + reset,
+            color + f"│{str(pos).center(9)}│" + reset,
+            color + f"│{name}│" + reset,
+            color + f"│{type_display.center(9)}│" + reset,
+            color + f"│{price_str.center(9)}│" + reset,
+            color + f"│[{player_str}]".ljust(10) + "│" + reset,
+            color + "└" + "─"*9 + "┘" + reset
+        ]
+        return lines
 
-    def buy_property(self, tile_id: int, player_id: str) -> bool:
-        tile = self.get_tile(tile_id)
-        if not tile or not self.is_property(tile):
-            return False
-        if tile.get("owner") is not None:
-            return False
-        if tile.get("price", 0) <= 0:  # THÊM KIỂM TRA
-            return False
-        tile["owner"] = player_id
-        return True
+    def render_board(self, players: Dict[str, int] = None):
+        if players is None:
+            players = {}
 
-    def reset_owner(self, player_id: str):
-        """Xóa quyền sở hữu của người chơi (khi bankrupt)"""
-        for tile in self.tiles:
-            if tile.get("owner") == player_id:
-                tile["owner"] = None
+        # Cạnh dưới: 0 -> 10
+        bottom_row = [self.create_tile_lines(self.tiles[i], i, players) for i in range(0, 11)]
+        # Cạnh phải: 11 -> 19
+        right_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(11, 20)]
+        right_col.reverse()
+        # Cạnh trên: 20 -> 30
+        top_row = [self.create_tile_lines(self.tiles[i], i, players) for i in range(20, 31)]
+        top_row.reverse()
+        # Cạnh trái: 31 -> 39
+        left_col = [self.create_tile_lines(self.tiles[i], i, players) for i in range(31, 40)]
 
-    def get_group_properties(self, group_name: str) -> List[Dict]:
-        """Trả về danh sách ô cùng nhóm màu"""
-        return [t for t in self.tiles if t.get("group") == group_name]
+        # ===== VẼ BOARD =====
+        # Cạnh trên
+        for line_num in range(7):
+            print("".join(tile[line_num] for tile in top_row))
 
-    def get_rent(self, tile_id: int, dice_roll: Optional[int] = None) -> int:
-        tile = self.get_tile(tile_id)
-        if not tile or not self.is_property(tile):
-            return 0
+        # Hai cạnh dọc
+        for i in range(len(right_col)):
+            left_tile = left_col[i]
+            right_tile = right_col[i]
+            middle_space = " " * (TILE_WIDTH * 9)
+            for ln in range(7):
+                print(left_tile[ln] + middle_space + right_tile[ln])
 
-        owner = tile.get("owner")
-        if not owner: 
-            return 0
+        # Cạnh dưới
+        for line_num in range(7):
+            print("".join(tile[line_num] for tile in bottom_row))
 
-        ttype = tile["type"]
-        if ttype == "property":
-            # Logic hiện tại OK
-            group = tile.get("group")
-            group_tiles = self.get_group_properties(group)
-            if group_tiles and all(t.get("owner") == owner for t in group_tiles):
-                return tile["rent"] * 2
-            return tile["rent"]
-
-        elif ttype == "railroad":
-            owner = tile.get("owner")
-            if not owner:  # KIỂM TRA THÊM
-                return 0
-            railroads = [t for t in self.tiles if t["type"] == "railroad" and t.get("owner") == owner]
-            return 25 * (2 ** (len(railroads) - 1))
-
-        elif ttype == "utility":
-            owner = tile.get("owner")
-            if not owner or dice_roll is None:  # KIỂM TRA THÊM
-                return 0
-            utilities = [t for t in self.tiles if t["type"] == "utility" and t.get("owner") == owner]
-            multiplier = 4 if len(utilities) == 1 else 10
-            return dice_roll * multiplier
-
-        return 0
+        # ===== CHÚ THÍCH =====
+        print("\n📝 CHÚ THÍCH:")
+        print("🟩 Property  🟦 Railroad  🟨 Chance  🟪 C.Chest  🟥 Tax  ⬜️ Special")
+        if players:
+            player_list = [f"{name}[{name[0]}]" for name in players.keys()]
+            print(f"👥 NGƯỜI CHƠI: {', '.join(player_list)}")
