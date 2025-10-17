@@ -1,0 +1,207 @@
+[
+    {
+        "name": "Mediterranean Avenue",
+        "color_group": "Brown",
+        "purchase_price": 60,
+        "base_rent": 2,
+        "rents": {"1_house": 10, "2_houses": 30, "3_houses": 90, "4_houses": 160, "hotel": 250},
+        "mortgage_value": 30,
+        "building_costs": {"house_cost": 50, "hotel_cost": 50, "exchange_houses": 4}
+    },
+    {
+
+        "name": "Baltic Avenue",
+        "color_group": "Brown",
+        "purchase_price": 60,
+        "base_rent": 4,
+        "rents": {"1_house": 20, "2_houses": 60, "3_houses": 180, "4_houses": 320, "hotel": 450},
+        "mortgage_value": 30,
+        "building_costs": {"house_cost": 50, "hotel_cost": 50, "exchange_houses": 4}
+    },
+
+    {
+        "name": "Oriental Avenue",
+        "color_group": "Light Blue",
+        "purchase_price": 100,
+        "base_rent": 6,
+        "rents": {"1_house": 30, "2_houses": 90, "3_houses": 270, "4_houses": 400, "hotel": 550},
+        "mortgage_value": 50,
+        "building_costs": {"house_cost": 50, "hotel_cost": 50, "exchange_houses": 4}
+    },
+    {
+        "name": "Vermont Avenue",
+        "color_group": "Light Blue",
+        "purchase_price": 100,
+        "base_rent": 6,
+        "rents": {"1_house": 30, "2_houses": 90, "3_houses": 270, "4_houses": 400, "hotel": 550},
+        "mortgage_value": 50,
+        "building_costs": {"house_cost": 50, "hotel_cost": 50, "exchange_houses": 4}
+    },
+    {
+        "name": "Connecticut Avenue",
+        "color_group": "Light Blue",
+        "purchase_price": 120,
+        "base_rent": 8,
+        "rents": {"1_house": 40, "2_houses": 100, "3_houses": 300, "4_houses": 450, "hotel": 600},
+        "mortgage_value": 60,
+        "building_costs": {"house_cost": 50, "hotel_cost": 50, "exchange_houses": 4}
+    },
+    {
+        "name": "St. Charles Place",
+        "color_group": "Pink",
+        "purchase_price": 140,
+        "base_rent": 10,
+        "rents": {"1_house": 50, "2_houses": 150, "3_houses": 450, "4_houses": 625, "hotel": 750},
+        "mortgage_value": 70,
+        "building_costs": {"house_cost": 100, "hotel_cost": 100, "exchange_houses": 4}
+    },
+    {
+        "name": "States Avenue",
+        "color_group": "Pink",
+        "purchase_price": 140,
+        "base_rent": 10,
+        "rents": {"1_house": 50, "2_houses": 150, "3_houses": 450, "4_houses": 625, "hotel": 750},
+        "mortgage_value": 70,
+        "building_costs": {"house_cost": 100, "hotel_cost": 100, "exchange_houses": 4}
+    },
+    {
+        "name": "Virginia Avenue",
+        "color_group": "Pink",
+        "purchase_price": 160,
+        "base_rent": 12,
+        "rents": {"1_house": 60, "2_houses": 180, "3_houses": 500, "4_houses": 700, "hotel": 900},
+        "mortgage_value": 80,
+        "building_costs": {"house_cost": 100, "hotel_cost": 100, "exchange_houses": 4}
+    },
+
+    {
+        "name": "St. James Place",
+        "color_group": "Orange",
+        "purchase_price": 180,
+        "base_rent": 14,
+        "rents": {"1_house": 70, "2_houses": 200, "3_houses": 550, "4_houses": 750, "hotel": 950},
+        "mortgage_value": 90,
+        "building_costs": {"house_cost": 100, "hotel_cost": 100, "exchange_houses": 4}
+    },
+    {
+        "name": "Tennessee Avenue",
+        "color_group": "Orange",
+        "purchase_price": 180,
+        "base_rent": 14,
+        "rents": {"1_house": 70, "2_houses": 200, "3_houses": 550, "4_houses": 750, "hotel": 950},
+        "mortgage_value": 90,
+        "building_costs": {"house_cost": 100, "hotel_cost": 100, "exchange_houses": 4}
+    },
+    {
+        "name": "New York Avenue",
+        "color_group": "Orange",
+        "purchase_price": 200,
+        "base_rent": 16,
+        "rents": {"1_house": 80, "2_houses": 220, "3_houses": 600, "4_houses": 800, "hotel": 1000},
+        "mortgage_value": 100,
+        "building_costs": {"house_cost": 100, "hotel_cost": 100, "exchange_houses": 4}
+    },
+
+    {
+        "name": "Kentucky Avenue",
+        "color_group": "Red",
+        "purchase_price": 220,
+        "base_rent": 18,
+        "rents": {"1_house": 90, "2_houses": 250, "3_houses": 700, "4_houses": 875, "hotel": 1050},
+        "mortgage_value": 110,
+        "building_costs": {"house_cost": 150, "hotel_cost": 150, "exchange_houses": 4}
+    },
+    {
+        "name": "Indiana Avenue",
+        "color_group": "Red",
+        "purchase_price": 220,
+        "base_rent": 18,
+        "rents": {"1_house": 90, "2_houses": 250, "3_houses": 700, "4_houses": 875, "hotel": 1050},
+        "mortgage_value": 110,
+        "building_costs": {"house_cost": 150, "hotel_cost": 150, "exchange_houses": 4}
+    },
+    {
+        "name": "Illinois Avenue",
+        "color_group": "Red",
+        "purchase_price": 240,
+        "base_rent": 20,
+        "rents": {"1_house": 100, "2_houses": 300, "3_houses": 750, "4_houses": 925, "hotel": 1100},
+        "mortgage_value": 120,
+        "building_costs": {"house_cost": 150, "hotel_cost": 150, "exchange_houses": 4}
+    },
+
+    {
+        "name": "Atlantic Avenue",
+        "color_group": "Yellow",
+        "purchase_price": 260,
+        "base_rent": 22,
+        "rents": {"1_house": 110, "2_houses": 330, "3_houses": 800, "4_houses": 975, "hotel": 1150},
+        "mortgage_value": 130,
+        "building_costs": {"house_cost": 150, "hotel_cost": 150, "exchange_houses": 4}
+    },
+    {
+        "name": "Ventnor Avenue",
+        "color_group": "Yellow",
+        "purchase_price": 260,
+        "base_rent": 22,
+        "rents": {"1_house": 110, "2_houses": 330, "3_houses": 800, "4_houses": 975, "hotel": 1150},
+        "mortgage_value": 130,
+        "building_costs": {"house_cost": 150, "hotel_cost": 150, "exchange_houses": 4}
+    },
+    {
+        "name": "Marvin Gardens",
+        "color_group": "Yellow",
+        "purchase_price": 280,
+        "base_rent": 24,
+        "rents": {"1_house": 120, "2_houses": 360, "3_houses": 850, "4_houses": 1025, "hotel": 1200},
+        "mortgage_value": 140,
+        "building_costs": {"house_cost": 150, "hotel_cost": 150, "exchange_houses": 4}
+    },
+
+    {
+        "name": "Pacific Avenue",
+        "color_group": "Green",
+        "purchase_price": 300,
+        "base_rent": 26,
+        "rents": {"1_house": 130, "2_houses": 390, "3_houses": 900, "4_houses": 1100, "hotel": 1275},
+        "mortgage_value": 150,
+        "building_costs": {"house_cost": 200, "hotel_cost": 200, "exchange_houses": 4}
+    },
+    {
+        "name": "North Carolina Avenue",
+        "color_group": "Green",
+        "purchase_price": 300,
+        "base_rent": 26,
+        "rents": {"1_house": 130, "2_houses": 390, "3_houses": 900, "4_houses": 1100, "hotel": 1275},
+        "mortgage_value": 150,
+        "building_costs": {"house_cost": 200, "hotel_cost": 200, "exchange_houses": 4}
+    },
+    {
+        "name": "Pennsylvania Avenue",
+        "color_group": "Green",
+        "purchase_price": 320,
+        "base_rent": 28,
+        "rents": {"1_house": 150, "2_houses": 450, "3_houses": 1000, "4_houses": 1200, "hotel": 1400},
+        "mortgage_value": 160,
+        "building_costs": {"house_cost": 200, "hotel_cost": 200, "exchange_houses": 4}
+    },
+
+    {
+        "name": "Park Place",
+        "color_group": "Dark Blue",
+        "purchase_price": 350,
+        "base_rent": 35,
+        "rents": {"1_house": 175, "2_houses": 500, "3_houses": 1100, "4_houses": 1300, "hotel": 1500},
+        "mortgage_value": 175,
+        "building_costs": {"house_cost": 200, "hotel_cost": 200, "exchange_houses": 4}
+    },
+    {
+        "name": "Boardwalk",
+        "color_group": "Dark Blue",
+        "purchase_price": 400,
+        "base_rent": 50,
+        "rents": {"1_house": 200, "2_houses": 600, "3_houses": 1400, "4_houses": 1700, "hotel": 2000},
+        "mortgage_value": 200,
+        "building_costs": {"house_cost": 200, "hotel_cost": 200, "exchange_houses": 4}
+    }
+]

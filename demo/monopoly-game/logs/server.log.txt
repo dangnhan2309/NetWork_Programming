@@ -16923,3 +16923,104 @@
 [2025-10-10 00:59:14] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
 [2025-10-10 00:59:14] [DEBUG] [Server] 📤 Heartbeat sent to l (Thread: MainThread, Func: main_loop)
 [2025-10-10 00:59:15] [DEBUG] [Server] 📤 Heartbeat sent to q (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:17] [INFO] [Server] 🚀 Initializing Monopoly Server...
+[2025-10-11 14:53:17] [SUCCESS] [Server] 🏠 Created room 'ROOM_01' on 224.1.1.10:5858
+[2025-10-11 14:53:17] [SUCCESS] [Server] 🏠 Created room 'ROOM_02' on 224.1.1.11:5066
+[2025-10-11 14:53:17] [INFO] [Server] ✅ 2 rooms initialized.
+[2025-10-11 14:53:17] [INFO] [Server] 🔄 Starting TCP server on 0.0.0.0:5050
+[2025-10-11 14:53:17] [INFO] [Server] 🌐 Monopoly Server is NOW RUNNING!
+[2025-10-11 14:53:17] [INFO] [Server]    TCP: 0.0.0.0:5050
+[2025-10-11 14:53:17] [INFO] [Server]    Rooms: 2
+[2025-10-11 14:53:17] [INFO] [Server]    Press Ctrl+C to stop
+[2025-10-11 14:53:17] [INFO] [Server] 📡 UDP Multicast listener started.
+[2025-10-11 14:53:17] [INFO] [Server] 🌀 Main loop started.
+[2025-10-11 14:53:17] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:17] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:22] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:22] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:27] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:27] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:32] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:32] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:37] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:37] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:43] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:43] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:48] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:48] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:53] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:53] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:58] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:53:58] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:03] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:03] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:08] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:08] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:13] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:13] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:18] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:18] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:23] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:23] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:28] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:28] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:33] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:33] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:35] [INFO] [Server] 🔌 New TCP connection from ('127.0.0.1', 60418)
+[2025-10-11 14:54:38] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:38] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:43] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:43] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:48] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:48] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:53] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:53] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:58] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:54:58] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:03] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:03] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:08] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:08] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:11] [DEBUG] [Server] 📨 Received 76 bytes from ('127.0.0.1', 60418), buffer: 76 chars (Thread: MainThread, Func: handle_tcp_client)
+[2025-10-11 14:55:11] [INFO] [Server] 📨 Received from ('127.0.0.1', 60418): JOIN_ROOM
+[2025-10-11 14:55:11] [INFO] [Server] 👤 nhan joined ROOM_02
+[2025-10-11 14:55:11] [INFO] [Server] ✅ Player nhan joined ROOM_02
+[2025-10-11 14:55:11] [DEBUG] [Server] 📤 Sent response to ('127.0.0.1', 60418): JOIN_SUCCESS (Thread: MainThread, Func: process_single_message)
+[2025-10-11 14:55:13] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:13] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:18] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:18] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:23] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:23] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:28] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:28] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:33] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:33] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:38] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:38] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:43] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:43] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:48] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:48] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:53] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:53] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:58] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:55:58] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:56:03] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_01 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:56:03] [DEBUG] [Server] 📤 Heartbeat sent to ROOM_02 (Thread: MainThread, Func: main_loop)
+[2025-10-11 14:56:06] [INFO] [Server] 🔌 Client ('127.0.0.1', 60418) disconnected (no data)
+[2025-10-11 14:56:06] [INFO] [Server] 🔌 Client ('127.0.0.1', 60418) fully disconnected
+[2025-10-11 14:56:08] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 14:56:08] [INFO] [Server] 🧩 Main loop stopped.
+[2025-10-11 15:08:23] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:24] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:25] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:25] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:25] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:25] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:26] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:30] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:30] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:30] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:30] [WARNING] [Server] ⚠️ Signal received, shutting down server...
+[2025-10-11 15:08:30] [WARNING] [Server] ⚠️ Signal received, shutting down server...

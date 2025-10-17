@@ -144,3 +144,125 @@
 #                 print(f"🎊 Người thắng: {winner}")
 #         print("Cảm ơn bạn đã chơi Monopoly!")
 #         print("🎉" * 20)
+
+
+
+import tkinter as tk
+from tkinter import messagebox, ttk
+import threading
+import json
+import socket
+
+# --- CONFIG ---
+MULTICAST_GROUP = '224.1.1.1'
+MULTICAST_PORT = 5007
+
+
+class MonopolyUI:
+    def __init__(self, master):
+        self.master = master
+        self.master.title("🎲 Monopoly Game Client")
+        self.master.geometry("900x600")
+
+        # --- FRAME LAYOUT ---
+        self.board_frame = tk.Frame(master, bg="lightgray", width=600, height=600)
+        self.info_frame = tk.Frame(master, bg="white", width=300, height=600)
+
+        self.board_frame.pack(side="left", fill="both", expand=True)
+        self.info_frame.pack(side="right", fill="y")
+
+        # --- CANVAS for BOARD ---
+        self.canvas = tk.Canvas(self.board_frame, bg="#f3f3f3", width=600, height=600)
+        self.canvas.pack(fill="both", expand=True)
+
+        # --- INFO PANEL ---
+        self.label_turn = tk.Label(self.info_frame, text="Turn: N/A", font=("Arial", 14, "bold"))
+        self.label_money = tk.Label(self.info_frame, text="Money: 0", font=("Arial", 12))
+        self.log_box = tk.Text(self.info_frame, height=20, state="disabled", bg="#f9f9f9")
+
+        self.label_turn.pack(pady=10)
+        self.label_money.pack(pady=5)
+        ttk.Separator(self.info_frame, orient="horizontal").pack(fill="x", pady=5)
+        tk.Label(self.info_frame, text="Game Log:").pack()
+        self.log_box.pack(fill="both", expand=True, padx=10, pady=5)
+
+        # --- GAME STATE ---
+        self.game_state = {}
+        self.tiles = []
+        self.player_tokens = {}
+
+        # --- SOCKET LISTENER THREAD ---
+        self.listener_thread = threading.Thread(target=self.listen_multicast, daemon=True)
+        self.listener_thread.start()
+
+        self.draw_board()
+
+    # ----------------------
+    def draw_board(self):
+        """Vẽ sơ bộ bàn cờ Monopoly (chỉ là khung vuông và các ô)"""
+        size = 10
+        tile_size = 50
+        self.tiles.clear()
+        for i in range(size):
+            # Top row
+            self.tiles.append(self.canvas.create_rectangle(
+                i * tile_size, 0, (i + 1) * tile_size, tile_size, outline="black", fill="white"))
+            # Bottom row
+            self.tiles.append(self.canvas.create_rectangle(
+                i * tile_size, 550, (i + 1) * tile_size, 600, outline="black", fill="white"))
+            # Left column
+            self.tiles.append(self.canvas.create_rectangle(
+                0, i * tile_size, tile_size, (i + 1) * tile_size, outline="black", fill="white"))
+            # Right column
+            self.tiles.append(self.canvas.create_rectangle(
+                550, i * tile_size, 600, (i + 1) * tile_size, outline="black", fill="white"))
+
+    # ----------------------
+    def listen_multicast(self):
+        """Lắng nghe gói tin từ server (multicast)"""
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        sock.bind(('', MULTICAST_PORT))
+
+        mreq = socket.inet_aton(MULTICAST_GROUP) + socket.inet_aton("0.0.0.0")
+        sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, mreq)
+
+        while True:
+            data, _ = sock.recvfrom(4096)
+            try:
+                packet = json.loads(data.decode())
+                self.master.after(0, self.update_state, packet)
+            except Exception as e:
+                print("⚠️ Parse error:", e)
+
+    # ----------------------
+    def update_state(self, packet):
+        """Cập nhật giao diện dựa vào game state"""
+        if packet.get("type") == "state_update":
+            self.game_state = packet["state"]
+            turn = self.game_state.get("turn")
+            money = self.game_state.get("money", {}).get("player1", 0)
+            self.label_turn.config(text=f"Turn: {turn}")
+            self.label_money.config(text=f"Money: {money}")
+            self.add_log(f"🔄 State updated: turn={turn}")
+
+        elif packet.get("type") == "chat":
+            msg = packet.get("message", "")
+            self.add_log(f"💬 {msg}")
+
+        elif packet.get("type") == "event":
+            self.add_log(f"🎯 {packet.get('description')}")
+
+    # ----------------------
+    def add_log(self, text):
+        """Thêm dòng log vào khung thông báo"""
+        self.log_box.config(state="normal")
+        self.log_box.insert("end", text + "\n")
+        self.log_box.config(state="disabled")
+        self.log_box.see("end")
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = MonopolyUI(root)
+    root.mainloop()

@@ -11,10 +11,12 @@ Tự động:
 
 import socket
 import json
-from ..utils import packetformat
-from ..utils import logger as Logger
+from json import JSONDecodeError
 
-logger = Logger("network_utils")
+from ..utils import packetformat
+from ..utils import logger
+
+logger = logger("network_utils")
 
 
 # ============================================================
@@ -34,14 +36,31 @@ def encode_packet(packet: dict) -> bytes:
 
 
 def decode_packet(data: bytes) -> dict | None:
-    """Decode packet, fallback JSON nếu cần"""
-    try:
-        return packetformat.decode_packet(data)
-    except Exception:
+        """Decode packet, fallback to JSON if initial decode fails."""
+
+        # --- FIRST ATTEMPT: Custom Packet Format ---
         try:
-            return json.loads(data.decode("utf-8"))
-        except Exception as e:
-            logger.warning(f"Decode packet lỗi ({e}), bỏ qua.")
+            # Assuming packetformat.decode_packet raises some form of ValueError
+            # or custom decoding error when data is corrupt.
+            return packetformat.decode_packet(data)
+
+            # Catch specific errors for the packet format failure.
+        # We use a broad base exception (like ValueError) if we don't know the custom error name.
+        except (ValueError, TypeError) as e:
+            logger.debug(f"Custom decode failed ({e}). Attempting JSON fallback.")
+
+        # --- SECOND ATTEMPT: JSON Fallback ---
+        try:
+            # 1. Decode bytes to string
+            decoded_string = data.decode("utf-8")
+
+            # 2. Parse JSON
+            return json.loads(decoded_string)
+
+        # Catch specific errors for JSON failure
+        except (JSONDecodeError, UnicodeDecodeError) as e:
+            # This is the final expected failure point for bad data format
+            logger.warning(f"JSON decode failed. Data is unusable ({e}), skipping.")
             return None
 
 

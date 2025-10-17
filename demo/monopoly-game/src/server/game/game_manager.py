@@ -1,501 +1,378 @@
-# game/game_manager.py
+# from datetime import datetime
+# import random
+#
+# from .Bank import Bank
+# from .player import Player
+# from ..rooms.room_state import RoomState
+# from ..network.packet_builder import PacketBuilder  # 🔗 Thêm import
+#
+# class GameManager:
+#     """
+#     Quản lý toàn bộ luồng chơi Monopoly:
+#     - Điều phối lượt chơi
+#     - Gọi hành động từ Player / Board / CardManager
+#     - Cập nhật RoomState
+#     - Phát sự kiện JSON tới client qua NetworkManager (chuẩn hóa bằng PacketBuilder)
+#     """
+#
+#     def __init__(self, room_state: RoomState, board, card_manager, network, logger):
+#         self.room_state = room_state
+#         self.board = board
+#         self.card_manager = card_manager
+#         self.network = network
+#         self.turn_manager = room_state.turn_manager
+#         self.active = False
+#         self.bank = Bank()
+#         self.logger = logger
+#
+#         # Đăng ký Player vào Bank
+#         for player in self.room_state.players:
+#             player.bank = self.bank
+#             self.bank.register_player(player, player.balance)
+#
+#     # -----------------------------------------------------
+#     # 🕹️ Game Lifecycle
+#     # -----------------------------------------------------
+#     def start_game(self):
+#         if self.active:
+#             return
+#         self.active = True
+#         self.turn_manager.current_index = 0
+#         self.room_state.status = "running"
+#         self.room_state.start_time = datetime.now().isoformat()
+#
+#         packet = PacketBuilder.start_game(self.room_state.room_id, self.room_state.host_id)
+#         packet["payload"]["players"] = [p.serialize() for p in self.room_state.players]
+#         self.network.send_packet(packet)
+#
+#     def end_game(self, winner_id=None):
+#         self.active = False
+#         self.room_state.status = "ended"
+#         self.room_state.end_time = datetime.now().isoformat()
+#         self.room_state.winner = winner_id
+#
+#         packet = PacketBuilder.broadcast_state(
+#             self.room_state.room_id,
+#             {
+#                 "action": "GAME_ENDED",
+#                 "winner": winner_id,
+#                 "timestamp": self.room_state.end_time,
+#             },
+#         )
+#         self.network.send_packet(packet)
+#
+#     # -----------------------------------------------------
+#     # 🔄 Turn Management
+#     # -----------------------------------------------------
+#     def get_current_player(self):
+#         return self.turn_manager.get_current_player()
+#
+#     def next_turn(self):
+#         """Chuyển lượt cho người chơi kế tiếp"""
+#         self.get_current_player().has_rolled_and_moved = False
+#         current = self.turn_manager.next_turn()
+#
+#         packet = PacketBuilder.broadcast_state(
+#             self.room_state.room_id,
+#             {
+#                 "action": "TURN_CHANGED",
+#                 "current_player": current.id,
+#             },
+#         )
+#         self.network.send_packet(packet)
+#
+#     # -----------------------------------------------------
+#     # 🎲 Player Actions
+#     # -----------------------------------------------------
+#     def roll_dice(self, player_id):
+#         player = self.room_state.get_player(player_id)
+#         if not player or not self.active:
+#             return
+#
+#         # 🎲 Tung xúc xắc
+#         dice_1, dice_2 = random.randint(1, 6), random.randint(1, 6)
+#         total_steps = dice_1 + dice_2
+#         is_double = (dice_1 == dice_2)
+#         players = self.room_state.players
+#
+#         packet = PacketBuilder.roll_result(self.room_state.room_id, player.id, (dice_1, dice_2), total_steps, is_double)
+#         self.network.send_packet(packet)
+#
+#         # 🎲 Xử lý ra đôi
+#         if is_double:
+#             player.consecutive_doubles += 1
+#         else:
+#             player.consecutive_doubles = 0
+#
+#         if player.consecutive_doubles == 3:
+#             jail_tile = self.board.get_jail_tile()
+#             player.position = jail_tile.tile_id
+#             player.in_jail = True
+#             player.consecutive_doubles = 0
+#
+#             jail_packet = PacketBuilder.send_to_jail(
+#                 self.room_state.room_id, player.id, jail_tile.tile_id
+#             )
+#             self.network.send_packet(self.room_state.room_id, jail_packet)
+#             self.next_turn()
+#             return
+#
+#         # 📦 Di chuyển bình thường
+#         move_result = self.board.move_player(player, total_steps, players)
+#         tile_id = move_result["tile_id"]
+#         tile = self.board.get_tile(tile_id)
+#
+#         # 💰 Qua ô GO
+#         if move_result.get("passed_go"):
+#             self.bank.pay_player(player, 200)
+#             balance_packet = PacketBuilder.update_balance(
+#                 self.room_state.room_id, player.id, player.balance
+#             )
+#             self.network.send_packet(self.room_state.room_id, balance_packet)
+#
+#         # 📡 Gửi gói tin thông báo di chuyển
+#         move_packet = PacketBuilder.player_move(
+#             self.room_state.room_id,
+#             player.id,
+#             tile_id,
+#             (dice_1, dice_2),
+#         )
+#         self.network.send_packet(self.room_state.room_id, move_packet)
+#
+#         # ⚙️ Gọi logic từ Tile (tile tự quyết định event nào xảy ra)
+#         tile_event = tile.on_land(player, self.board)
+#
+#
+#         match tile_event.get("event"):
+#             case "PAY_RENT":
+#                 data = tile_event["data"]
+#                 payer = player
+#                 owner = self.room_state.get_player(data["owner_id"])
+#                 amount = data["amount"]
+#
+#                 self.bank.transfer_between_players(payer, owner, amount)
+#                 self.network.send_packet(PacketBuilder.update_balance(self.room_state.room_id, payer.id, payer.balance))
+#                 self.network.send_packet(PacketBuilder.update_balance(self.room_state.room_id, owner.id, owner.balance))
+#
+#             case "BUY_PROPERTY":
+#                 # Hiển thị prompt mua
+#                 self.network.send_packet(PacketBuilder.prompt_buy_property(
+#                     self.room_state.room_id,
+#                     player.id,
+#                     tile_event["data"]["tile_id"],
+#                     tile_event["data"]["price"]
+#                 ))
+#
+#             case "OWN_PROPERTY":
+#                 # Gửi thông điệp đơn giản
+#                 self.network.send_packet(PacketBuilder.info_message(
+#                     self.room_state.room_id,
+#                     tile_event["message"]
+#                 ))
+#
+#         # 🔁 Chuyển lượt nếu không ra đôi
+#         if not is_double:
+#             player.consecutive_doubles = 0
+#             self.next_turn()
+#
+#     def buy_property(self, player_id):
+#         """Người chơi mua property hiện tại"""
+#         player: 'Player' = self.room_state.get_player(player_id)
+#         if not player or player.is_bankrupt:
+#             return {"Notion": f"'{player.name} is bankrupted'"}
+#
+#         if not player.has_rolled_and_moved:
+#             return {"Notion": f"'{player.name} must move before buying property'"}
+#
+#         tile = self.board.get_tile(player.position)
+#         if tile.type != "property" or tile.owner_id is not None:
+#             return {"Notion": f"'Property {tile.id} already owned by {tile.owner_id}'"}
+#
+#         result = player.bank.buy_property(player,tile)
+#
+#         if result["event"] == "buy_property" and result["status"] == "success":
+#             self.bank.set_property_owner(tile.id, player.id)
+#             tile.owner_id = player.id
+#         elif result["event"] == "insufficient_funds":
+#             return {"Notion": f"'{player.name} not have enough cash'"}
+#         elif result["event"] == "player_has_not_moved":
+#             return {"Notion": f"'{player.name} must move before buying property'"}
+#
+#         # Kiểm tra phá sản
+#         if player.is_bankrupt:
+#             self.handle_bankrupt(player)
+#
+#         packet = PacketBuilder.player_buy_property(
+#             self.room_state.room_id,
+#             str(player.id),
+#             tile.tile_id,
+#             tile.price,
+#             result,
+#         )
+#         packet["payload"].update({
+#             "balance": player.bank.get_balance(player),
+#             "properties": player.properties,
+#         })
+#         self.network.send_packet(packet)
+#         return None
+#
+#     # -----------------------------------------------------
+#     # 💸 Bankrupt Handling
+#     # -----------------------------------------------------
+#     def handle_bankrupt(self, player):
+#         self.logger.info(f"Player {player.name} (ID: {player.id}) went bankrupt.")
+#
+#         # Reset tài sản
+#         self.bank.reset_property_owner(player.id)
+#         for property_id in player.properties:
+#             tile = self.board.get_tile(property_id)
+#             if tile:
+#                 tile.owner_id = None
+#         player.properties = []
+#         player.is_bankrupt = True
+#
+#         packet = PacketBuilder.error(
+#             self.room_state.room_id,
+#             player.id,
+#             f"{player.name} has gone bankrupt."
+#         )
+#         self.network.send_packet(packet)
+#         self.check_end_conditions()
+#
+#     # -----------------------------------------------------
+#     # 🏁 End Conditions
+#     # -----------------------------------------------------
+#     def check_end_conditions(self):
+#         active_players = [p for p in self.room_state.players if not p.is_bankrupt]
+#         if len(active_players) <= 1:
+#             winner = active_players[0].id if active_players else None
+#             self.end_game(winner)
+#
+#     # -----------------------------------------------------
+#     # 🔄 Sync / Utility
+#     # -----------------------------------------------------
+#     def force_sync(self):
+#         """Gửi toàn bộ trạng thái phòng và board tới client"""
+#         self.room_state.update_from_game(self.board, self.room_state.players)
+#         state_data = {
+#             "room": self.room_state.serialize(),
+#             "board": self.board.get_board_state(),
+#         }
+#         packet = PacketBuilder.broadcast_state(self.room_state.room_id, state_data)
+#         self.network.send_packet(packet)
 
-"""
-GameManager – Monopoly Server
-------------------------------
-Quản lý logic game Monopoly trong 1 phòng:
-- Board, Players, Turns, Round
-- Gửi trực tiếp các sự kiện game qua UDP multicast
-- Không còn phụ thuộc UDPMulticast / MulticastManager
-"""
 
-import threading
+
+# file: game/logic/game_manager.py
 import random
-from typing import Dict, Optional, List
+from datetime import datetime
+from ..network.packet_builder import PacketBuilder
 
-from .board import Board
-from .player import Player
-from ..utils import packetformat as PacketFormat
-from ..utils import logger as Logger
-from ..network import network_utils as net
-
-community_chest_cards = [
-    "Advance to Go (Collect $200)",
-    "Bank error in your favor – Collect $200",
-    "Doctor’s fees – Pay $50",
-    "From sale of stock you get $50",
-    "Get Out of Jail Free",
-    "Go to Jail – Go directly to jail – Do not pass Go – Do not collect $200",
-    "Grand Opera Night – Collect $50 from every player for opening night seats",
-    "Holiday Fund matures – Receive $100",
-    "Income tax refund – Collect $20",
-    "It is your birthday – Collect $10 from every player",
-    "Life insurance matures – Collect $100",
-    "Hospital Fees – Pay $50",
-    "School fees – Pay $50",
-    "Receive $25 consultancy fee",
-    "You are assessed for street repairs – $40 per house, $115 per hotel",
-    "You have won second prize in a beauty contest – Collect $10"
-]
-
-chance_cards = [
-    "Advance to Go (Collect $200)",
-    "Advance to Illinois Ave. If you pass Go, collect $200",
-    "Advance to St. Charles Place. If you pass Go, collect $200",
-    "Advance token to nearest Utility. If unowned, buy it. If owned, pay rent.",
-    "Advance token to nearest Railroad. Pay owner double rent. If unowned, you may buy.",
-    "Bank pays you dividend of $50",
-    "Get Out of Jail Free",
-    "Go Back 3 Spaces",
-    "Go to Jail – Go directly to jail – Do not pass Go – Do not collect $200",
-    "Make general repairs on all your property: For each house pay $25, For each hotel $100",
-    "Pay poor tax of $15",
-    "Take a trip to Reading Railroad. If you pass Go, collect $200",
-    "Take a walk on the Boardwalk. Advance token to Boardwalk",
-    "You have been elected Chairman of the Board – Pay each player $50",
-    "Your building loan matures – Collect $150",
-    "You have won a crossword competition – Collect $100"
-]
 
 class GameManager:
     """
-    Quản lý 1 phiên chơi Monopoly (1 room)
+    Quản lý toàn bộ luồng chơi Monopoly:
+    - Điều phối lượt chơi
+    - Gọi hành động từ Player / Board / Carnager
+    - Cập nhật RoomState
+    - Phát sự kiện JSON tới client qua NetworkManager (chuẩn hóa bằng PacketBuilder)
     """
 
-    def __init__(self, room_id: str, logger: Optional[Logger] = None,
-                 mcast_ip: str = None, mcast_port: int = None):
-        self.room_id = room_id
-        self.board = Board()
-        self.players: Dict[str, Player] = {}
-        self.turn_order: List[str] = []
-        self.current_turn_index: int = 0
-        self.round_number: int = 1
-        self.active: bool = False
-        self.winner: Optional[str] = None
+    def __init__(self, room_state, board, network, logger):
+        self.room_state = room_state    # Thông tin phòng hiện tại
+        self.board = board              # Lớp xử lý toàn bộ logic game
+        self.network = network          # NetworkManager
+        self.logger = logger
+        self.active = False
+        self.turn_index = 0
+        self.turn_order = []            # Danh sách ID người chơi theo thứ tự lượt
 
-        self.community_chest_cards = community_chest_cards
-        self.chance_cards = chance_cards
-        
-        self.seq_counter = 0
-        self.lock = threading.RLock()
-        self.logger = logger or Logger(room_id)
+    # ----------------------------------------------------------------------
+    # 🎮 GAME FLOW
+    # ----------------------------------------------------------------------
+    def start_game(self):
+        """Khởi động game và chọn người đi đầu tiên."""
+        self.active = True
+        self.turn_order = list(self.room_state.players.keys())
+        self.turn_index = 0
+        first_player = self.room_state.get_player(self.turn_order[0])
 
-        # Multicast target cho tất cả sự kiện/state
-        self.mcast_ip = mcast_ip
-        self.mcast_port = mcast_port
+        packet = PacketBuilder.game_start(self.room_state.room_id, first_player.id)
+        self.network.send_packet(self.room_state.room_id, packet)
+        self.logger.info(f"[GAME] Bắt đầu game tại phòng {self.room_state.room_id}")
 
-    # -------------------------
-    # Packet helpers
-    # -------------------------
-    def _next_seq(self) -> int:
-        with self.lock:
-            self.seq_counter += 1
-            return self.seq_counter
+    def next_turn(self):
+        """Chuyển lượt sang người chơi kế tiếp."""
+        self.turn_index = (self.turn_index + 1) % len(self.turn_order)
+        next_player_id = self.turn_order[self.turn_index]
+        next_player = self.room_state.get_player(next_player_id)
 
-    def build_state_packet(self) -> dict:
-        with self.lock:
-            players_state = {pid: p.to_dict() for pid, p in self.players.items()}
-            data = {
-                "room_id": self.room_id,
-                "round": self.round_number,
-                "current_turn": self.get_current_player_id(),
-                "players": players_state,
-                "winner": self.winner,
-                "active": self.active
-            }
-            return PacketFormat.create_packet(
-                packet_type="STATE",
-                room_id=self.room_id,
-                sender="SERVER",
-                target="ALL",
-                action="STATE_UPDATE",
-                args={},
-                payload={"data": data, "status": "OK"},
-                seq_id=self._next_seq(),
-                ack=False,
-                reliable=True,
-                hop_count=1
-            )
+        packet = PacketBuilder.next_turn(self.room_state.room_id, next_player.id)
+        self.network.send_packet(self.room_state.room_id, packet)
+        self.logger.debug(f"[TURN] → {next_player.name}'s turn")
 
-    def build_event_packet(self, action: str, payload: dict, target: str = "ALL") -> dict:
-        return PacketFormat.create_packet(
-            packet_type="EVENT",
-            room_id=self.room_id,
-            sender="SERVER",
-            target=target,
-            action=action,
-            args={},
-            payload=payload,
-            seq_id=self._next_seq(),
-            ack=False,
-            reliable=False,
-            hop_count=1
-        )
-
-    # -------------------------
-    # Network send helpers
-    # -------------------------
-    def send_state_update(self):
-        if self.mcast_ip and self.mcast_port:
-            packet = self.build_state_packet()
-            sock = net.create_udp_socket(multicast=True)
-            net.send_udp(sock, packet, (self.mcast_ip, self.mcast_port))
-            sock.close()
-            self.logger.debug(f"[GameManager] STATE_UPDATE sent to {self.mcast_ip}:{self.mcast_port}")
-
-    def send_event(self, action: str, payload: dict, target: str = "ALL"):
-        if self.mcast_ip and self.mcast_port:
-            packet = self.build_event_packet(action, payload, target)
-            sock = net.create_udp_socket(multicast=True)
-            net.send_udp(sock, packet, (self.mcast_ip, self.mcast_port))
-            sock.close()
-            self.logger.debug(f"[GameManager] EVENT {action} sent to {self.mcast_ip}:{self.mcast_port}")
-
-    # -------------------------
-    # Player management
-    # -------------------------
-    def add_player(self, player_id: str, name: str) -> bool:
-        with self.lock:
-            if player_id in self.players:
-                self.logger.warning(f"[GameManager] Player {player_id} already exists")
-                return False
-            p = Player(player_id=player_id, name=name)
-            self.players[player_id] = p
-            self.turn_order.append(player_id)
-            self.logger.info(f"[GameManager] Player added: {player_id}")
-            self.send_state_update()
-            return True
-
-    def remove_player(self, player_id: str) -> bool:
-        with self.lock:
-            if player_id not in self.players:
-                return False
-            if player_id in self.turn_order:
-                idx = self.turn_order.index(player_id)
-                del self.turn_order[idx]
-                if idx <= self.current_turn_index and self.current_turn_index > 0:
-                    self.current_turn_index -= 1
-            del self.players[player_id]
-            self.logger.info(f"[GameManager] Player removed: {player_id}")
-            self._check_end_conditions()
-            self.send_state_update()
-            return True
-
-    def get_current_player_id(self) -> Optional[str]:
-        with self.lock:
-            if not self.turn_order:
-                return None
-            if self.current_turn_index >= len(self.turn_order):
-                self.current_turn_index = 0
-            return self.turn_order[self.current_turn_index]
-
-    def get_current_player(self) -> Optional[Player]:
-        pid = self.get_current_player_id()
-        return self.players.get(pid) if pid else None
-
-    # -------------------------
-    # Game lifecycle
-    # -------------------------
-    def start_game(self) -> bool:
-        with self.lock:
-            if len(self.players) < 2:
-                self.logger.warning("[GameManager] Need at least 2 players to start")
-                return False
-            self.active = True
-            self.current_turn_index = 0
-            self.round_number = 1
-            self.winner = None
-            self.logger.info(f"[GameManager] Game started")
-            self.send_event("GAME_STARTED", {"status": "OK"})
-            self.send_state_update()
-            return True
-
-    def end_game(self):
-        with self.lock:
-            self.active = False
-            self.logger.info(f"[GameManager] Game ended. Winner: {self.winner}")
-            self.send_event("GAME_ENDED", {"winner": self.winner})
-            self.send_state_update()
-
-    def _check_end_conditions(self):
-        alive = [p for p in self.players.values() if not p.is_bankrupt()]
-        if len(alive) == 1:
-            self.winner = alive[0].id
-            self.active = False
-            self.logger.info(f"[GameManager] Winner determined: {self.winner}")
-            self.send_event("GAME_ENDED", {"winner": self.winner})
-            self.send_state_update()
-
-    # -------------------------
-    # Core actions
-    # -------------------------
-    def _validate_player_turn(self, player_id: str) -> bool:
-        """Kiểm tra xem có phải lượt của player không"""
-        return self.active and self.get_current_player_id() == player_id
-        
-    def roll(self, player_id: str) -> dict:
-        with self.lock:
-            if not self.active:
-                return {"status": "ERROR", "message": "Game not active"}
-            if not self._validate_player_turn(player_id):  # DÙNG HELPER
-                return {"status": "ERROR", "message": "Not your turn"}
-            if self.get_current_player_id() != player_id:
-                return {"status": "ERROR", "message": "Not your turn"}
-
-            player = self.players.get(player_id)  # THÊM .get() để tránh KeyError
-            if not player:
-                return {"status": "ERROR", "message": "Player not found"}
-
-            d1, d2 = random.randint(1, 6), random.randint(1, 6)
-            total = d1 + d2
-
-            old_pos = player.position
-            new_pos = player.move(total, board_size=len(self.board.tiles))
-            tile = self.board.get_tile(new_pos)
-
-            rent_paid = 0
-            events = []
-
-            # SỬA LẠI LOGIC TÍNH TIỀN THUÊ
-            if tile and self.board.is_property(tile):
-                owner = tile.get("owner")
-                if owner and owner != player_id and owner in self.players:  # THÊM KIỂM TRA owner tồn tại
-                    if tile["type"] == "utility":
-                        rent = self.board.get_rent(new_pos, dice_roll=total)
-                    else:
-                        rent = self.board.get_rent(new_pos)
-                    
-                    if rent > 0:  # CHỈ TRẢ TIỀN NẾU CÓ TIỀN THUÊ
-                        receiver = self.players.get(owner)
-                        if receiver and player.pay(rent, receiver=receiver):
-                            rent_paid = rent
-                            events.append(f"Paid rent {rent} to {owner}")
-                        else:
-                            events.append("Bankrupt paying rent")
-                            self._handle_bankruptcy(player)
-
-            # Xử lý các ô đặc biệt
-            if tile and tile.get("type") == "go_to_jail":
-                player.send_to_jail(10)  # Vị trí jail
-                events.append("Sent to Jail")
-                
-            if tile and tile.get("type") in ("community_chest", "chance"):
-                card = self.draw_card(tile["type"])
-                card_events = self.handle_card_content(player_id, card)  # SỬA TÊN
-                events.extend(card_events)
-
-            self._advance_turn()
-
-            payload = {
-                "player": player_id,
-                "dice": [d1, d2],
-                "total": total,
-                "old_pos": old_pos,
-                "new_pos": new_pos,
-                "tile": tile,
-                "rent_paid": rent_paid,
-                "events": events,
-                "status": "OK"
-            }
-
-            self.logger.info(f"[GameManager] ROLL {player_id}: {d1}+{d2} -> {new_pos}")
-            self.send_event("ROLL_RESULT", payload)
-            self.send_state_update()
-            return payload
-
-    def buy(self, player_id: str) -> dict:
-        with self.lock:
-            player = self.players.get(player_id)
-            if not player:
-                return {"status": "ERROR", "message": "Player not found"}
-            tile = self.board.get_tile(player.position)
-            if not tile or not self.board.is_property(tile):
-                return {"status": "ERROR", "message": "No purchasable property here"}
-            if tile.get("owner") is not None:
-                return {"status": "ERROR", "message": "Property already owned"}
-
-            price = tile.get("price", 0)
-            if player.money < price:
-                return {"status": "ERROR", "message": "Insufficient funds"}
-
-            success = self.board.buy_property(tile_id=player.position, player_id=player_id)
-            if success:
-                player.pay(price)
-                player.add_property(player.position)
-                payload = {"status": "OK", "tile_id": player.position, "message": "Property purchased"}
-                self.send_event("PROPERTY_BOUGHT", payload)
-                self.send_state_update()
-                return payload
-            return {"status": "ERROR", "message": "Buy failed"}
-
-    def pay(self, from_id: str, to_id: str, amount: int) -> dict:
-        with self.lock:
-            payer = self.players.get(from_id)
-            receiver = self.players.get(to_id)
-            if not payer or not receiver or amount <= 0:
-                return {"status": "ERROR", "message": "Invalid payment"}
-            success = payer.pay(amount, receiver=receiver)
-            payload = {"from": from_id, "to": to_id, "amount": amount, "status": "OK" if success else "ERROR"}
-            self.send_event("PAYMENT", payload)
-            self.send_state_update()
-            if not success:
-                self._handle_bankruptcy(payer)
-            return payload
-
-    def end_turn(self, player_id: str) -> dict:
-        with self.lock:
-            if self.get_current_player_id() != player_id:
-                return {"status": "ERROR", "message": "Not your turn"}
-            self._advance_turn()
-            payload = {"player": player_id, "status": "OK"}
-            self.send_event("TURN_ENDED", payload)
-            self.send_state_update()
-            return payload
-
-    # -------------------------
-    # Internal helpers
-    # -------------------------
-    def _advance_turn(self):
-        if not self.turn_order:
-            return
-        self.current_turn_index = (self.current_turn_index + 1) % len(self.turn_order)
-        if self.current_turn_index == 0:
-            self.round_number += 1
-
-    def _handle_bankruptcy(self, player: Player):
-        player.bankrupt = True
-        self.board.reset_owner(player.id)
-        if player.id in self.turn_order:
-            self.turn_order.remove(player.id)
-        self.logger.info(f"[GameManager] Player bankrupt: {player.id}")
-        self._check_end_conditions()
-        self.send_event("BANKRUPTCY", {"player": player.id})
-        self.send_state_update()
-
-    # -------------------------
-    # Command dispatcher
-    # -------------------------
-    def handle_command(self, packet: dict) -> dict:
+    # ----------------------------------------------------------------------
+    # 🎲 COMMAND DISPATCHER
+    # ----------------------------------------------------------------------
+    def handle_command(self, command: str, player_id: str, data: dict = None):
         """
-        Xử lý packet command từ client.
-        Caller không cần gửi event/state, GameManager tự lo.
+        Nhận lệnh từ client và ủy quyền xử lý cho Board.
+        :param command: Tên lệnh ("ROLL_DICE", "BUY_PROPERTY", ...)
+        :param player_id: Người gửi lệnh
+        :param data: Dữ liệu kèm theo (nếu có)
         """
-        try:
-            if not PacketFormat.is_valid(packet):
-                return {"status": "ERROR", "message": "Invalid packet format"}
-
-            action = packet["command"]["action"].upper()
-            sender = packet["header"]["sender"]
-            args = packet["command"].get("args", {}) or {}
-
-            # Validation common checks
-            if action in ["ROLL", "BUY", "PAY", "END_TURN"]:
-                if sender not in self.players:
-                    return {"status": "ERROR", "message": "Player not in game"}
-                if action in ["ROLL", "BUY", "END_TURN"] and not self.active:
-                    return {"status": "ERROR", "message": "Game not active"}
-
-            # Route actions
-            if action == "JOIN":
-                player_name = args.get("player_name", sender)
-                return {"status": "OK" if self.add_player(sender, player_name) else "ERROR"}
-                
-            elif action == "LEAVE":
-                return {"status": "OK" if self.remove_player(sender) else "ERROR"}
-                
-            elif action == "START_GAME":
-                return {"status": "OK" if self.start_game() else "ERROR"}
-                
-            elif action == "ROLL":
-                return self.roll(sender)
-                
-            elif action == "BUY":
-                return self.buy(sender)
-                
-            elif action == "PAY":
-                to_player = args.get("to")
-                amount_str = args.get("amount", "0")
-                
-                if not to_player or to_player not in self.players:
-                    return {"status": "ERROR", "message": "Invalid recipient"}
-                
-                try:
-                    amount = int(amount_str)
-                    if amount <= 0:
-                        return {"status": "ERROR", "message": "Amount must be positive"}
-                except (ValueError, TypeError):
-                    return {"status": "ERROR", "message": "Invalid amount format"}
-                
-                return self.pay(sender, to_player, amount)
-                
-            elif action == "END_TURN":
-                return self.end_turn(sender)
-                
-            elif action == "STATE_REQUEST":
-                return {"status": "OK", "state": self.build_state_packet()["payload"]["data"]}
-                
-            else:
-                return {"status": "ERROR", "message": f"Unknown action {action}"}
-                
-        except KeyError as e:
-            self.logger.error(f"[GameManager] Missing key in packet: {e}")
-            return {"status": "ERROR", "message": f"Missing key: {e}"}
-        except Exception as e:
-            self.logger.error(f"[GameManager] handle_command error: {e}")
-            return {"status": "ERROR", "message": "Internal server error"}
-    # -------------------------
-    # Draw / Handle Card
-    # -------------------------
-    def draw_card(self, deck_type: str) -> str:
-        """Chọn ngẫu nhiên 1 lá bài từ deck"""
-        deck = self.community_chest_cards if deck_type == "community_chest" else self.chance_cards
-        return random.choice(deck)
-
-    def handle_card_content(self, player_id: str, card: str):
-        """
-        Xử lý nội dung của lá bài:
-        - Cập nhật tiền, vị trí, đi tù, trả tiền cho người chơi khác...
-        - Gửi event DRAW_CARD cho tất cả người chơi
-        """
-        player = self.players.get(player_id)
-        if not player:
+        player = self.room_state.get_player(player_id)
+        if not player or not self.active:
+            self.logger.warning(f"[GAME] Bỏ qua lệnh {command} (game chưa hoạt động hoặc player không tồn tại)")
             return
 
-        events = []
-
-        # Simple string-based rules
-        if "Collect $" in card:
-            amount = int(''.join(filter(str.isdigit, card)))
-            player.money += amount
-            events.append(f"Received ${amount}")
-
-        if "Pay $" in card:
-            amount = int(''.join(filter(str.isdigit, card)))
-            if not player.pay(amount):
-                self._handle_bankruptcy(player)
-            events.append(f"Paid ${amount}")
-
-        if "Go to Jail" in card:
-            player.send_to_jail(10)
-            events.append("Sent to Jail")
-
-        if "Advance to Go" in card:
-            player.position = 0
-            player.money += 200
-            events.append("Advanced to Go and collected $200")
-
-        if "Go Back 3 Spaces" in card:
-            player.position = max(0, player.position - 3)
-            events.append("Moved back 3 spaces")
-
-        # Có thể thêm xử lý nâng cao hơn dựa theo tên property, utility, etc.
-
-        # Gửi DRAW_CARD event multicast
-        payload = {
-            "player": player_id,
-            "card": card,
-            "events": events
+        # Bảng ánh xạ command → phương thức xử lý trong Board
+        command_map = {
+            "ROLL_DICE": self._cmd_roll_dice,
+            "BUY_PROPERTY": self._cmd_buy_property,
+            "END_TURN": self._cmd_end_turn,
         }
-        self.send_event("DRAW_CARD", payload)
 
-        return events
+        handler = command_map.get(command)
+        if handler:
+            result_packets = handler(player, data)
+            self._broadcast_packets(result_packets)
+        else:
+            self.logger.warning(f"[GAME] Lệnh không hợp lệ: {command}")
+
+    # ----------------------------------------------------------------------
+    # 🎯 COMMAND HANDLERS
+    # ----------------------------------------------------------------------
+    def _cmd_roll_dice(self, player, data=None):
+        """Gọi board để xử lý việc tung xúc xắc."""
+        dice_1, dice_2 = random.randint(1, 6), random.randint(1, 6)
+        total_steps = dice_1 + dice_2
+
+        # Ủy quyền xử lý di chuyển và logic trong Board
+        results = self.board.handle_player_move(player, total_steps, (dice_1, dice_2))
+        return results  # Board trả về list các packet chuẩn
+
+    def _cmd_buy_property(self, player, data):
+        """Người chơi quyết định mua property."""
+        tile_id = data.get("tile_id")
+        results = self.board.handle_buy_property(player, tile_id)
+        return results
+
+    def _cmd_end_turn(self, player, data=None):
+        """Người chơi kết thúc lượt."""
+        self.next_turn()
+        return [PacketBuilder.info_message("END_TURN", f"{player.name} đã kết thúc lượt.")]
+
+    # ----------------------------------------------------------------------
+    # 🛰️ NETWORK HELPER
+    # ----------------------------------------------------------------------
+    def _broadcast_packets(self, packets):
+        """Gửi danh sách packet tới tất cả client trong phòng."""
+        if not packets:
+            return
+        if isinstance(packets, dict):
+            packets = [packets]
+
+        for pkt in packets:
+            pkt["room_id"] = self.room_state.room_id
+            self.network.send_packet(self.room_state.room_id, pkt, target="all")

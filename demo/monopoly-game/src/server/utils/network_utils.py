@@ -128,9 +128,20 @@ def get_available_port(start_port: int = 5000, end_port: int = 6000) -> int:
 
 
 def get_local_ip() -> str:
+    """
+    Tries to find the local IP address by connecting to an external server.
+    Falls back to '127.0.0.1' upon any OS/Socket error.
+    """
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
+            # Connect to a known external address (like Google's DNS) to determine
+            # the outbound interface's IP. This doesn't actually send data.
             sock.connect(("8.8.8.8", 80))
             return sock.getsockname()[0]
-    except Exception:
+
+    # 🚨 CATCH CÁC LỖI HỆ THỐNG/SOCKET CỤ THỂ 🚨
+    # OSError covers most network-related connection and resource allocation errors.
+    except OSError:
+        # Nếu không thể tạo socket hoặc kết nối (ví dụ: không có mạng),
+        # trả về loopback address.
         return "127.0.0.1"

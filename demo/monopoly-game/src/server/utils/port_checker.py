@@ -7,15 +7,19 @@ from typing import List, Optional
 # Import logger đúng path ( điều chỉnh theo project của bạn )
 try:
     # Nếu package layout là src.utils.logger
-    from src.utils.logger import Logger
-except Exception:
-    # Fallback nếu import khác
+    from ..utils.logger import Logger
+
+# 🚨 CATCH LỖI IMPORT CỤ THỂ 🚨
+except ImportError:
+    # Fallback nếu import khác (gói không tồn tại hoặc đường dẫn sai)
     class Logger:
         def __init__(self, name=None): self.name = name
-        def info(self, m): print(f"[INFO] {m}")
-        def success(self, m): print(f"[SUCCESS] {m}")
-        def error(self, m): print(f"[ERROR] {m}")
 
+        def info(self, m): print(f"[{self.name}][INFO] {m}")
+
+        def success(self, m): print(f"[{self.name}][SUCCESS] {m}")
+
+        def error(self, m): print(f"[{self.name}][ERROR] {m}")
 class PortChecker:
     """
     Kiểm tra và quản lý cổng UDP khả dụng cho multicast.
